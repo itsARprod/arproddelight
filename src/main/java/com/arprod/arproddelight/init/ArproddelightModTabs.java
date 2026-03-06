@@ -49,6 +49,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.WILD_COTTON.get(),
 				ArproddelightModItems.STRAWBERRY.get(),
 				ArproddelightModItems.COFFEE_BERRY.get(),
+				ArproddelightModItems.LATTE_CUP.get(),
 				ArproddelightModItems.MINT.get(),
 				ArproddelightModItems.COTTON.get(),
 				ArproddelightModItems.COFFEE_BEAN.get(),
@@ -74,6 +75,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.SALAMI_PIZZA_SLICE.get(),
 				ArproddelightModItems.BOSCAIOLA_PIZZA.get(),
 				ArproddelightModItems.BOSCAIOLA_PIZZA_SLICE.get(),
+				ArproddelightModItems.STRAWBERRY_CHEESECAKE.get(),
 				ArproddelightModItems.LAVASH.get(),
 				ArproddelightModItems.RAW_BEEF_LAHMAJO.get(),
 				ArproddelightModItems.BEEF_LAHMAJO.get(),
@@ -90,6 +92,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.CANDY_CANE.get(),
 
 				ArproddelightModItems.CANDY_SPEAR.get(),
+
 				ArproddelightModItems.RED_BAUBLE.get(),
 				ArproddelightModItems.SPRUCE_LEAVES_RED_BAUBLE.get(),
 				ArproddelightModItems.BLUE_BAUBLE.get(),

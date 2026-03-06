@@ -51,6 +51,7 @@ public class ArproddelightModBlocks {
 	public static final RegistryObject<Block> COFFEE_BEAN = REGISTRY.register("coffee_bean", CoffeeBeanBlock::new);
 	public static final RegistryObject<Block> FRYING_BASKET = REGISTRY.register("frying_basket", FryingBasketBlock::new);
 	public static final RegistryObject<Block> SUNFLOWER_OIL = REGISTRY.register("sunflower_oil", SunflowerOilBlock::new);
+	public static final RegistryObject<Block> STRAWBERRY_CHEESECAKE = REGISTRY.register("strawberry_cheesecake", StrawberryCheesecakeBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

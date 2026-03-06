@@ -123,6 +123,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> SUNFLOWER_OIL_BUCKET= REGISTRY.register("sunflower_oil_bucket", SunflowerOilBucketItem::new);
     public static final RegistryObject<Item> BATTERED_COD= REGISTRY.register("battered_cod", BatteredCodItem::new);
     public static final RegistryObject<Item> FRIED_CHICKEN= REGISTRY.register("fried_chicken", FriedChickenItem::new);
+    public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE= block(ArproddelightModBlocks.STRAWBERRY_CHEESECAKE);
     //public static final RegistryObject<Item> PIZZA_BOX= REGISTRY.register("pizza_box", PizzaBoxItem::new);
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         return REGISTRY.register(

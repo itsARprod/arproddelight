@@ -20,7 +20,6 @@ public class BoscaiolaPizzaBlock extends PieBlock {
     public BoscaiolaPizzaBlock() {
         super(
                 BlockBehaviour.Properties.of()
-                        .mapColor(MapColor.WOOL)
                         .strength(0.5F)
                         .sound(SoundType.WOOL)
                         .noOcclusion(),
