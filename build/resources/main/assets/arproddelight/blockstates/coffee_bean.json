@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "arproddelight:block/coffee/coffee_0"
+    },
+    "age=1": {
+      "model": "arproddelight:block/coffee/coffee_1"
+    },
+    "age=2": {
+      "model": "arproddelight:block/coffee/coffee_2"
+    },
+    "age=3": {
+      "model": "arproddelight:block/coffee/coffee_3"
+    },
+    "age=4": {
+      "model": "arproddelight:block/coffee/coffee_4"
+    },
+    "age=5": {
+      "model": "arproddelight:block/coffee/coffee_5"
+    },
+    "age=6": {
+      "model": "arproddelight:block/coffee/coffee_6"
+    },
+    "age=7": {
+      "model": "arproddelight:block/coffee/coffee_7"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:cotton_crate"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:cotton",
+    "count": 9
+  }
+}

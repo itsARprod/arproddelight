@@ -1,0 +1,105 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net' }
+        mavenCentral()
+        gradlePluginPortal()
+
+
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:6.0.+'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+
+group = 'com.arprod.arproddelight'
+version = '3.0.1'
+def string = archivesBaseName = 'arproddelight'
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+        server {
+            workingDirectory project.file('run')
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+
+    maven { url "https://modmaven.dev" }
+
+    maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+
+    maven { url = "https://maven.ithundxr.dev/mirror" } // Registrate
+
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
+
+    maven {url = "https://maven.ithundxr.dev/releases"}
+
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
+    repositories {
+        maven { url "https://maven.ryanliptak.com/" }
+    }
+}
+
+
+
+dependencies {
+
+    minecraft "net.minecraftforge:forge:1.20.1-47.4.6"
+
+
+    implementation(fg.deobf("com.simibubi.create:create-1.20.1:${create_version}:slim") { transitive = false })
+
+    implementation(fg.deobf("net.createmod.ponder:Ponder-Forge-1.20.1:${ponder_version}"))
+
+    compileOnly(fg.deobf("dev.engine-room.flywheel:flywheel-forge-api-1.20.1:${flywheel_version}"))
+
+    runtimeOnly(fg.deobf("dev.engine-room.flywheel:flywheel-forge-1.20.1:${flywheel_version}"))
+
+    implementation(fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}"))
+
+    annotationProcessor "io.github.llamalad7:mixinextras-common:0.4.1"
+
+    implementation("io.github.llamalad7:mixinextras-forge:0.4.1")
+
+    compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.20.0.112"))
+    compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.20.0.112"))
+    runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.112"))
+
+    runtimeOnly(fg.deobf("squeek.appleskin:appleskin-forge:mc1.20.1-2.5.1"))
+
+    implementation fg.deobf("curse.maven:farmers-delight-398521:5962797")
+
+    implementation fg.deobf("curse.maven:createaddition-422951:6915920")
+
+    implementation fg.deobf("curse.maven:create-central-kitchen-820977:6987710")
+}
+
+
+
+

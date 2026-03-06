@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:grater"
+    },
+    "title": {
+      "translate": "advancements.grater.title"
+    },
+    "description": {
+      "translate": "advancements.grater.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "grater_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arproddelight:grater"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/cheese"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "arproddelight:custom/pizza",
+  "textures": {
+    "all": "arproddelight:block/salami",
+    "particle": "arproddelight:block/salami",
+    "0": "arproddelight:block/salami"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:cotton"
+    },
+    "title": {
+      "translate": "advancements.cotton.title"
+    },
+    "description": {
+      "translate": "advancements.cotton.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cotton_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arproddelight:cotton"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/root"
+}

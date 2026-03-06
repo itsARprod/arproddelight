@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"down": "arproddelight:block/tonir",
+		"north": "minecraft:block/bricks",
+		"south": "minecraft:block/bricks",
+		"east": "minecraft:block/bricks",
+		"west": "minecraft:block/bricks",
+		"particle": "minecraft:block/bricks",
+		"up": "arproddelight:block/tonir"
+	}
+}

@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Items.BRASS_HAND"
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.WOOL#14"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:BoxingGlove"
+    },
+    "name": "boxing_glove",
+    "namespace": "mod"
+  }
+}

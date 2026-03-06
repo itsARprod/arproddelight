@@ -1,0 +1,55 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "arproddelight:ice_cream_cone"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "item": "arproddelight:ice_cream_cream"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "arproddelight:ice_cream_cone"
+        },
+        {
+          "amount": 250,
+          "fluid": "minecraft:milk"
+        }
+      ],
+      "results": [
+        {
+          "item": "arproddelight:ice_cream_cone"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "arproddelight:ice_cream_cone"
+        },
+        [
+          {
+            "item": "minecraft:ice"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "arproddelight:ice_cream_cone"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "arproddelight:ice_cream_cone"
+  }
+}
+
+
+

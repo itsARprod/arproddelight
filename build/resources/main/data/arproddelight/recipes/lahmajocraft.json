@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:lavash"
+    },
+    {
+      "item": "farmersdelight:minced_beef"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:raw_beef_lahmajo",
+    "count": 1
+  }
+}

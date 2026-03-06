@@ -1,0 +1,29 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 10,
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:porkchop"
+    }
+  ],
+  "fuel": {
+    "fluidTag": "minecraft:water",
+    "amount": 500
+  },
+  "results": [
+    {
+      "item": "minecraft:cooked_porkchop"
+    },
+    {
+      "item": "arproddelight:gelatin",
+      "count": 3
+    },
+    {
+      "item": "arproddelight:gelatin",
+      "count": 2,
+      "chance": 0.50
+    }
+
+  ]
+}

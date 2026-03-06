@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "farmersdelight:block/crate_bottom",
+    "up": "arproddelight:block/mint_crate_top",
+    "north": "arproddelight:block/mint_crate_side",
+    "east": "arproddelight:block/mint_crate_side",
+    "south": "arproddelight:block/mint_crate_side",
+    "west": "arproddelight:block/mint_crate_side",
+    "particle": "arproddelight:block/crate_bottom"
+  },
+  "render_type": "solid"
+}

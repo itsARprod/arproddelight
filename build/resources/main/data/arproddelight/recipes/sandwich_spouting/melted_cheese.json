@@ -1,0 +1,11 @@
+{
+  "type": "some_assembly_required:sandwich_spouting",
+  "fluid": {
+    "amount": 250,
+    "fluid": "arproddelight:melted_cheese",
+    "nbt": {}
+  },
+  "result": {
+    "item": "arproddelight:melted_cheese_bucket"
+  }
+}

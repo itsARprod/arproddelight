@@ -1,0 +1,66 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "forge:dough"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "item": "arproddelight:margherita_pizza"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "arproddelight:unfinished_pizza"
+        }
+      ],
+      "results": [
+        {
+          "item": "arproddelight:unfinished_pizza"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "arproddelight:unfinished_pizza"
+        },
+        [
+          {
+            "item": "farmersdelight:tomato_sauce"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "arproddelight:unfinished_pizza"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "arproddelight:unfinished_pizza"
+        },
+        [
+          {
+            "item": "arproddelight:grated_cheese"
+          }
+        ]
+      ],
+      "results": [
+        {
+          "item": "arproddelight:unfinished_pizza"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "arproddelight:unfinished_pizza"
+  }
+}

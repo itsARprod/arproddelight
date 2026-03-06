@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "arproddelight:wild_coffea"
+    }
+  ],
+  "result": [
+    {
+      "item": "arproddelight:coffee_bean",
+      "count": 2
+    },
+    {
+      "chance": 0.5,
+      "count": 2,
+      "item": "minecraft:red_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

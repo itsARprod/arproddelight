@@ -1,0 +1,7 @@
+{
+  "parent": "arproddelight:custom/boxing_glove",
+  "textures": {
+    "0": "arproddelight:block/boxing_glove",
+    "particle": "arproddelight:item/boxing_glove"
+  }
+}

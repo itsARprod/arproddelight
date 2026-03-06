@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "translucent",
+  "ambientocclusion": false,
+  "textures": {
+    "all": "arproddelight:block/gelatin_block_dyed",
+    "particle": "arproddelight:block/gelatin_block_dyed"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": { "texture": "#all", "tintindex": 0 },
+        "south": { "texture": "#all", "tintindex": 0 },
+        "east":  { "texture": "#all", "tintindex": 0 },
+        "west":  { "texture": "#all", "tintindex": 0 },
+        "up":    { "texture": "#all", "tintindex": 0 },
+        "down":  { "texture": "#all", "tintindex": 0 }
+      }
+    }
+  ]
+}

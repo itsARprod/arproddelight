@@ -1,0 +1,20 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 3,
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "arproddelight:cut_potatoes"
+    }
+  ],
+  "fuel": {
+    "fluidTag": "forge:plantoil",
+    "amount": 200
+  },
+  "results": [
+    {
+      "item": "arproddelight:fried_cut_potatoes",
+      "count": 1
+    }
+  ]
+}

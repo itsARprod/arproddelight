@@ -1,0 +1,24 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "fluidTag": "minecraft:water",
+      "amount": 100
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "arproddelight:gelatin"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:marshmallow",
+      "count": 2
+    }
+  ]
+}

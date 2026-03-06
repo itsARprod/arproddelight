@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:coffee_cup"
+    },
+    "title": {
+      "translate": "advancements.coffee.title"
+    },
+    "description": {
+      "translate": "advancements.coffee.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "coffee_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "arproddelight:main/root"
+}

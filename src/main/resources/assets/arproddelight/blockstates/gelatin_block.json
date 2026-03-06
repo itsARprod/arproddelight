@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "dyed=false": {
+      "model": "arproddelight:block/gelatin_block"
+    },
+
+    "dyed=true,color=white": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=orange": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=magenta": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=light_blue": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=yellow": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=lime": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=pink": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=gray": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=light_gray": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=cyan": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=purple": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=blue": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=brown": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=green": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=red": { "model": "arproddelight:block/gelatin_block_dyed" },
+    "dyed=true,color=black": { "model": "arproddelight:block/gelatin_block_dyed" }
+  }
+}

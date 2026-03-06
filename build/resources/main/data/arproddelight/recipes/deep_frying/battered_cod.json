@@ -1,0 +1,23 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 3,
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "farmersdelight:cod_slice"
+    },
+    {
+      "tag": "forge:dough/wheat"
+    }
+  ],
+  "fuel": {
+    "fluidTag": "forge:plantoil",
+    "amount": 300
+  },
+  "results": [
+    {
+      "item": "arproddelight:battered_cod",
+      "count": 1
+    }
+  ]
+}

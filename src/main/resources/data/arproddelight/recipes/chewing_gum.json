@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "arproddelight:mint"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:chewing_gum",
+    "count": 3
+  }
+}

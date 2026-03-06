@@ -1,0 +1,9 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "arproddelight:block/cotton_6",
+    "particle": "arproddelight:block/cotton_6"
+  },
+  "render_type": "cutout"
+}
+

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:lavash"
+    },
+    {
+      "tag": "forge:cheese/solid"
+    },
+    {
+      "item": "farmersdelight:tomato"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:cheese_and_tomato_durum",
+    "count": 1
+  }
+}

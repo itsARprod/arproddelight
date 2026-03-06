@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "minecraft:red_glazed_terracotta"
+    }
+  },
+  "result": {
+    "item": "arproddelight:red_bauble",
+    "count": 2
+  }
+}

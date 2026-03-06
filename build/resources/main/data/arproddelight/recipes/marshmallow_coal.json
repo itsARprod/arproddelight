@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:burnt_marshmallow_on_stick"
+    }
+  ],
+  "result": {
+    "item": "minecraft:charcoal",
+    "count": 1
+  }
+}

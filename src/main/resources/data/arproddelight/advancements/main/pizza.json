@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:salami_pizza"
+    },
+    "title": {
+      "translate": "advancements.pizza.title"
+    },
+    "description": {
+      "translate": "advancements.pizza.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pizza_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "arproddelight:pizza",
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/grater"
+}

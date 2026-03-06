@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "arproddelight:ice_cream_cream"
+    },
+    {
+      "amount": 250,
+      "fluid": "create:honey",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:ice_cream_honey"
+    }
+  ]
+}

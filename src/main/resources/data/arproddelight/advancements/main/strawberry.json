@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:strawberry"
+    },
+    "title": {
+      "translate": "advancements.strawberry.title"
+    },
+    "description": {
+      "translate": "advancements.strawberry.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "strawberry_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arproddelight:strawberry"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/root"
+}

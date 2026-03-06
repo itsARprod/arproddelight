@@ -1,0 +1,26 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 3,
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "farmersdelight:chicken_cuts"
+    },
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "tag": "forge:eggs"
+    }
+  ],
+  "fuel": {
+    "fluidTag": "forge:plantoil",
+    "amount": 250
+  },
+  "results": [
+    {
+      "item": "arproddelight:fried_chicken",
+      "count": 1
+    }
+  ]
+}

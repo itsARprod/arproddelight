@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:coffee_berry"
+    }
+  },
+  "result": {
+    "item": "arproddelight:coffee_berry_crate",
+    "count": 1
+  }
+}

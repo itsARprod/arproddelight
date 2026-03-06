@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:cheese"
+    },
+    "title": {
+      "translate": "advancements.cheese.title"
+    },
+    "description": {
+      "translate": "advancements.cheese.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cheese_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arproddelight:cheese"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/root"
+}

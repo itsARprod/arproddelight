@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "farmersdelight:rotten_tomato"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "farmersdelight:tomato_seeds"
+    },
+    {
+      "count": 1,
+      "item": "arproddelight:mold",
+      "chance": 0.5
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

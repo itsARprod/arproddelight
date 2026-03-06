@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "forge:cheese/solid"
+    },
+    {
+      "item": "farmersdelight:beef_patty"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:cheeseburger",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "displayItem": {
+    "item": "some_assembly_required:spread",
+    "nbt": {
+      "Color": 15684474
+    }
+  },
+  "fullName": {
+    "translate": "item.arproddelight.berry_tea"
+  },
+  "item": "arproddelight:berry_tea",
+  "soundEvent": "some_assembly_required:block.sandwich.add_item.wet"
+}

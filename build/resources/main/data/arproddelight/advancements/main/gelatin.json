@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:gelatin"
+    },
+    "title": {
+      "translate": "advancements.gelatin.title"
+    },
+    "description": {
+      "translate": "advancements.gelatin.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "gelatin_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arproddelight:gelatin"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/strawberry"
+}

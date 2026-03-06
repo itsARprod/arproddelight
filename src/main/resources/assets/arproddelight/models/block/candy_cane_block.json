@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "arproddelight:block/candy_cane_block_top",
+    "up": "arproddelight:block/candy_cane_block_top",
+    "north": "arproddelight:block/candy_cane_block",
+    "east": "arproddelight:block/candy_cane_block",
+    "south": "arproddelight:block/candy_cane_block",
+    "west": "arproddelight:block/candy_cane_block",
+    "particle": "arproddelight:block/candy_cane_block_top"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,110 @@
+{
+  "_fv": 66,
+  "_type": "blockstates",
+  "definition": {
+    "block": "BoscaiolaPizza",
+    "blockstateList": [
+      {
+        "texture": "margherita",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "pizza:shroom",
+        "luminance": 0,
+        "boundingBoxes": [
+          {
+            "mx": 1.0,
+            "my": 0.0,
+            "mz": 1.0,
+            "Mx": 15.0,
+            "My": 2.0,
+            "Mz": 15.0,
+            "subtract": false
+          }
+        ]
+      },
+      {
+        "texture": "margherita",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "pizza1:shroom",
+        "luminance": 0,
+        "boundingBoxes": [
+          {
+            "mx": 1.0,
+            "my": 0.0,
+            "mz": 1.0,
+            "Mx": 8.0,
+            "My": 2.0,
+            "Mz": 15.0,
+            "subtract": false
+          },
+          {
+            "mx": 8.0,
+            "my": 0.0,
+            "mz": 8.0,
+            "Mx": 15.0,
+            "My": 2.0,
+            "Mz": 15.0,
+            "subtract": false
+          }
+        ]
+      },
+      {
+        "texture": "margherita",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "pizza2:shroom",
+        "luminance": 0,
+        "boundingBoxes": [
+          {
+            "mx": 1.0,
+            "my": 0.0,
+            "mz": 1.0,
+            "Mx": 8.0,
+            "My": 2.0,
+            "Mz": 15.0,
+            "subtract": false
+          }
+        ]
+      },
+      {
+        "texture": "margherita",
+        "textureTop": "",
+        "textureLeft": "",
+        "textureFront": "",
+        "textureRight": "",
+        "textureBack": "",
+        "particleTexture": "",
+        "renderType": 2,
+        "customModelName": "pizza3:shroom",
+        "luminance": 0,
+        "boundingBoxes": [
+          {
+            "mx": 1.0,
+            "my": 0.0,
+            "mz": 8.0,
+            "Mx": 8.0,
+            "My": 2.0,
+            "Mz": 15.0,
+            "subtract": false
+          }
+        ]
+      }
+    ]
+  }
+}

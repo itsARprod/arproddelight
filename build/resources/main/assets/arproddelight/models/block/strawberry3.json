@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "arproddelight:block/strawberry3",
+    "particle": "arproddelight:block/strawberry3"
+  },
+  "render_type": "cutout"
+}

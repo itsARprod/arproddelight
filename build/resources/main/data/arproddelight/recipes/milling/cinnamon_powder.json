@@ -1,0 +1,15 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "arproddelight:cinnamon"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "count": 2,
+      "item": "arproddelight:cinnamon_powder"
+    }
+  ]
+}

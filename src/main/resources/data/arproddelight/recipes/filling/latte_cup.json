@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "arproddelight:coffee_cup"
+    },
+    {
+      "fluidTag": "forge:milk",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:latte_cup"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "arproddelight:blocks/cherry_crate",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arproddelight:cherry_crate"
+        }
+      ]
+    }
+  ]
+}

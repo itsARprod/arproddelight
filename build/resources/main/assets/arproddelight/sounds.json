@@ -1,0 +1,10 @@
+{
+  "frying_basket_sizzling": {
+    "subtitle": "subtitles.arproddelight.frying_basket_sizzling",
+    "sounds": [
+      {
+        "name": "arproddelight:frying_basket_sizzling"
+      }
+    ]
+  }
+}

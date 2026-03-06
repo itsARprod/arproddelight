@@ -1,0 +1,31 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluidTag": "forge:milk"
+    },
+    {
+      "item": "arproddelight:mold",
+      "count": 1
+    }
+
+  ],
+  "results": [
+    {
+      "amount": 100,
+      "fluid": "arproddelight:melted_cheese"
+    },
+    {
+      "item": "arproddelight:mold",
+      "count": 1
+    },
+    {
+      "item": "arproddelight:mold",
+      "count": 1,
+      "chance": 0.50
+    }
+
+  ]
+}

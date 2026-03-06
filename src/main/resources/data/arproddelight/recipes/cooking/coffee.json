@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredients": [
+    {
+      "item": "arproddelight:coffee_bean"
+    },
+    {
+      "item": "arproddelight:coffee_bean"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "arproddelight:coffee_cup"
+  }
+
+}

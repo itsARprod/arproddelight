@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:banana_crate"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:banana",
+    "count": 9
+  }
+}

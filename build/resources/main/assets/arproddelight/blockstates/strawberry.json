@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "age=0": {"model": "arproddelight:block/strawberry0"},
+    "age=1": {"model": "arproddelight:block/strawberry1"},
+    "age=2": {"model": "arproddelight:block/strawberry2"},
+    "age=3": {"model": "arproddelight:block/strawberry3"}
+  }
+}

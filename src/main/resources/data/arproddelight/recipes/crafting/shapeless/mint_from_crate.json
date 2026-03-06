@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:mint_crate"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:mint",
+    "count": 9
+  }
+}

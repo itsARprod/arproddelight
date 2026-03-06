@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT License"
+
+[[mods]]
+modId="arproddelight"
+version="3.0.1"
+displayName="ARprod's Delight"
+displayURL=""
+logoFile="logo.png"
+authors="ARprod"
+
+[[dependencies.arproddelight]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.arproddelight]]
+modId="create"
+mandatory=true
+versionRange="[0.5.0,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.arproddelight]]
+modId="farmersdelight"
+mandatory=true
+versionRange="[1.2.0,)"
+ordering="AFTER"
+side="BOTH"

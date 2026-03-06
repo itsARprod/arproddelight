@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "arproddelight:block/cheese_block",
+    "up": "arproddelight:block/cheese_block",
+    "north": "arproddelight:block/cheese_block",
+    "east": "arproddelight:block/cheese_block",
+    "south": "arproddelight:block/cheese_block",
+    "west": "arproddelight:block/cheese_block",
+    "particle": "arproddelight:block/cheese_block"
+  },
+  "render_type": "solid"
+}

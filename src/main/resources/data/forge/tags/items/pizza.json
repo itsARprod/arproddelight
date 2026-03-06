@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "arproddelight:margherita_pizza",
+    "arproddelight:margherita_pizza_slice",
+    "arproddelight:salami_pizza",
+    "arproddelight:salami_pizza_slice",
+    "arproddelight:boscaiola_pizza",
+    "arproddelight:boscaiola_pizza_slice"
+  ]
+}

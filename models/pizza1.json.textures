@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "margherita"
+      },
+      "name": "default"
+    },
+    "salami": {
+      "map": {
+        "0": "salami"
+      },
+      "name": "salami"
+    },
+    "shroom": {
+      "map": {
+        "0": "shroom"
+      },
+      "name": "shroom"
+    }
+  }
+}

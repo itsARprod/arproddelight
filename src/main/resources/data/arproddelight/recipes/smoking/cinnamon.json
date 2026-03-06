@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 500,
+  "ingredient": {
+    "item": "farmersdelight:tree_bark"
+  },
+  "result": "arproddelight:cinnamon"
+}

@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "tag": "forge:shears"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arproddelight:wild_cotton"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type": "minecraft:player"
+          }
+        },
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "tag": "forge:shears"
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arproddelight:cotton_seeds",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "arproddelight:blocks/wild_cotton"
+}

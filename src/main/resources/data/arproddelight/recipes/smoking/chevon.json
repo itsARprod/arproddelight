@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "arproddelight:chevon"
+  },
+  "result": "arproddelight:cooked_chevon",
+  "experience": 0.35
+}

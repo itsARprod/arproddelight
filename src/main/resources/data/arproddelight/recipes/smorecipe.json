@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:cookie"
+    },
+    {
+      "item": "create:bar_of_chocolate"
+    },
+    {
+      "item": "arproddelight:marshmallow"
+    },
+    {
+      "item": "minecraft:cookie"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:smore",
+    "count": 1
+  }
+}

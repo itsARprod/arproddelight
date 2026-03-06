@@ -1,0 +1,10 @@
+{
+  "parent": "arproddelight:custom/leaves",
+  "textures": {
+    "all": "arproddelight:block/spruce_leaves_blue_bauble",
+    "particle": "arproddelight:block/spruce_leaves_blue_bauble",
+    "0": "arproddelight:block/spruce_leaves_blue_bauble",
+    "1": "arproddelight:block/spruce_leaves_bauble"
+  },
+  "render_type": "cutout"
+}

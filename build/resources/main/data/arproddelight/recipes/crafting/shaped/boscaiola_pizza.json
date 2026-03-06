@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:boscaiola_pizza_slice"
+    }
+  },
+  "result": {
+    "item": "arproddelight:boscaiola_pizza",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:cheese_block"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:cheese",
+    "count": 9
+  }
+}

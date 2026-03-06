@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:cheese"
+    }
+  },
+  "result": {
+    "item": "arproddelight:cheese_block",
+    "count": 1
+  }
+}

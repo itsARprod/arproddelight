@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:pear"
+    }
+  },
+  "result": {
+    "item": "arproddelight:pear_crate",
+    "count": 1
+  }
+}

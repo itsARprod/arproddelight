@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "arproddelight:block/wild_coffea_upper"
+    },
+    "half=lower": {
+      "model": "arproddelight:block/wild_coffea_lower"
+    }
+  }
+}
