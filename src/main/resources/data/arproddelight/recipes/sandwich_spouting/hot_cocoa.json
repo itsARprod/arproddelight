@@ -1,0 +1,17 @@
+{
+  "type": "some_assembly_required:sandwich_spouting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create_central_kitchen"
+    }
+  ],
+  "fluid": {
+    "amount": 250,
+    "fluid": "create_central_kitchen:hot_cocoa",
+    "nbt": {}
+  },
+  "result": {
+    "item": "farmersdelight:hot_cocoa"
+  }
+}

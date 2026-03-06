@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "forge:dough"
+    },
+    {
+      "item": "farmersdelight:minced_beef"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "arproddelight:khinkali"
+  }
+}

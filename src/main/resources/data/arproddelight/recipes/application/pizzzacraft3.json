@@ -1,0 +1,18 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "arproddelight:salami_pizza"
+    },
+    [
+      {
+        "item": "minecraft:brown_mushroom"
+      }
+    ]
+  ],
+  "results": [
+    {
+      "item": "arproddelight:boscaiola_pizza"
+    }
+  ]
+}

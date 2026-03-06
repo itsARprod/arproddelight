@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "farmersdelight:rice"
+    },
+    {
+      "item": "farmersdelight:chicken_cuts"
+    },
+    {
+      "item": "minecraft:carrot"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "arproddelight:uzbek_rice"
+  },
+  "container": {
+      "item": "minecraft:bowl"
+    }
+}

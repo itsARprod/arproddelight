@@ -1,0 +1,48 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "Items.BREAD"
+      },
+      {
+        "value": "Items.CABBAGE"
+      },
+      {
+        "value": "Items.TOMATO"
+      },
+      {
+        "value": "Items.BREAD"
+      },
+      {
+        "value": "Items.BEEF_PATTY"
+      },
+      {
+        "value": "Items.BEEF_PATTY"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Cheeseburger"
+    },
+    "name": "durum",
+    "namespace": "mod"
+  }
+}

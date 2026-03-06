@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:boiled_egg"
+    },
+    {
+      "item": "arproddelight:boiled_egg"
+    },
+    {
+      "item": "arproddelight:pepper"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+
+  ],
+  "result": {
+    "item": "arproddelight:deviled_eggs",
+    "count": 1
+  }
+}

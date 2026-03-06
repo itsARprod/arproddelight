@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:cinnamon_powder"
+    },
+    "b": {
+      "item": "create:sweet_roll"
+    }
+  },
+  "result": {
+    "item": "arproddelight:cinnamon_roll",
+    "count": 1
+  }
+}

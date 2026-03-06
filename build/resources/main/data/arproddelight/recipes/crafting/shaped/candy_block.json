@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:candy_cane"
+    }
+  },
+  "result": {
+    "item": "arproddelight:candy_cane_block",
+    "count": 1
+  }
+}

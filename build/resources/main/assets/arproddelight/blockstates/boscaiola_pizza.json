@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "arproddelight:block/boscaiola_pizza_0"
+    },
+    "bites=1": {
+      "model": "arproddelight:block/boscaiola_pizza_1"
+    },
+    "bites=2": {
+      "model": "arproddelight:block/boscaiola_pizza_2"
+    },
+    "bites=3": {
+      "model": "arproddelight:block/boscaiola_pizza_3"
+    }
+  }
+}

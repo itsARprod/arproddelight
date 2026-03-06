@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "arproddelight:cinnamon"
+    }
+  ],
+  "tool": {
+    "tag": "arproddelight:graters"
+  },
+  "result": [
+    {
+      "item": "arproddelight:cinnamon_powder",
+      "count": 2
+    }
+  ],
+  "sound": "minecraft:item.axe.strip"
+}

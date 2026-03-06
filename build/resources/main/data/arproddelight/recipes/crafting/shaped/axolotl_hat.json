@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:axolotl_gills"
+    },
+    "b": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "arproddelight:axolotl_hat_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "arproddelight:banana_crate",
+    "arproddelight:cherry_crate",
+    "arproddelight:pear_crate",
+    "arproddelight:coffee_berry_crate",
+    "arproddelight:mint_crate",
+    "arproddelight:cotton_crate"
+
+  ]
+}

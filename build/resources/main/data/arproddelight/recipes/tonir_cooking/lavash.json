@@ -1,0 +1,9 @@
+{
+  "type": "arproddelight:tonir_cooking",
+  "ingredient": {
+    "tag": "forge:dough/wheat"
+  },
+  "result": { "item": "arproddelight:lavash", "count": 1 },
+  "cookTime": 200,
+  "experience": 1
+}

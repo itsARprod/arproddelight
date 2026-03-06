@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa ",
+    "aa ",
+    "  b"
+  ],
+  "key": {
+    "a": {
+      "tag": "forge:plates/iron"
+    },
+    "b": {
+      "item": "minecraft:brick"
+    }
+  },
+  "result": {
+    "item": "arproddelight:frying_basket",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "arproddelight:block/wild_mint",
+    "particle": "arproddelight:block/wild_mint"
+  },
+  "render_type": "cutout"
+}

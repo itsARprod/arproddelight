@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "ingredients": [
+    {
+      "item": "arproddelight:strawberry"
+    },
+    {
+      "item": "arproddelight:cherry"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "arproddelight:berry_tea"
+  }
+}

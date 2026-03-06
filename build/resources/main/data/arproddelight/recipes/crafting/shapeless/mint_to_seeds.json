@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:mint"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:mint_seeds",
+    "count": 1
+  }
+}

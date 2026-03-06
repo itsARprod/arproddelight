@@ -1,0 +1,9 @@
+{
+  "parent": "arproddelight:custom/pizza1",
+  "textures": {
+    "all": "arproddelight:block/margherita",
+    "particle": "arproddelight:block/shroom",
+    "0": "arproddelight:block/shroom"
+  },
+  "render_type": "solid"
+}

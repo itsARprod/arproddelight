@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_savanna",
+  "features": "arproddelight:wild_coffea",
+  "step": "vegetal_decoration"
+}

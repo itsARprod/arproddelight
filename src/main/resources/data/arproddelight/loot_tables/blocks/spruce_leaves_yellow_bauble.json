@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "arproddelight:blocks/spruce_leaves_yellow_bauble",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "arproddelight:yellow_bauble"
+        }
+      ]
+    }
+  ]
+}

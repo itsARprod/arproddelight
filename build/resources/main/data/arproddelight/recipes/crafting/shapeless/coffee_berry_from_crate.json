@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "arproddelight:coffee_berry_crate"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:coffee_berry",
+    "count": 9
+  }
+}

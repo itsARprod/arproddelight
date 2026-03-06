@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "ba"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:gelatin"
+    },
+    "b": {
+      "item": "arproddelight:strawberry"
+    }
+  },
+  "result": {
+    "item": "arproddelight:strawberry_jelly",
+    "count": 1
+  }
+}

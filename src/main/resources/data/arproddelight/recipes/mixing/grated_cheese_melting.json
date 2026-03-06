@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "arproddelight:grated_cheese"
+    }
+
+  ],
+  "results": [
+    {
+      "amount": 125,
+      "fluid": "arproddelight:melted_cheese"
+    }
+
+  ]
+}

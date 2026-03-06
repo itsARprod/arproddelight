@@ -1,0 +1,17 @@
+{
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "item": "arproddelight:sunflower_oil_bucket"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "amount": 1000,
+      "fluid": "arproddelight:sunflower_oil"
+    }
+  ]
+}
