@@ -4,10 +4,10 @@
       "item": "arproddelight:gelatin"
     },
     "title": {
-      "translate": "advancements.gelatin.title"
+      "translate": "advancements.arproddelight.gelatin.title"
     },
     "description": {
-      "translate": "advancements.gelatin.descr"
+      "translate": "advancements.arproddelight.gelatin.descr"
     },
     "frame": "task",
     "show_toast": true,

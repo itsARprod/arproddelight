@@ -11,6 +11,7 @@ import com.simibubi.create.foundation.fluid.FluidIngredient;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 
 public class DeepFryingRecipe extends BasinRecipe {
 
@@ -81,7 +82,7 @@ public class DeepFryingRecipe extends BasinRecipe {
     }
 
     @Override
-    public void writeAdditional(JsonObject json) {
+    public void writeAdditional(@NotNull JsonObject json) {
         if (hasFuel()) {
             json.add("fuel", fuel.serialize());
         }
@@ -102,7 +103,7 @@ public class DeepFryingRecipe extends BasinRecipe {
     }
 
     @Override
-    public boolean matches(Container inv, Level worldIn) {
+    public boolean matches(Container inv, @NotNull Level worldIn) {
         return false;
     }
 }

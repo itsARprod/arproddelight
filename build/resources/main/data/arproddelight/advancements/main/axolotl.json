@@ -4,10 +4,10 @@
       "item": "arproddelight:axolotl_gills"
     },
     "title": {
-      "translate": "advancements.axolotl.title"
+      "translate": "advancements.arproddelight.axolotl.title"
     },
     "description": {
-      "translate": "advancements.axolotl.descr"
+      "translate": "advancements.arproddelight.axolotl.descr"
     },
     "frame": "task",
     "show_toast": true,

@@ -4,10 +4,10 @@
       "item": "arproddelight:strawberry"
     },
     "title": {
-      "translate": "advancements.strawberry.title"
+      "translate": "advancements.arproddelight.strawberry.title"
     },
     "description": {
-      "translate": "advancements.strawberry.descr"
+      "translate": "advancements.arproddelight.strawberry.descr"
     },
     "frame": "task",
     "show_toast": true,

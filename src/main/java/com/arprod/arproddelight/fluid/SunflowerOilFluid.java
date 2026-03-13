@@ -12,27 +12,27 @@ import com.arprod.arproddelight.init.ArproddelightModItems;
 import com.arprod.arproddelight.init.ArproddelightModFluids;
 import com.arprod.arproddelight.init.ArproddelightModFluidTypes;
 import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class SunflowerOilFluid extends ForgeFlowingFluid {
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> ArproddelightModFluidTypes.SUNFLOWER_OIL_TYPE.get(), () -> ArproddelightModFluids.SUNFLOWER_OIL.get(),
-			() -> ArproddelightModFluids.FLOWING_SUNFLOWER_OIL.get()).explosionResistance(100f).bucket(() -> ArproddelightModItems.SUNFLOWER_OIL_BUCKET.get()).block(() -> (LiquidBlock) ArproddelightModBlocks.SUNFLOWER_OIL.get());
+	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(ArproddelightModFluidTypes.SUNFLOWER_OIL_TYPE, ArproddelightModFluids.SUNFLOWER_OIL,
+            ArproddelightModFluids.FLOWING_SUNFLOWER_OIL).explosionResistance(100f).bucket(ArproddelightModItems.SUNFLOWER_OIL_BUCKET).block(() -> (LiquidBlock) ArproddelightModBlocks.SUNFLOWER_OIL.get());
 
 	private SunflowerOilFluid() {
 		super(PROPERTIES);
 	}
-
 	public static class Source extends SunflowerOilFluid {
-		public int getAmount(FluidState state) {
+		public int getAmount(@NotNull FluidState state) {
 			return 8;
 		}
 
-		public boolean isSource(FluidState state) {
+		public boolean isSource(@NotNull FluidState state) {
 			return true;
 		}
 	}
 
 	public static class Flowing extends SunflowerOilFluid {
-		protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> builder) {
+		protected void createFluidStateDefinition(StateDefinition.@NotNull Builder<Fluid, FluidState> builder) {
 			super.createFluidStateDefinition(builder);
 			builder.add(LEVEL);
 		}
@@ -41,7 +41,7 @@ public abstract class SunflowerOilFluid extends ForgeFlowingFluid {
 			return state.getValue(LEVEL);
 		}
 
-		public boolean isSource(FluidState state) {
+		public boolean isSource(@NotNull FluidState state) {
 			return false;
 		}
 	}

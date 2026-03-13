@@ -24,10 +24,10 @@ import com.arprod.arproddelight.ArproddelightMod;
 
 public class ArproddelightModFluids {
 	public static final DeferredRegister<Fluid> REGISTRY = DeferredRegister.create(ForgeRegistries.FLUIDS, ArproddelightMod.MODID);
-	public static final RegistryObject<FlowingFluid> MELTED_CHEESE = REGISTRY.register("melted_cheese", () -> new MeltedCheeseFluid.Source());
-	public static final RegistryObject<FlowingFluid> FLOWING_MELTED_CHEESE = REGISTRY.register("flowing_melted_cheese", () -> new MeltedCheeseFluid.Flowing());
-	public static final RegistryObject<FlowingFluid> SUNFLOWER_OIL = REGISTRY.register("sunflower_oil", () -> new SunflowerOilFluid.Source());
-	public static final RegistryObject<FlowingFluid> FLOWING_SUNFLOWER_OIL = REGISTRY.register("flowing_sunflower_oil", () -> new SunflowerOilFluid.Flowing());
+	public static final RegistryObject<FlowingFluid> MELTED_CHEESE = REGISTRY.register("melted_cheese", MeltedCheeseFluid.Source::new);
+	public static final RegistryObject<FlowingFluid> FLOWING_MELTED_CHEESE = REGISTRY.register("flowing_melted_cheese", MeltedCheeseFluid.Flowing::new);
+	public static final RegistryObject<FlowingFluid> SUNFLOWER_OIL = REGISTRY.register("sunflower_oil", SunflowerOilFluid.Source::new);
+	public static final RegistryObject<FlowingFluid> FLOWING_SUNFLOWER_OIL = REGISTRY.register("flowing_sunflower_oil", SunflowerOilFluid.Flowing::new);
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class FluidsClientSideHandler {

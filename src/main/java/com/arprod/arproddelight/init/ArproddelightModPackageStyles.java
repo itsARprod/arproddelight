@@ -1,6 +1,5 @@
 package com.arprod.arproddelight.init;
 
-import com.simibubi.create.content.logistics.box.PackageItem;
 import com.simibubi.create.content.logistics.box.PackageStyles;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -8,7 +7,6 @@ import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.Tags;
 
 public class ArproddelightModPackageStyles {
 
@@ -16,7 +14,7 @@ public class ArproddelightModPackageStyles {
             new PackageStyles.PackageStyle("pizza", 16, 3, 23f, false);
 
     private static final ResourceLocation PIZZA_TAG_ID =
-            new ResourceLocation("forge", "pizza");
+            ResourceLocation.fromNamespaceAndPath("forge", "pizza");
 
     /**
      * Called by your custom PackageItem override

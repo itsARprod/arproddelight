@@ -15,5 +15,5 @@ import com.arprod.arproddelight.ArproddelightMod;
 
 public class ArproddelightModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, ArproddelightMod.MODID);
-	public static final RegistryObject<MobEffect> LACTOSE_INTOLERANCE = REGISTRY.register("lactose_intolerance", () -> new LactoseIntoleranceMobEffect());
+	public static final RegistryObject<MobEffect> LACTOSE_INTOLERANCE = REGISTRY.register("lactose_intolerance", LactoseIntoleranceMobEffect::new);
 }

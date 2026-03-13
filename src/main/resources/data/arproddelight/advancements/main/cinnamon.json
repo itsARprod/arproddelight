@@ -4,10 +4,10 @@
       "item": "arproddelight:cinnamon_powder"
     },
     "title": {
-      "translate": "advancements.cinnamon.title"
+      "translate": "advancements.arproddelight.cinnamon.title"
     },
     "description": {
-      "translate": "advancements.cinnamon.descr"
+      "translate": "advancements.arproddelight.cinnamon.descr"
     },
     "frame": "task",
     "show_toast": true,

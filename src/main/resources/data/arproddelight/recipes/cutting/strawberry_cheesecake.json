@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "arproddelight:strawberry_cheesecake"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "arproddelight:strawberry_cheesecake_slice"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

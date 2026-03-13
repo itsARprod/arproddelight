@@ -35,6 +35,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.GELATIN_BLOCK.get(),
 				ArproddelightModItems.MELTED_CHEESE_BUCKET.get(),
 				ArproddelightModItems.SUNFLOWER_OIL_BUCKET.get(),
+				ArproddelightModItems.SUNFLOWER_OIL_BOTTLE.get(),
 				ArproddelightModItems.CUT_POTATOES.get(),
 				ArproddelightModItems.FRIED_CUT_POTATOES.get(),
 
@@ -49,7 +50,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.WILD_COTTON.get(),
 				ArproddelightModItems.STRAWBERRY.get(),
 				ArproddelightModItems.COFFEE_BERRY.get(),
-				ArproddelightModItems.LATTE_CUP.get(),
+
 				ArproddelightModItems.MINT.get(),
 				ArproddelightModItems.COTTON.get(),
 				ArproddelightModItems.COFFEE_BEAN.get(),
@@ -75,7 +76,6 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.SALAMI_PIZZA_SLICE.get(),
 				ArproddelightModItems.BOSCAIOLA_PIZZA.get(),
 				ArproddelightModItems.BOSCAIOLA_PIZZA_SLICE.get(),
-				ArproddelightModItems.STRAWBERRY_CHEESECAKE.get(),
 				ArproddelightModItems.LAVASH.get(),
 				ArproddelightModItems.RAW_BEEF_LAHMAJO.get(),
 				ArproddelightModItems.BEEF_LAHMAJO.get(),
@@ -89,6 +89,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.RAW_CLAY_CUP.get(),
 				ArproddelightModItems.CLAY_CUP.get(),
 				ArproddelightModItems.COFFEE_CUP.get(),
+				ArproddelightModItems.LATTE_CUP.get(),
 				ArproddelightModItems.CANDY_CANE.get(),
 
 				ArproddelightModItems.CANDY_SPEAR.get(),
@@ -114,6 +115,8 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.GELATIN.get(),
 
 				ArproddelightModItems.STRAWBERRY_JELLY.get(),
+				ArproddelightModItems.STRAWBERRY_CHEESECAKE.get(),
+				ArproddelightModItems.STRAWBERRY_CHEESECAKE_SLICE.get(),
 				ArproddelightModItems.STRAWBERRY_JAM.get(),
 				ArproddelightModItems.CINNAMON.get(),
 				ArproddelightModItems.CINNAMON_POWDER.get(),

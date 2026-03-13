@@ -121,11 +121,14 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> DEVILED_EGGS= REGISTRY.register("deviled_eggs", DeviledEggsItem::new);
     public static final RegistryObject<Item> FRYING_BASKET= block(ArproddelightModBlocks.FRYING_BASKET);
     public static final RegistryObject<Item> SUNFLOWER_OIL_BUCKET= REGISTRY.register("sunflower_oil_bucket", SunflowerOilBucketItem::new);
+    public static final RegistryObject<Item> SUNFLOWER_OIL_BOTTLE= REGISTRY.register("sunflower_oil_bottle", SunflowerOilBottleItem::new);
     public static final RegistryObject<Item> BATTERED_COD= REGISTRY.register("battered_cod", BatteredCodItem::new);
     public static final RegistryObject<Item> FRIED_CHICKEN= REGISTRY.register("fried_chicken", FriedChickenItem::new);
     public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE= block(ArproddelightModBlocks.STRAWBERRY_CHEESECAKE);
+    public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE_SLICE= REGISTRY.register("strawberry_cheesecake_slice", StrawberryCheesecakeSlice::new);
     //public static final RegistryObject<Item> PIZZA_BOX= REGISTRY.register("pizza_box", PizzaBoxItem::new);
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
+        assert block.getId() != null;
         return REGISTRY.register(
                 block.getId().getPath(),
                 () -> new BlockItem(block.get(), new Item.Properties())

@@ -58,10 +58,10 @@ public class CoffeeItem extends DrinkableItem {
 			entity.removeEffect(MobEffects.DIG_SPEED);
 			entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, negativeEffectDuration, negativeEffectStrength, false, true));
 			entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, negativeEffectDuration, negativeEffectStrength, false, true));
-			entity.addEffect(new MobEffectInstance(ArproddelightModMobEffects.LACTOSE_INTOLERANCE.get(), 6000, 0, false, true));
+			entity.addEffect(new MobEffectInstance(ArproddelightModMobEffects.LACTOSE_INTOLERANCE.get(), negativeEffectDuration, 0, false, true));
 			//ADVANCEMENT
 			if (entity instanceof ServerPlayer _player) {
-				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("arproddelight:main/coffee"));
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.fromNamespaceAndPath("arproddelight", "main/coffee"));
                 assert _adv != null;
                 AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 				if (!_ap.isDone()) {
@@ -73,7 +73,7 @@ public class CoffeeItem extends DrinkableItem {
 		} else {
 			//POSITIVE EFFECTS
 			for (int i = 0; i < positiveEffects.size(); i++) {
-				entity.addEffect(new MobEffectInstance(positiveEffects.get(i), positiveEffectDurations.get(i) - caffeine * 400, caffeine, false, true));
+				entity.addEffect(new MobEffectInstance(positiveEffects.get(i), positiveEffectDurations.get(i) - caffeine * positiveEffectDurations.get(i) / 4, caffeine, false, true));
 			}
 
 			entity.getPersistentData().putInt("caffeine", (caffeine + 1));

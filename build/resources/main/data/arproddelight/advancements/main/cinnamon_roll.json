@@ -4,10 +4,10 @@
       "item": "arproddelight:cinnamon_roll"
     },
     "title": {
-      "translate": "advancements.cinnamon_roll.title"
+      "translate": "advancements.arproddelight.cinnamon_roll.title"
     },
     "description": {
-      "translate": "advancements.cinnamon_roll.descr"
+      "translate": "advancements.arproddelight.cinnamon_roll.descr"
     },
     "frame": "task",
     "show_toast": true,

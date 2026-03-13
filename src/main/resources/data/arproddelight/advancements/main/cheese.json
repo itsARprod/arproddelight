@@ -4,10 +4,10 @@
       "item": "arproddelight:cheese"
     },
     "title": {
-      "translate": "advancements.cheese.title"
+      "translate": "advancements.arproddelight.cheese.title"
     },
     "description": {
-      "translate": "advancements.cheese.descr"
+      "translate": "advancements.arproddelight.cheese.descr"
     },
     "frame": "task",
     "show_toast": true,

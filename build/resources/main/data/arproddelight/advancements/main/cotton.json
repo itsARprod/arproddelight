@@ -4,10 +4,10 @@
       "item": "arproddelight:cotton"
     },
     "title": {
-      "translate": "advancements.cotton.title"
+      "translate": "advancements.arproddelight.cotton.title"
     },
     "description": {
-      "translate": "advancements.cotton.descr"
+      "translate": "advancements.arproddelight.cotton.descr"
     },
     "frame": "task",
     "show_toast": true,

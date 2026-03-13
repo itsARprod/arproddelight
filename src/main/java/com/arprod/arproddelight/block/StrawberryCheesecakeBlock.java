@@ -10,6 +10,6 @@ public class StrawberryCheesecakeBlock extends PieBlock {
         super(BlockBehaviour.Properties.of()
                 .strength(0.5F)
                 .sound(SoundType.WOOL)
-                .noOcclusion(), ArproddelightModItems.STRAWBERRY);
+                .noOcclusion(), ArproddelightModItems.STRAWBERRY_CHEESECAKE_SLICE);
     }
 }

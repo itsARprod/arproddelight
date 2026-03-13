@@ -4,10 +4,10 @@
       "item": "arproddelight:coffee_cup"
     },
     "title": {
-      "translate": "advancements.coffee.title"
+      "translate": "advancements.arproddelight.coffee.title"
     },
     "description": {
-      "translate": "advancements.coffee.descr"
+      "translate": "advancements.arproddelight.coffee.descr"
     },
     "frame": "task",
     "show_toast": true,

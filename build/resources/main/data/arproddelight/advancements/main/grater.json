@@ -4,10 +4,10 @@
       "item": "arproddelight:grater"
     },
     "title": {
-      "translate": "advancements.grater.title"
+      "translate": "advancements.arproddelight.grater.title"
     },
     "description": {
-      "translate": "advancements.grater.descr"
+      "translate": "advancements.arproddelight.grater.descr"
     },
     "frame": "task",
     "show_toast": true,

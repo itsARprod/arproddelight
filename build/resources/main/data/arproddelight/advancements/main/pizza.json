@@ -4,10 +4,10 @@
       "item": "arproddelight:salami_pizza"
     },
     "title": {
-      "translate": "advancements.pizza.title"
+      "translate": "advancements.arproddelight.pizza.title"
     },
     "description": {
-      "translate": "advancements.pizza.descr"
+      "translate": "advancements.arproddelight.pizza.descr"
     },
     "frame": "task",
     "show_toast": true,

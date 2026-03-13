@@ -52,12 +52,11 @@ public class TonirBlock extends BaseEntityBlock {
         ItemStack off = player.getOffhandItem();
         ItemStack held = main.isEmpty() ? off : main;
 
-        // EMPTY HAND -> EXTRACT + COLLECT STORED XP
-        if (held.isEmpty()) {
-            ItemStack out = tonir.extractItem();
+        ItemStack out = tonir.extractItem();
+        if (!out.isEmpty() && main.isEmpty()) {
             boolean awardedXp = tonir.awardStoredExperience(player);
             if (!out.isEmpty()) {
-                player.addItem(out);
+                player.setItemInHand(hand, out);
                 return InteractionResult.CONSUME;
             }
             return awardedXp ? InteractionResult.CONSUME : InteractionResult.PASS;

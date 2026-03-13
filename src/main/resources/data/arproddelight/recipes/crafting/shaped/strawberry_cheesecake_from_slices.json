@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "arproddelight:strawberry_cheesecake_slice"
+    }
+  },
+  "result": {
+    "item": "arproddelight:strawberry_cheesecake",
+    "count": 1
+  }
+}

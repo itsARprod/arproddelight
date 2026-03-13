@@ -18,8 +18,8 @@ public class SunflowerOilFluidType extends FluidType {
 	@Override
 	public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 		consumer.accept(new IClientFluidTypeExtensions() {
-			private static final ResourceLocation STILL_TEXTURE = new ResourceLocation("arproddelight:block/sunflower_oil_still");
-			private static final ResourceLocation FLOWING_TEXTURE = new ResourceLocation("arproddelight:block/sunflower_oil_flow");
+			private static final ResourceLocation STILL_TEXTURE = ResourceLocation.fromNamespaceAndPath("arproddelight","block/sunflower_oil_still");
+			private static final ResourceLocation FLOWING_TEXTURE = ResourceLocation.fromNamespaceAndPath("arproddelight", "block/sunflower_oil_flow");
 
 			@Override
 			public ResourceLocation getStillTexture() {

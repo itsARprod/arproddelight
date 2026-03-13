@@ -12,7 +12,7 @@ public class ArproddelightModSounds {
 
     static {
         SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, "arproddelight");
-        FRYING_BASKET_SIZZLING = SOUNDS.register("frying_basket_sizzling", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("arproddelight", "frying_basket_sizzling")));
+        FRYING_BASKET_SIZZLING = SOUNDS.register("frying_basket_sizzling", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("arproddelight", "frying_basket_sizzling")));
     }
 }
 
