@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "m": {
+      "tag": "forge:milk"
+    },
+    "s": {
+      "item": "arproddelight:strawberry"
+    },
+    "j": {
+      "item": "arproddelight:strawberry_jelly"
+    }
+  },
+  "pattern": [
+    "sss",
+    "jjj",
+    "mOm"
+  ],
+  "result": {
+    "item": "arproddelight:strawberry_cheesecake"
+  }
+}

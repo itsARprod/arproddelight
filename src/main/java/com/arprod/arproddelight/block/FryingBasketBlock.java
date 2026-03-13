@@ -100,17 +100,4 @@ public class FryingBasketBlock extends BaseEntityBlock implements IWrenchable {
 		return level.isClientSide ? null
 				: createTickerHelper(type, ArproddelightModBlockEntities.FRYING_BASKET.get(), (level1, pos, state1, be) -> FryingBasketBlockEntity.tick(level1, pos, be));
 	}
-
-	@Override
-	public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-		if (!state.is(newState.getBlock())) {
-			BlockEntity blockEntity = level.getBlockEntity(pos);
-			if (blockEntity instanceof FryingBasketBlockEntity fryingBasket) {
-				for (int slot = 0; slot < fryingBasket.getItemHandler().getSlots(); slot++) {
-					Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), fryingBasket.getItemHandler().getStackInSlot(slot));
-				}
-			}
-		}
-		super.onRemove(state, level, pos, newState, movedByPiston);
-	}
 }

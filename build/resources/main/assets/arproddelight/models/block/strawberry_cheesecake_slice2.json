@@ -1,0 +1,11 @@
+{
+  "parent": "farmersdelight:block/pie_slice2",
+  "textures": {
+    "particle": "arproddelight:block/strawberry_cheesecake_top",
+    "bottom": "farmersdelight:block/pie_bottom",
+    "side": "arproddelight:block/strawberry_cheesecake_side",
+    "top": "arproddelight:block/strawberry_cheesecake_top",
+    "inner": "arproddelight:block/strawberry_cheesecake_side"
+  },
+  "render_type": "translucent"
+}

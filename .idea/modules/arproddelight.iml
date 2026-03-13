@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/../.." dumb="true">
+      <excludeFolder url="file://$MODULE_DIR$/../../run/config/jei/world" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/defaultconfigs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/logs/telemetry" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/mods" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/resourcepacks" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (1)/advancements" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (1)/data" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (1)/datapacks" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (1)/poi" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (2)/DIM-1" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (2)/DIM1" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (2)/data" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (2)/datapacks" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (2)/playerdata" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (2)/serverconfig" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World (2)/stats" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World/DIM1" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World/advancements" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World/datapacks" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World/poi" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World/region" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/saves/New World/stats" />
+      <excludeFolder url="file://$MODULE_DIR$/../../run/schematics" />
+    </content>
+  </component>
+</module>

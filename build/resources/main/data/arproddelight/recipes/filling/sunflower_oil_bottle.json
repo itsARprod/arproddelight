@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "fluid": "arproddelight:sunflower_oil",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:sunflower_oil_bottle"
+    }
+  ]
+}
