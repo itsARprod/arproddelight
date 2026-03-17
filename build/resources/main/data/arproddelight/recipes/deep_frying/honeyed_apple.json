@@ -1,0 +1,19 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 5,
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "fuel": {
+    "fluidTag": "forge:honey",
+    "amount": 500
+  },
+  "results": [
+    {
+      "item": "create:honeyed_apple",
+      "count": 1
+    }
+  ]
+}

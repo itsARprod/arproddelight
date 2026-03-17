@@ -38,19 +38,15 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.SUNFLOWER_OIL_BOTTLE.get(),
 				ArproddelightModItems.CUT_POTATOES.get(),
 				ArproddelightModItems.FRIED_CUT_POTATOES.get(),
-
+				ArproddelightModItems.BOILED_POTATO.get(),
+				ArproddelightModItems.MASHED_POTATO.get(),
 				ArproddelightModItems.BANANA_PEEL.get(),
 				ArproddelightModItems.BANANAXE.get(),
-
-
-
-
 				ArproddelightModItems.WILD_COFFEA.get(),
 				ArproddelightModItems.WILD_MINT.get(),
 				ArproddelightModItems.WILD_COTTON.get(),
 				ArproddelightModItems.STRAWBERRY.get(),
 				ArproddelightModItems.COFFEE_BERRY.get(),
-
 				ArproddelightModItems.MINT.get(),
 				ArproddelightModItems.COTTON.get(),
 				ArproddelightModItems.COFFEE_BEAN.get(),
@@ -61,9 +57,9 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.MINT_SEEDS.get(),
 				ArproddelightModItems.COTTON_SEEDS.get(),
 				ArproddelightModItems.CHEESE.get(),
-
 				ArproddelightModItems.GRATED_CHEESE.get(),
 				ArproddelightModItems.MOLD.get(),
+				ArproddelightModItems.MAYONNAISE_JAR.get(),
 				ArproddelightModItems.GRILLED_CHEESE_SANDWICH.get(),
 				ArproddelightModItems.CHEESEBURGER.get(),
 				ArproddelightModItems.DOUBLE_HAMBURGER.get(),
@@ -122,10 +118,8 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.CINNAMON_POWDER.get(),
 				ArproddelightModItems.BERRY_TEA.get(),
 				ArproddelightModItems.CINNAMON_ROLL.get(),
-				ArproddelightModItems.PEPPER.get(),
 				ArproddelightModItems.BOILED_EGG.get(),
 				ArproddelightModItems.DEVILED_EGGS.get(),
-				// ArproddelightModItems.PIZZA_BOX.get(),
 
 
 				ArproddelightModItems.BATTERED_COD.get(),

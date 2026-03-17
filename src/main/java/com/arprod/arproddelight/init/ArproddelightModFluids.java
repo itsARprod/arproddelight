@@ -4,6 +4,9 @@
  */
 package com.arprod.arproddelight.init;
 
+import com.arprod.arproddelight.fluid.MayonnaiseFluid;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,7 +31,8 @@ public class ArproddelightModFluids {
 	public static final RegistryObject<FlowingFluid> FLOWING_MELTED_CHEESE = REGISTRY.register("flowing_melted_cheese", MeltedCheeseFluid.Flowing::new);
 	public static final RegistryObject<FlowingFluid> SUNFLOWER_OIL = REGISTRY.register("sunflower_oil", SunflowerOilFluid.Source::new);
 	public static final RegistryObject<FlowingFluid> FLOWING_SUNFLOWER_OIL = REGISTRY.register("flowing_sunflower_oil", SunflowerOilFluid.Flowing::new);
-
+	public static final RegistryObject<FlowingFluid> MAYONNAISE = REGISTRY.register("mayonnaise", MayonnaiseFluid.Source::new);
+	public static final RegistryObject<FlowingFluid> FLOWING_MAYONNAISE = REGISTRY.register("flowing_mayonnaise", MayonnaiseFluid.Flowing::new);
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class FluidsClientSideHandler {
 		@SubscribeEvent
@@ -39,4 +43,5 @@ public class ArproddelightModFluids {
 			ItemBlockRenderTypes.setRenderLayer(FLOWING_SUNFLOWER_OIL.get(), RenderType.translucent());
 		}
 	}
+
 }

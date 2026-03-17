@@ -2,5 +2,6 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "arproddelight:item/strawberry_cheesecake"
-  }
+  },
+  "render_type": "translucent"
 }

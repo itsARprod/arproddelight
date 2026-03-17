@@ -20,7 +20,7 @@ public class MeltedCheeseFluidType extends FluidType {
 	@Override
 	public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {
 		consumer.accept(new IClientFluidTypeExtensions() {
-			private static final ResourceLocation STILL_TEXTURE = ResourceLocation.fromNamespaceAndPath("arproddelight", "block/cheese_still"), FLOWING_TEXTURE = ResourceLocation.fromNamespaceAndPath("arproddelight", "block/cheese_flowing");
+			private static final ResourceLocation STILL_TEXTURE = ResourceLocation.fromNamespaceAndPath("arproddelight", "block/cheese_still"), FLOWING_TEXTURE = ResourceLocation.fromNamespaceAndPath("arproddelight", "block/cheese_flow");
 
 			@Override
 			public ResourceLocation getStillTexture() {

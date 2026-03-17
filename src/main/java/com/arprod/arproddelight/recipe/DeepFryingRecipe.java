@@ -59,7 +59,7 @@ public class DeepFryingRecipe extends BasinRecipe {
             return 0;
         }
         int required = fuel.getRequiredAmount();
-        return Math.max(1, (required + 9) / 10);
+        return Math.max(1, required / 5);
     }
 
     @Override

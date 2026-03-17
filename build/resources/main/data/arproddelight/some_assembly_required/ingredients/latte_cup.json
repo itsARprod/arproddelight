@@ -1,0 +1,16 @@
+{
+  "container": {
+    "item": "arproddelight:clay_cup"
+  },
+  "displayItem": {
+    "item": "some_assembly_required:spread",
+    "nbt": {
+      "Color": 8408364
+    }
+  },
+  "fullName": {
+    "translate": "ingredient.arproddelight.latte"
+  },
+  "item": "arproddelight:latte_cup",
+  "soundEvent": "some_assembly_required:block.sandwich.add_item.wet"
+}

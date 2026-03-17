@@ -2,19 +2,29 @@
 package com.arprod.arproddelight.item;
 
 import com.arprod.arproddelight.init.ArproddelightModItems;
+import com.simibubi.create.foundation.item.CustomUseEffectsItem;
+import com.simibubi.create.foundation.item.TooltipModifier;
+import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
-
+import com.simibubi.create.foundation.item.TooltipHelper;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 
-public class BananaItem extends ConsumableItem {
+import java.util.List;
+
+public class BananaItem extends ConsumableItem{
 	public BananaItem() {
 		super(new Properties().food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).build()));
 	}

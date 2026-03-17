@@ -1,0 +1,14 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "arproddelight:boiled_potato"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:mashed_potato",
+      "count": 2
+    }
+  ]
+}

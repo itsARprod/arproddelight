@@ -4,6 +4,7 @@
  */
 package com.arprod.arproddelight.init;
 
+import com.arprod.arproddelight.fluid.types.MayonnaiseFluidType;
 import com.arprod.arproddelight.fluid.types.SunflowerOilFluidType;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,5 +19,5 @@ public class ArproddelightModFluidTypes {
 	public static final DeferredRegister<FluidType> REGISTRY = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, ArproddelightMod.MODID);
 	public static final RegistryObject<FluidType> MELTED_CHEESE_TYPE = REGISTRY.register("melted_cheese", MeltedCheeseFluidType::new);
 	public static final RegistryObject<FluidType> SUNFLOWER_OIL_TYPE = REGISTRY.register("sunflower_oil", SunflowerOilFluidType::new);
-
+	public static final RegistryObject<FluidType> MAYONNAISE_TYPE = REGISTRY.register("mayonnaise", MayonnaiseFluidType::new);
 }

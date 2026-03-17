@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "fluidTag": "forge:plantoil",
+      "amount": 100
+    }
+
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "fluid": "arproddelight:mayonnaise"
+    }
+
+  ]
+}

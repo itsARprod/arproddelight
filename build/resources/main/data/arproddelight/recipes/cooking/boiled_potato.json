@@ -1,0 +1,13 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "ingredients": [
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "item": "arproddelight:boiled_potato"
+  }
+}

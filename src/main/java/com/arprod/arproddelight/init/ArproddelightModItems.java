@@ -4,6 +4,7 @@
 package com.arprod.arproddelight.init;
 
 import com.arprod.arproddelight.item.*;
+import com.tterrag.registrate.builders.ItemBuilder;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,6 +15,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import com.arprod.arproddelight.ArproddelightMod;
+
+import java.util.function.Supplier;
 
 public class ArproddelightModItems {
     public static final DeferredRegister<Item> REGISTRY =
@@ -103,7 +106,7 @@ public class ArproddelightModItems {
             )
     );
     public static final RegistryObject<Item> STRAWBERRY_JELLY = REGISTRY.register("strawberry_jelly", StrawberryJellyItem::new);
-    public static final RegistryObject<Item> GELATIN_BLOCK = block(ArproddelightModBlocks.GELATIN_BLOCK);
+    public static final RegistryObject<Item> GELATIN_BLOCK = REGISTRY.register("gelatin_block", GelatinBlockItem::new);
     public static final RegistryObject<Item> STRAWBERRY_JAM = REGISTRY.register("strawberry_jam", StrawberryJamItem::new);
     public static final RegistryObject<Item> MINT_SEEDS = block(ArproddelightModBlocks.MINT_SEEDS);
     public static final RegistryObject<Item> CINNAMON= REGISTRY.register("cinnamon", BasicItem::new);
@@ -119,13 +122,16 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> PEPPER= REGISTRY.register("pepper", PepperItem::new);
     public static final RegistryObject<Item> BOILED_EGG= REGISTRY.register("boiled_egg", BoiledEggItem::new);
     public static final RegistryObject<Item> DEVILED_EGGS= REGISTRY.register("deviled_eggs", DeviledEggsItem::new);
-    public static final RegistryObject<Item> FRYING_BASKET= block(ArproddelightModBlocks.FRYING_BASKET);
+    public static final RegistryObject<Item> FRYING_BASKET= REGISTRY.register("frying_basket", FryingBasketItem::new);
     public static final RegistryObject<Item> SUNFLOWER_OIL_BUCKET= REGISTRY.register("sunflower_oil_bucket", SunflowerOilBucketItem::new);
     public static final RegistryObject<Item> SUNFLOWER_OIL_BOTTLE= REGISTRY.register("sunflower_oil_bottle", SunflowerOilBottleItem::new);
     public static final RegistryObject<Item> BATTERED_COD= REGISTRY.register("battered_cod", BatteredCodItem::new);
     public static final RegistryObject<Item> FRIED_CHICKEN= REGISTRY.register("fried_chicken", FriedChickenItem::new);
     public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE= block(ArproddelightModBlocks.STRAWBERRY_CHEESECAKE);
-    public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE_SLICE= REGISTRY.register("strawberry_cheesecake_slice", StrawberryCheesecakeSlice::new);
+    public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE_SLICE= REGISTRY.register("strawberry_cheesecake_slice", StrawberryCheesecakeSliceItem::new);
+    public static final RegistryObject<Item> MAYONNAISE_JAR= REGISTRY.register("mayonnaise_jar", MayonnaiseJarItem::new);
+    public static final RegistryObject<Item> BOILED_POTATO= REGISTRY.register("boiled_potato", BoiledPotatoItem::new);
+    public static final RegistryObject<Item> MASHED_POTATO= REGISTRY.register("mashed_potato", BoiledPotatoItem::new);
     //public static final RegistryObject<Item> PIZZA_BOX= REGISTRY.register("pizza_box", PizzaBoxItem::new);
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         assert block.getId() != null;
