@@ -1,9 +1,8 @@
 {
-  "frying_basket_sizzling": {
-    "subtitle": "subtitles.arproddelight.frying_basket_sizzling",
+  "music_disc_high": {
     "sounds": [
       {
-        "name": "arproddelight:frying_basket_sizzling"
+        "name": "arproddelight:music_disc_high"
       }
     ]
   }

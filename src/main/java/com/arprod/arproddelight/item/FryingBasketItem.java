@@ -17,6 +17,7 @@ import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 import java.util.List;
+import java.util.Objects;
 
 public class FryingBasketItem extends BlockItem {
     public FryingBasketItem() {
@@ -26,13 +27,6 @@ public class FryingBasketItem extends BlockItem {
     @Override
     public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, level, tooltip, flag);
-
-        if (level == null) return; // ensures client context
-
-        ItemDescription description = ItemDescription.create(this, FontHelper.Palette.STANDARD_CREATE);
-
-        if (description != null) {
-            tooltip.addAll(description.getCurrentLines());
-        }
+        tooltip.addAll(Objects.requireNonNull(ItemDescription.create(this, FontHelper.Palette.STANDARD_CREATE)).getCurrentLines());
     }
 }

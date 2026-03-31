@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 5,
+        "max": 10
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:wheat_flour",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:raw_pasta",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "farmersdelight:rice",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "arproddelight:cheese",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potato",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bread",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

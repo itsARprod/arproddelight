@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:frying_basket"
+    },
+    "title": {
+      "translate": "advancements.arproddelight.frying_basket.title"
+    },
+    "description": {
+      "translate": "advancements.arproddelight.frying_basket.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "frying_basket_0": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "arproddelight:frying_basket"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/oil"
+}

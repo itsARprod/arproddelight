@@ -38,4 +38,9 @@ public class IceCreamHoneyItem extends ConsumableItem {
 
     }
 
+    @Override
+    public Component getName(ItemStack p_41458_) {
+        return Component.translatable("item.arproddelight.ice_cream");
+    }
+
 }

@@ -28,4 +28,9 @@ public class IceCreamChocolateItem extends ConsumableItem {
         super.appendHoverText(itemstack, level, list, flag);
         list.add(Component.translatable("fluid.create.chocolate").withStyle(ChatFormatting.DARK_PURPLE));
     }
+
+    @Override
+    public Component getName(ItemStack p_41458_) {
+        return Component.translatable("item.arproddelight.ice_cream");
+    }
 }

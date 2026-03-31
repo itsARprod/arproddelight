@@ -1,22 +1,19 @@
 package com.arprod.arproddelight.block_entity;
 
-import com.arprod.arproddelight.ArproddelightMod;
 import com.arprod.arproddelight.init.ArproddelightModBlockEntities;
 import com.arprod.arproddelight.init.ArproddelightModRecipes;
-import com.arprod.arproddelight.init.ArproddelightModSounds;
 import com.arprod.arproddelight.recipe.DeepFryingRecipe;
 import com.simibubi.create.AllParticleTypes;
 import com.simibubi.create.content.processing.basin.BasinBlockEntity;
 import com.simibubi.create.content.processing.burner.BlazeBurnerBlock.HeatLevel;
 import com.simibubi.create.content.fluids.particle.FluidParticleData;
+import com.simibubi.create.content.processing.recipe.HeatCondition;
 import com.simibubi.create.foundation.fluid.FluidIngredient;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -34,26 +31,16 @@ import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.registry.ModSounds;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Set;
-import java.util.WeakHashMap;
 
 public class FryingBasketBlockEntity extends BlockEntity {
-    private static final boolean DEBUG_FRYING_BASKET = Boolean.getBoolean("arproddelight.debugFryingBasket");
-    private static final Set<Level> DEBUG_LOGGED_LEVELS = Collections.newSetFromMap(new WeakHashMap<>());
-
     private final ItemStackHandler noDropInventory = new ItemStackHandler(0);
 
     private int progress;
     private int maxProgress;
     @Nullable
     private DeepFryingRecipe activeRecipe;
-    @Nullable
-    private String lastDebugBasinState;
-    @Nullable
-    private String lastDebugRecipeScan;
 
     public FryingBasketBlockEntity(BlockPos pos, BlockState state) {
         super(ArproddelightModBlockEntities.FRYING_BASKET.get(), pos, state);
@@ -64,15 +51,11 @@ public class FryingBasketBlockEntity extends BlockEntity {
             return;
         }
 
-        be.debugLogLoadedRecipes(level, pos);
-
         BasinBlockEntity basin = be.getBasin(level, pos);
         if (basin == null) {
             be.resetProgress();
             return;
         }
-
-        be.debugLogBasinCompletionState(level, pos, basin);
 
         DeepFryingRecipe recipe = be.findMatchingRecipe(level, basin);
         if (recipe == null) {
@@ -109,88 +92,6 @@ public class FryingBasketBlockEntity extends BlockEntity {
         return below instanceof BasinBlockEntity basin ? basin : null;
     }
 
-    private void debugLogLoadedRecipes(Level level, BlockPos pos) {
-        if (!DEBUG_FRYING_BASKET || !DEBUG_LOGGED_LEVELS.add(level)) {
-            return;
-        }
-
-        List<DeepFryingRecipe> recipes = level.getRecipeManager().getAllRecipesFor(ArproddelightModRecipes.DEEP_FRYING_TYPE.get());
-        debugMessage(level, "[FryingBasketDebug] Loaded " + recipes.size() + " deep_frying recipes for level "
-                + level.dimension().location() + " at first basket tick " + pos);
-        for (DeepFryingRecipe recipe : recipes) {
-            String fuelInfo = recipe.hasFuel()
-                    ? recipe.getFuel().serialize().toString() + " (consumes " + recipe.getFuelAmountToConsume() + "mB)"
-                    : "none";
-            debugMessage(level, "[FryingBasketDebug] recipe=" + recipe.getId()
-                    + " processingTime=" + recipe.getProcessingTime()
-                    + " heat=" + recipe.getRequiredHeat().serialize()
-                    + " itemInputs=" + recipe.getIngredients().size()
-                    + " fluidInputs=" + recipe.getFluidIngredients().size()
-                    + " itemOutputs=" + recipe.getRollableResults().size()
-                    + " fluidOutputs=" + recipe.getFluidResults().size()
-                    + " fuel=" + fuelInfo);
-        }
-    }
-
-    private void debugLogBasinCompletionState(Level level, BlockPos pos, BasinBlockEntity basin) {
-        if (!DEBUG_FRYING_BASKET) {
-            return;
-        }
-
-        boolean basinHasItems = !basin.getInputInventory().isEmpty() || !basin.getOutputInventory().isEmpty();
-        if (!basinHasItems) {
-            lastDebugBasinState = null;
-            return;
-        }
-
-        List<DeepFryingRecipe> recipes = getSortedRecipes(level);
-        debugLogRecipeScan(level, pos, basin, recipes);
-        String status;
-        if (recipes.isEmpty()) {
-            status = "basinHasItems=true, recipe=none, willComplete=false, reason=no deep_frying recipes loaded";
-        } else {
-            RecipeCheck bestFailure = null;
-            RecipeCheck success = null;
-            for (DeepFryingRecipe recipe : recipes) {
-                RecipeCheck check = checkRecipe(recipe, basin);
-                if (check.success()) {
-                    success = check;
-                    break;
-                }
-                if (bestFailure == null) {
-                    bestFailure = check;
-                }
-            }
-
-            if (success != null) {
-                status = "basinHasItems=true, recipe=" + success.recipeId() + ", willComplete=true, reason=ok";
-            } else {
-                status = "basinHasItems=true, recipe=" + bestFailure.recipeId() + ", willComplete=false, reason=" + bestFailure.reason();
-            }
-        }
-
-        if (!status.equals(lastDebugBasinState)) {
-            debugMessage(level, "[FryingBasketDebug] " + status + " at " + pos);
-            lastDebugBasinState = status;
-        }
-    }
-
-    private void debugLogRecipeScan(Level level, BlockPos pos, BasinBlockEntity basin, List<DeepFryingRecipe> recipes) {
-        StringBuilder scan = new StringBuilder();
-        scan.append("scanCount=").append(recipes.size());
-        for (DeepFryingRecipe recipe : recipes) {
-            RecipeCheck check = checkRecipe(recipe, basin);
-            scan.append(" | ").append(recipe.getId())
-                    .append(" -> ")
-                    .append(check.success() ? "ok" : "fail(" + check.reason() + ")");
-        }
-
-        String scanText = scan.toString();
-        if (!scanText.equals(lastDebugRecipeScan)) {
-            debugMessage(level, "[FryingBasketDebug] recipeScan " + scanText + " at " + pos);
-            lastDebugRecipeScan = scanText;
-        }
-    }
 
     @Nullable
     private DeepFryingRecipe findMatchingRecipe(Level level, BasinBlockEntity basin) {
@@ -399,7 +300,7 @@ public class FryingBasketBlockEntity extends BlockEntity {
     }
 
     private void emitProcessingEffects(Level level, BlockPos pos, DeepFryingRecipe recipe, BasinBlockEntity basin) {
-        if (progress % 24 == 0) {
+        if (progress % 24 == 0 && recipe.getRequiredHeat() != HeatCondition.NONE) {
             level.playSound(null, pos, ModSounds.BLOCK_SKILLET_SIZZLE.get(), SoundSource.BLOCKS,
                     1.2f, 0.95f + level.random.nextFloat() * 0.1f);
         }
@@ -438,21 +339,6 @@ public class FryingBasketBlockEntity extends BlockEntity {
             return sample;
         }
         return FluidStack.EMPTY;
-    }
-
-    private void debugMessage(Level level, String message) {
-        ArproddelightMod.LOGGER.info(message);
-        if (!(level instanceof ServerLevel serverLevel)) {
-            return;
-        }
-        Component component = Component.literal(message);
-        for (ServerPlayer player : serverLevel.players()) {
-            player.sendSystemMessage(component);
-        }
-    }
-
-    public ItemStackHandler getItemHandler() {
-        return noDropInventory;
     }
 
     @Override

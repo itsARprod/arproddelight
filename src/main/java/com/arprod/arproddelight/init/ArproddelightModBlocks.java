@@ -36,6 +36,7 @@ public class ArproddelightModBlocks {
 	public static final RegistryObject<Block> PEAR_CRATE = REGISTRY.register("pear_crate", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> CHERRY_CRATE = REGISTRY.register("cherry_crate", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 	public static final RegistryObject<Block> COTTON_CRATE = REGISTRY.register("cotton_crate", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+	public static final RegistryObject<Block> COFFEE_BEAN_BAG = REGISTRY.register("coffee_bean_bag", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
 	public static final RegistryObject<Block> CANDY_CANE_BLOCK = REGISTRY.register("candy_cane_block", CandyCaneBlockBlock::new);
 	public static final RegistryObject<Block> SPRUCE_LEAVES_RED_BAUBLE = REGISTRY.register("spruce_leaves_red_bauble", SprueLeavesRedBaubleBlock::new);
@@ -52,6 +53,7 @@ public class ArproddelightModBlocks {
 	public static final RegistryObject<Block> FRYING_BASKET = REGISTRY.register("frying_basket", FryingBasketBlock::new);
 	public static final RegistryObject<Block> SUNFLOWER_OIL = REGISTRY.register("sunflower_oil", SunflowerOilBlock::new);
 	public static final RegistryObject<Block> STRAWBERRY_CHEESECAKE = REGISTRY.register("strawberry_cheesecake", StrawberryCheesecakeBlock::new);
+
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

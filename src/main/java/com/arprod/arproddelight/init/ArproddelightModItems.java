@@ -4,8 +4,6 @@
 package com.arprod.arproddelight.init;
 
 import com.arprod.arproddelight.item.*;
-import com.tterrag.registrate.builders.ItemBuilder;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,8 +13,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import com.arprod.arproddelight.ArproddelightMod;
-
-import java.util.function.Supplier;
 
 public class ArproddelightModItems {
     public static final DeferredRegister<Item> REGISTRY =
@@ -67,7 +63,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> COFFEE_BERRY_CRATE = block(ArproddelightModBlocks.COFFEE_BERRY_CRATE);
     public static final RegistryObject<Item> COTTON_CRATE = block(ArproddelightModBlocks.COTTON_CRATE);
     public static final RegistryObject<Item> MINT_CRATE = block(ArproddelightModBlocks.MINT_CRATE);
-
+    public static final RegistryObject<Item> COFFEE_BEAN_BAG = block(ArproddelightModBlocks.COFFEE_BEAN_BAG);
     public static final RegistryObject<Item> CANDY_CANE = REGISTRY.register("candy_cane", CandyCaneItem::new);
     public static final RegistryObject<Item> CANDY_SPEAR = REGISTRY.register("candy_spear", CandySpearItem::new);
     public static final RegistryObject<Item> CANDY_CANE_BLOCK = block(ArproddelightModBlocks.CANDY_CANE_BLOCK);
@@ -96,15 +92,7 @@ public class ArproddelightModItems {
 //    public static final RegistryObject<Item> BOXING_GLOVE = REGISTRY.register("boxing_glove", BoxingGloveItem::new);
     public static final RegistryObject<Item> MOLD = REGISTRY.register("mold", MoldItem::new);
     public static final RegistryObject<Item> GELATIN = REGISTRY.register("gelatin", GelatinItem::new);
-    public static final RegistryObject<Item> STRAWBERRY = REGISTRY.register("strawberry",
-            () -> new BlockItem(ArproddelightModBlocks.STRAWBERRY.get(),
-                    new Item.Properties()
-                            .food(new FoodProperties.Builder()
-                                    .nutrition(2)
-                                    .saturationMod(0.3f)
-                                    .build())
-            )
-    );
+    public static final RegistryObject<Item> STRAWBERRY = REGISTRY.register("strawberry", StrawberryItem::new);
     public static final RegistryObject<Item> STRAWBERRY_JELLY = REGISTRY.register("strawberry_jelly", StrawberryJellyItem::new);
     public static final RegistryObject<Item> GELATIN_BLOCK = REGISTRY.register("gelatin_block", GelatinBlockItem::new);
     public static final RegistryObject<Item> STRAWBERRY_JAM = REGISTRY.register("strawberry_jam", StrawberryJamItem::new);
@@ -132,6 +120,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> MAYONNAISE_JAR= REGISTRY.register("mayonnaise_jar", MayonnaiseJarItem::new);
     public static final RegistryObject<Item> BOILED_POTATO= REGISTRY.register("boiled_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MASHED_POTATO= REGISTRY.register("mashed_potato", BoiledPotatoItem::new);
+    public static final RegistryObject<Item> MUSIC_DISC_HIGH = REGISTRY.register("music_disc_high", MusicDiscHighItem::new);
     //public static final RegistryObject<Item> PIZZA_BOX= REGISTRY.register("pizza_box", PizzaBoxItem::new);
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         assert block.getId() != null;

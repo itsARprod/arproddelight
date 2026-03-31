@@ -9,7 +9,7 @@
     }
   },
   "fullName": {
-    "translate": "fluid.arproddelight.mayonnaise"
+    "translate": "fluid_type.arproddelight.mayonnaise"
   },
   "item": "arproddelight:mayonnaise_jar",
   "soundEvent": "some_assembly_required:block.sandwich.add_item.moist"

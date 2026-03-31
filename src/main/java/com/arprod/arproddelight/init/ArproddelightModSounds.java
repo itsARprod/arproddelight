@@ -8,11 +8,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ArproddelightModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS;
-    public static final RegistryObject<SoundEvent> FRYING_BASKET_SIZZLING;
+    public static final RegistryObject<SoundEvent> MUSIC_DISC_HIGH;
 
     static {
         SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, "arproddelight");
-        FRYING_BASKET_SIZZLING = SOUNDS.register("frying_basket_sizzling", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("arproddelight", "frying_basket_sizzling")));
+        MUSIC_DISC_HIGH = SOUNDS.register("music_disc_high", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("arproddelight", "music_disc_high")));
     }
 }
-

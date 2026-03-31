@@ -111,7 +111,7 @@ public class TonirBlockEntity extends BlockEntity implements WorldlyContainer {
         BlockState below = level.getBlockState(pos.below());
         return below.is(TagKey.create(
                 Registries.BLOCK,
-                new ResourceLocation("farmersdelight", "heat_sources")
+                ResourceLocation.fromNamespaceAndPath("farmersdelight", "heat_sources")
         ));
     }
 

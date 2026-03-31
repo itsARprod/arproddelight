@@ -4,14 +4,11 @@ package com.arprod.arproddelight.item;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
-import com.arprod.arproddelight.procedures.IceCreamPlayerFinishesUsingItemProcedure;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 import java.util.List;
@@ -27,4 +24,8 @@ public class IceCreamItem extends ConsumableItem {
 		list.add(Component.translatable("fluid_type.minecraft.milk").withStyle(ChatFormatting.GRAY));
 	}
 
+	@Override
+	public Component getName(ItemStack p_41458_) {
+		return Component.translatable("item.arproddelight.ice_cream");
+	}
 }

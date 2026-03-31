@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:sunflower_oil_bottle"
+    },
+    "title": {
+      "translate": "advancements.arproddelight.oil.title"
+    },
+    "description": {
+      "translate": "advancements.arproddelight.oil.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cotton_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arproddelight:sunflower_oil_bottle",
+              "arproddelight:sunflower_oil_bucket"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/root"
+}
