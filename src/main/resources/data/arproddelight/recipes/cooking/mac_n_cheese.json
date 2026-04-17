@@ -1,7 +1,7 @@
 {
   "type": "farmersdelight:cooking",
   "cookingtime": 200,
-  "experience": 1.0,
+  "experience": 0.5,
   "ingredients": [
     {
       "tag": "forge:pasta"
@@ -10,12 +10,14 @@
       "item": "arproddelight:grated_cheese"
     },
     {
-      "item": "minecraft:milk_bucket"
+      "tag": "forge:milk"
     }
   ],
   "recipe_book_tab": "meals",
   "result": {
     "item": "arproddelight:mac_n_cheese"
   },
-
+  "container": {
+      "item": "minecraft:bowl"
+    }
 }

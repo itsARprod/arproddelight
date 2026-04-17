@@ -15,7 +15,7 @@ import vectorwing.farmersdelight.common.block.PieBlock;
 public class SalamiPizzaBlock extends PieBlock {
 
     // Example voxel shape: slightly taller than default
-    private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 2, 15);
+    private static final VoxelShape SHAPE = Block.box(2.0F, 0.0F, 2.0F, 14.0F, 3.0F, 14.0F);
 
     public SalamiPizzaBlock() {
         super(
@@ -30,11 +30,6 @@ public class SalamiPizzaBlock extends PieBlock {
 
     @Override
     public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, net.minecraft.core.@NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return SHAPE;
-    }
-
-    @Override
-    public @NotNull VoxelShape getVisualShape(@NotNull BlockState state, @NotNull BlockGetter world, net.minecraft.core.@NotNull BlockPos pos, @NotNull CollisionContext context) {
         return SHAPE;
     }
 }

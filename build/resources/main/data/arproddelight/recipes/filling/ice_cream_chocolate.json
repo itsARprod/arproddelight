@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "arproddelight:ice_cream_cream"
+    },
+    {
+      "amount": 100,
+      "fluid": "create:chocolate"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:ice_cream_chocolate"
+    }
+  ]
+}

@@ -9,14 +9,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
-import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.block.PieBlock;
 
 public class MargheritaPizzaBlock extends PieBlock {
 
-    // Example voxel shape: slightly taller than default
-    private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 2, 15);
+    
+    private static final VoxelShape SHAPE = Block.box(2.0F, 0.0F, 2.0F, 14.0F, 3.0F, 14.0F);
 
     public MargheritaPizzaBlock() {
         super(
@@ -30,12 +28,8 @@ public class MargheritaPizzaBlock extends PieBlock {
     }
 
     @Override
-    public @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull net.minecraft.core.BlockPos pos, @NotNull CollisionContext context) {
+    public  VoxelShape getShape( BlockState state,  BlockGetter world,  net.minecraft.core.BlockPos pos,  CollisionContext context) {
         return SHAPE;
     }
 
-    @Override
-    public @NotNull VoxelShape getVisualShape(@NotNull BlockState state, @NotNull BlockGetter world, @NotNull net.minecraft.core.BlockPos pos, @NotNull CollisionContext context) {
-        return SHAPE;
-    }
 }

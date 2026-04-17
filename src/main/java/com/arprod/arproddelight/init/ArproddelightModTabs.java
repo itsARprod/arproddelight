@@ -107,9 +107,8 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.BURNT_MARSHMALLOW_ON_STICK.get(),
 				ArproddelightModItems.CHEVON.get(),
 				ArproddelightModItems.COOKED_CHEVON.get(),
-				ArproddelightModItems.AXOLOTL_GILLS.get(),
-				ArproddelightModItems.AXOLOTL_HAT_HELMET.get(),
-				//ArproddelightModItems.FRIED_DRAGON_EGG.get(),
+//				ArproddelightModItems.AXOLOTL_GILLS.get(),
+//				ArproddelightModItems.AXOLOTL_HAT_HELMET.get(),
 				ArproddelightModItems.GELATIN.get(),
 
 				ArproddelightModItems.STRAWBERRY_JELLY.get(),

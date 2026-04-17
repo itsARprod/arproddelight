@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "arproddelight:wheat_farm",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 12987423,
+    "spacing": 48,
+    "separation": 16
+  }
+}

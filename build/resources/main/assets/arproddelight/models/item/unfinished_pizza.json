@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "arproddelight:item/pizzadough"
+    "layer0": "arproddelight:item/unfinished_pizza"
   }
 }

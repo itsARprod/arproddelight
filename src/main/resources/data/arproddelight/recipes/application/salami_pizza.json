@@ -1,0 +1,18 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "arproddelight:margherita_pizza"
+    },
+    [
+      {
+        "tag": "arproddelight:salami_ingredients"
+      }
+    ]
+  ],
+  "results": [
+    {
+      "item": "arproddelight:salami_pizza"
+    }
+  ]
+}

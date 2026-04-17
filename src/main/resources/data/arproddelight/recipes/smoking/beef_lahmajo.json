@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "arproddelight:raw_beef_lahmajo"
+  },
+  "result": "arproddelight:beef_lahmajo"
+}

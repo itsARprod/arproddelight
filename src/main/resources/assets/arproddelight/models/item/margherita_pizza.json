@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "arproddelight:item/margheritta"
+    "layer0": "arproddelight:item/margherita_pizza"
   },
   "render_type": "translucent"
 }

@@ -1,6 +1,15 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "arproddelight:item/marshmallow_on_a_stick"
-  }
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "arproddelight:item/marshmallow_on_a_stick"
+	},
+	"display": {
+		"fixed": {
+			"rotation": [-90, -45, 23.5],
+			"translation": [-1.5, -1.5, -12],
+			"scale": [1.8, 1.8, 1.8]
+		}
+	}
 }

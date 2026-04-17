@@ -36,13 +36,13 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> DOUBLE_HAMBURGER = REGISTRY.register("double_hamburger", DoubleHamburgerItem::new);
     public static final RegistryObject<Item> CHEESE_AND_TOMATO_DURUM = REGISTRY.register("cheese_and_tomato_durum", CheeseAndTomatoDurumItem::new);
     public static final RegistryObject<Item> UZBEK_RICE = REGISTRY.register("uzbek_rice", UzbekRiceItem::new);
-    //public static final RegistryObject<Item> CREAM_BUCKET = REGISTRY.register("cream_bucket", CreamItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CONE = REGISTRY.register("ice_cream_cone", IceCreamConeItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CREAM = REGISTRY.register("ice_cream_cream", IceCreamItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CHOCOLATE = REGISTRY.register("ice_cream_chocolate", IceCreamChocolateItem::new);
     public static final RegistryObject<Item> RAW_BEEF_LAHMAJO = REGISTRY.register("raw_beef_lahmajo", RawBeefLahmajoItem::new);
     public static final RegistryObject<Item> BEEF_LAHMAJO = REGISTRY.register("beef_lahmajo", BeefLahmajoItem::new);
     public static final RegistryObject<Item> ICE_CREAM_HONEY = REGISTRY.register("ice_cream_honey", IceCreamHoneyItem::new);
+    public static final RegistryObject<Item> ICE_CREAM_CINNAMON = REGISTRY.register("ice_cream_cinnamon", IceCreamCinnamonItem::new);
     public static final RegistryObject<Item> BANANA_PEEL = block(ArproddelightModBlocks.BANANA_PEEL);
     public static final RegistryObject<Item> BANANA = REGISTRY.register("banana", BananaItem::new);
     public static final RegistryObject<Item> GRATER = REGISTRY.register("grater", GraterItem::new);
@@ -56,7 +56,6 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> COFFEE_CUP = REGISTRY.register("coffee_cup", CoffeeCupItem::new);
     public static final RegistryObject<Item> LATTE_CUP = REGISTRY.register("latte_cup", LatteCupItem::new);
     public static final RegistryObject<Item> BANANAXE = REGISTRY.register("bananaxe", BananaxeItem::new);
-
     public static final RegistryObject<Item> BANANA_CRATE = REGISTRY.register("banana_crate", () -> new BananaCrateItem(ArproddelightModBlocks.BANANA_CRATE.get()));
     public static final RegistryObject<Item> CHERRY_CRATE = block(ArproddelightModBlocks.CHERRY_CRATE);
     public static final RegistryObject<Item> PEAR_CRATE = block(ArproddelightModBlocks.PEAR_CRATE);
@@ -87,9 +86,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> PEAR = REGISTRY.register("pear", PearItem::new);
     public static final RegistryObject<Item> GOLDEN_PEAR = REGISTRY.register("golden_pear", GoldenPearItem::new);
     public static final RegistryObject<Item> AXOLOTL_GILLS = REGISTRY.register("axolotl_gills", AxolotlGillsItem::new);
-    public static final RegistryObject<Item> AXOLOTL_HAT_HELMET = REGISTRY.register("axolotl_hat_helmet", AxolotlHatItem.Helmet::new);
-    //public static final RegistryObject<Item> FRIED_DRAGON_EGG = REGISTRY.register("fried_dragon_egg", FriedDragonEggItem::new);
-//    public static final RegistryObject<Item> BOXING_GLOVE = REGISTRY.register("boxing_glove", BoxingGloveItem::new);
+    public static final RegistryObject<Item> AXOLOTL_HAT_HELMET = REGISTRY.register("axolotl_hat_helmet", AxolotlHatItem::new);
     public static final RegistryObject<Item> MOLD = REGISTRY.register("mold", MoldItem::new);
     public static final RegistryObject<Item> GELATIN = REGISTRY.register("gelatin", GelatinItem::new);
     public static final RegistryObject<Item> STRAWBERRY = REGISTRY.register("strawberry", StrawberryItem::new);

@@ -47,25 +47,27 @@ public class TonirBlock extends BaseEntityBlock {
         TonirBlockEntity tonir = (TonirBlockEntity) level.getBlockEntity(pos);
         if (tonir == null) return InteractionResult.PASS;
 
-        // MAIN HAND FIRST, THEN OFFHAND
-        ItemStack main = player.getMainHandItem();
-        ItemStack off = player.getOffhandItem();
-        ItemStack held = main.isEmpty() ? off : main;
+        ItemStack held = player.getMainHandItem();
 
-        ItemStack out = tonir.extractItem();
-        if (!out.isEmpty() && main.isEmpty()) {
-            boolean awardedXp = tonir.awardStoredExperience(player);
+        // Only extract if the player hand is empty.
+        if (held.isEmpty()) {
+            ItemStack out = tonir.extractItem();
             if (!out.isEmpty()) {
                 player.setItemInHand(hand, out);
                 return InteractionResult.CONSUME;
             }
-            return awardedXp ? InteractionResult.CONSUME : InteractionResult.PASS;
+            return tonir.awardStoredExperience(player) ? InteractionResult.CONSUME : InteractionResult.PASS;
         }
 
-        // INSERT
+        // INSERT (only when block is empty)
+        if (!tonir.getStack().isEmpty()) {
+            return InteractionResult.PASS;
+        }
+
         int inserted = tonir.insertFromPlayer(held);
         if (inserted > 0) {
             held.shrink(inserted);
+            player.swing(hand);
             return InteractionResult.CONSUME;
         }
 
@@ -76,7 +78,7 @@ public class TonirBlock extends BaseEntityBlock {
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(
             Level level, BlockState state, BlockEntityType<T> type) {
         return level.isClientSide ? null :
-                createTickerHelper(type, ArproddelightModBlockEntities.TONIR.get(), TonirBlockEntity::tick);
+                createTickerHelper(type, ArproddelightModBlockEntities.TONIR.get(), (level1, pos, state1, be) -> TonirBlockEntity.tick(level1, pos, be));
     }
 
     @Override

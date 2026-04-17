@@ -1,0 +1,10 @@
+{
+  "parent": "arproddelight:block/pizza_slice3",
+  "textures": {
+    "particle": "arproddelight:block/boscaiola_pizza_top",
+    "bottom": "farmersdelight:block/pie_bottom",
+    "inner": "arproddelight:block/margherita_pizza_inner",
+    "side": "farmersdelight:block/pie_side",
+    "top": "arproddelight:block/boscaiola_pizza_top"
+  }
+}

@@ -2,8 +2,10 @@ package com.arprod.arproddelight.compat.jei;
 
 import com.arprod.arproddelight.ArproddelightMod;
 import com.arprod.arproddelight.compat.jei.category.DeepFryingCategory;
+import com.arprod.arproddelight.compat.jei.category.TonirCookingCategory;
 import com.arprod.arproddelight.init.ArproddelightModBlocks;
 import com.arprod.arproddelight.init.ArproddelightModRecipes;
+import com.arprod.arproddelight.recipe.TonirCookingRecipe;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.compat.jei.DoubleItemIcon;
 import com.simibubi.create.compat.jei.EmptyBackground;
@@ -36,7 +38,7 @@ public class ArproddelightJEIPlugin implements IModPlugin {
 
     private static final ResourceLocation PLUGIN_ID = id("jei_plugin");
 
-    private final List<CreateRecipeCategory<?>> categories = new ArrayList<>();
+    private final List<CreateRecipeCategory<?>> createCategories = new ArrayList<>();
 
     @Override
     public @NotNull ResourceLocation getPluginUid() {
@@ -45,19 +47,23 @@ public class ArproddelightJEIPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        categories.clear();
-        categories.add(createDeepFryingCategory());
-        registration.addRecipeCategories(categories.toArray(new CreateRecipeCategory[0]));
+        createCategories.clear();
+        createCategories.add(createDeepFryingCategory());
+        TonirCookingCategory tonirCookingCategory = new TonirCookingCategory(registration.getJeiHelpers().getGuiHelper());
+        registration.addRecipeCategories(tonirCookingCategory);
+        registration.addRecipeCategories(createCategories.toArray(new CreateRecipeCategory[0]));
     }
 
     @Override
     public void registerRecipes(@NotNull IRecipeRegistration registration) {
-        categories.forEach(c -> c.registerRecipes(registration));
+        createCategories.forEach(c -> c.registerRecipes(registration));
+        registration.addRecipes(TonirCookingCategory.RECIPE_TYPE, getTonirCookingRecipes());
     }
 
     @Override
     public void registerRecipeCatalysts(@NotNull IRecipeCatalystRegistration registration) {
-        categories.forEach(c -> c.registerCatalysts(registration));
+        createCategories.forEach(c -> c.registerCatalysts(registration));
+        registration.addRecipeCatalyst(new ItemStack(ArproddelightModBlocks.TONIR.get()), TonirCookingCategory.RECIPE_TYPE);
     }
 
     private DeepFryingCategory createDeepFryingCategory() {
@@ -84,5 +90,13 @@ public class ArproddelightJEIPlugin implements IModPlugin {
                 catalysts
         );
         return new DeepFryingCategory(info);
+    }
+
+    private static List<TonirCookingRecipe> getTonirCookingRecipes() {
+        if (Minecraft.getInstance().getConnection() == null) {
+            return Collections.emptyList();
+        }
+        return new ArrayList<>(Minecraft.getInstance().getConnection().getRecipeManager()
+                .getAllRecipesFor(ArproddelightModRecipes.TONIR_TYPE.get()));
     }
 }

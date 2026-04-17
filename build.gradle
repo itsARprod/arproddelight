@@ -17,8 +17,7 @@ apply plugin: 'maven-publish'
 
 
 group = 'com.arprod.arproddelight'
-version = '3.0.1'
-def string = archivesBaseName = 'arproddelight'
+version = '4.0.0'
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)

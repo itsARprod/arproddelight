@@ -1,7 +1,7 @@
 {
   "type": "create:sequenced_assembly",
   "ingredient": {
-    "tag": "forge:dough"
+    "item": "farmersdelight:pie_crust"
   },
   "loops": 1,
   "results": [
@@ -10,19 +10,6 @@
     }
   ],
   "sequence": [
-    {
-      "type": "create:pressing",
-      "ingredients": [
-        {
-          "item": "arproddelight:unfinished_pizza"
-        }
-      ],
-      "results": [
-        {
-          "item": "arproddelight:unfinished_pizza"
-        }
-      ]
-    },
     {
       "type": "create:deploying",
       "ingredients": [

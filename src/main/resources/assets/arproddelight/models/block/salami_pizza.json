@@ -1,9 +1,9 @@
 {
-  "parent": "arproddelight:custom/pizza",
+  "parent": "arproddelight:block/pizza",
   "textures": {
-    "all": "arproddelight:block/salami",
-    "particle": "arproddelight:block/salami",
-    "0": "arproddelight:block/salami"
-  },
-  "render_type": "solid"
+    "particle": "arproddelight:block/salami_pizza_top",
+    "bottom": "farmersdelight:block/pie_bottom",
+    "side": "farmersdelight:block/pie_side",
+    "top": "arproddelight:block/salami_pizza_top"
+  }
 }

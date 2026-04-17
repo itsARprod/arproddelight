@@ -148,8 +148,12 @@
   "item_group.arproddelight.a_rprods_delight": "ARprod's Delight",
   "jei.arproddelight.deep_frying.fuel_consumed": "Consumed: %s mB",
   "jei.arproddelight.deep_frying.fuel_required": "Minimum: %s mB",
+  "jei.arproddelight.tonir.experience": "%sXP",
   "recipe.arproddelight.deep_frying": "Deep Frying",
+  "recipe.arproddelight.tonir_cooking": "Tonir Cooking",
   "subtitles.arproddelight.frying_basket_sizzling": "Frying Basket sizzles",
   "item.arproddelight.music_disc_high": "Music Disc",
-  "item.arproddelight.music_disc_high.desc": "JBP - High (NCS Release)"
+  "item.arproddelight.music_disc_high.desc": "JBP - High (NCS Release)",
+  "item.arproddelight.boiled_potato": "Boiled Potato",
+  "item.arproddelight.mashed_potato": "Mashed Potato"
 }

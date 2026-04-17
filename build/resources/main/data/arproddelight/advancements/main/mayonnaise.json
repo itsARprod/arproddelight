@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:mayonnaise_jar"
+    },
+    "title": {
+      "translate": "advancements.arproddelight.mayonnaise.title"
+    },
+    "description": {
+      "translate": "advancements.arproddelight.mayonnaise.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mayonnaise_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arproddelight:mayonnaise_jar"
+            ],
+            "count": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "arproddelight:main/oil"
+}

@@ -10,12 +10,13 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.Containers;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -30,6 +31,10 @@ public class TonirBlockEntity extends BlockEntity implements WorldlyContainer {
 
     private static final int TONIR_STACK_CAP = 16;
     private static final int[] SLOTS = new int[]{0};
+    private static final TagKey<Block> HEAT_SOURCES = TagKey.create(
+            Registries.BLOCK,
+            ResourceLocation.fromNamespaceAndPath("farmersdelight", "heat_sources")
+    );
 
     private ItemStack stack = ItemStack.EMPTY;
     private int cookTime = 0;
@@ -56,7 +61,7 @@ public class TonirBlockEntity extends BlockEntity implements WorldlyContainer {
 
         if (stack.isEmpty()) {
             stack = incoming.copyWithCount(amount);
-        } else {
+        } else if (stack.getItem() == incoming.getItem()) {
             stack.grow(amount);
         }
         setChanged();
@@ -79,22 +84,22 @@ public class TonirBlockEntity extends BlockEntity implements WorldlyContainer {
        TICK
        --------------------------------------------------------- */
 
-    public static void tick(Level level, BlockPos pos, BlockState state, TonirBlockEntity be) {
+    public static void tick(Level level, BlockPos pos, TonirBlockEntity be) {
         if (level.isClientSide) return;
 
         if (be.stack.isEmpty()) {
-            be.cookTime = 0;
+            be.resetCookTime();
             return;
         }
 
         if (!hasHeat(level, pos)) {
-            be.cookTime = 0;
+            be.resetCookTime();
             return;
         }
 
         TonirCookingRecipe recipe = be.getRecipe(level);
         if (recipe == null) {
-            be.cookTime = 0;
+            be.resetCookTime();
             return;
         }
 
@@ -103,16 +108,13 @@ public class TonirBlockEntity extends BlockEntity implements WorldlyContainer {
 
         if (be.cookTime >= be.cookTimeTotal) {
             be.finishCooking(level, pos, recipe);
-            be.cookTime = 0;
+            be.resetCookTime();
         }
     }
 
     private static boolean hasHeat(Level level, BlockPos pos) {
         BlockState below = level.getBlockState(pos.below());
-        return below.is(TagKey.create(
-                Registries.BLOCK,
-                ResourceLocation.fromNamespaceAndPath("farmersdelight", "heat_sources")
-        ));
+        return below.is(HEAT_SOURCES);
     }
 
     private TonirCookingRecipe getRecipe(Level level) {
@@ -123,15 +125,29 @@ public class TonirBlockEntity extends BlockEntity implements WorldlyContainer {
     }
 
     private void finishCooking(Level level, BlockPos pos, TonirCookingRecipe recipe) {
+        if (stack.isEmpty()) {
+            return;
+        }
+
         int inputCount = stack.getCount();
-        ItemStack result = recipe.getResult().copy();
+        ItemStack resultTemplate = recipe.getResult();
+        if (resultTemplate.isEmpty()) {
+            return;
+        }
 
         // Cook the whole stack in one cycle and keep output in internal inventory.
-        int totalOutput = inputCount * result.getCount();
-        stack = result.copyWithCount(Math.min(getLimitFor(result), totalOutput));
+        int totalOutput = inputCount * resultTemplate.getCount();
+        int limit = getLimitFor(resultTemplate);
+        int storedOutput = Math.min(limit, totalOutput);
+        stack = resultTemplate.copyWithCount(storedOutput);
+
+        int overflow = totalOutput - storedOutput;
+        if (overflow > 0) {
+            dropOverflow(level, pos, resultTemplate, overflow);
+        }
 
         // Store XP for later player collection (furnace-like behavior).
-        storedExperience += Math.max(0, recipe.getExperience()) * inputCount;
+        storedExperience += recipe.getExperience() * inputCount;
 
         setChanged();
     }
@@ -249,6 +265,22 @@ public class TonirBlockEntity extends BlockEntity implements WorldlyContainer {
         if (incoming.isEmpty()) return false;
         if (stack.isEmpty()) return incoming.getCount() > 0;
         return ItemStack.isSameItemSameTags(stack, incoming) && stack.getCount() < getLimitFor(stack);
+    }
+
+    private void resetCookTime() {
+        if (cookTime != 0) {
+            cookTime = 0;
+        }
+    }
+
+    private static void dropOverflow(Level level, BlockPos pos, ItemStack template, int count) {
+        int remaining = count;
+        while (remaining > 0) {
+            int dropCount = Math.min(remaining, template.getMaxStackSize());
+            ItemStack drop = template.copyWithCount(dropCount);
+            Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), drop);
+            remaining -= dropCount;
+        }
     }
 
     private int getLimitFor(ItemStack itemStack) {

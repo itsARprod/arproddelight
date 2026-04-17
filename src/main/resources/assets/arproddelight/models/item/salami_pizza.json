@@ -1,7 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "arproddelight:item/salamipizza"
-  },
-  "render_type": "translucent"
+    "layer0": "arproddelight:item/salami_pizza"
+  }
 }

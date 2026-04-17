@@ -1,9 +1,9 @@
 {
-  "parent": "arproddelight:custom/pizza",
+  "parent": "arproddelight:block/pizza",
   "textures": {
-    "all": "arproddelight:block/shroom",
-    "particle": "arproddelight:block/shroom",
-    "0": "arproddelight:block/shroom"
-  },
-  "render_type": "solid"
+    "particle": "arproddelight:block/boscaiola_pizza_top",
+    "bottom": "farmersdelight:block/pie_bottom",
+    "side": "farmersdelight:block/pie_side",
+    "top": "arproddelight:block/boscaiola_pizza_top"
+  }
 }
