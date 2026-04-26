@@ -20,7 +20,6 @@ public class ArproddelightModCompostableItems {
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.MINT_SEEDS.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.MINT.get(), 0.5f);
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.WILD_MINT.get(), 0.65f);
-        ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.STRAWBERRY.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.COFFEE_BERRY.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.MOLD.get(), 1);
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.COTTON.get(), 0.3f);

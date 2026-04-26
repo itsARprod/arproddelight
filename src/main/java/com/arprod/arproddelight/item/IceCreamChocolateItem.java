@@ -17,7 +17,7 @@ import java.util.List;
 
 public class IceCreamChocolateItem extends ConsumableItem {
 	public IceCreamChocolateItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(8).saturationMod(0.3f).alwaysEat().effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,600,1),1).build()),true);
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(8).saturationMod(0.3f).alwaysEat().effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED,600,1),1).build()),true);
 	}
 
     @Override

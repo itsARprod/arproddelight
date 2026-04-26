@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "ingredients": [
     {
-      "item": "arproddelight:strawberry"
+      "item": "minecraft:glow_berries"
     },
     {
       "item": "arproddelight:cherry"

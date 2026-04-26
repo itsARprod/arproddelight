@@ -7,7 +7,7 @@
     "east": "arproddelight:block/banana_crate_side",
     "south": "arproddelight:block/banana_crate_side",
     "west": "arproddelight:block/banana_crate_side",
-    "particle": "arproddelight:block/crate_bottom"
+    "particle": "farmersdelight:block/crate_bottom"
   },
   "render_type": "solid"
 }

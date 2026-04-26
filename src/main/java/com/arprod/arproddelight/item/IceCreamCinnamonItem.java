@@ -15,7 +15,7 @@ import java.util.List;
 
 public class IceCreamCinnamonItem extends ConsumableItem {
 	public IceCreamCinnamonItem() {
-		super(new Properties().food((new FoodProperties.Builder()).nutrition(8).saturationMod(0.3f).alwaysEat().effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get()),1).build()),true);
+		super(new Properties().food((new FoodProperties.Builder()).nutrition(8).saturationMod(0.3f).alwaysEat().effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(),300,0),1).build()),true);
 	}
 
     @Override

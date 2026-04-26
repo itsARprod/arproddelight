@@ -7,7 +7,7 @@
     "east": "arproddelight:block/pear_crate_side",
     "south": "arproddelight:block/pear_crate_side",
     "west": "arproddelight:block/pear_crate_side",
-    "particle": "arproddelight:block/crate_bottom"
+    "particle": "farmersdelight:block/crate_bottom"
   },
   "render_type": "solid"
 }

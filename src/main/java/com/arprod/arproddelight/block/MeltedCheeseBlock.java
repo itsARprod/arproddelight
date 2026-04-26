@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import com.arprod.arproddelight.init.ArproddelightModFluids;
@@ -19,7 +18,7 @@ public class MeltedCheeseBlock extends LiquidBlock {
 
     public MeltedCheeseBlock() {
         super(
-                () -> ArproddelightModFluids.MELTED_CHEESE.get(),
+                ArproddelightModFluids.MELTED_CHEESE,
                 BlockBehaviour.Properties.of()
                         .strength(100f)
                         .noCollission()

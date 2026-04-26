@@ -19,7 +19,7 @@ public class ArproddelightModTabs {
 	public static final RegistryObject<CreativeModeTab> ARPRODDELIGHT = REGISTRY.register("arproddelight",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.arproddelight.a_rprods_delight")).icon(() -> new ItemStack(ArproddelightModItems.CHEESE.get())).displayItems((parameters, tabData) -> {
 				java.util.List.of(
-						//blocks
+				//blocks
 				ArproddelightModItems.TONIR.get(),
 				ArproddelightModItems.FRYING_BASKET.get(),
 				ArproddelightModItems.GRATER.get(),
@@ -31,7 +31,6 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.MINT_CRATE.get(),
 				ArproddelightModItems.COTTON_CRATE.get(),
 				ArproddelightModItems.COFFEE_BEAN_BAG.get(),
-
 				ArproddelightModItems.CHEESE_BLOCK.get(),
 				ArproddelightModItems.CANDY_CANE_BLOCK.get(),
 				ArproddelightModItems.GELATIN_BLOCK.get(),
@@ -47,7 +46,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.WILD_COFFEA.get(),
 				ArproddelightModItems.WILD_MINT.get(),
 				ArproddelightModItems.WILD_COTTON.get(),
-				ArproddelightModItems.STRAWBERRY.get(),
+				//fruits n veggies
 				ArproddelightModItems.COFFEE_BERRY.get(),
 				ArproddelightModItems.MINT.get(),
 				ArproddelightModItems.COTTON.get(),
@@ -58,16 +57,20 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.GOLDEN_PEAR.get(),
 				ArproddelightModItems.MINT_SEEDS.get(),
 				ArproddelightModItems.COTTON_SEEDS.get(),
+				//ingredients
 				ArproddelightModItems.CHEESE.get(),
 				ArproddelightModItems.GRATED_CHEESE.get(),
 				ArproddelightModItems.MOLD.get(),
 				ArproddelightModItems.MAYONNAISE_JAR.get(),
+				ArproddelightModItems.GELATIN.get(),
+				ArproddelightModItems.CINNAMON.get(),
+				ArproddelightModItems.CINNAMON_POWDER.get(),
+				//simple meals
 				ArproddelightModItems.GRILLED_CHEESE_SANDWICH.get(),
 				ArproddelightModItems.CHEESEBURGER.get(),
 				ArproddelightModItems.DOUBLE_HAMBURGER.get(),
 				ArproddelightModItems.MAC_N_CHEESE.get(),
 				ArproddelightModItems.UZBEK_RICE.get(),
-				ArproddelightModItems.SALAMI.get(),
 				ArproddelightModItems.MARGHERITA_PIZZA.get(),
 				ArproddelightModItems.MARGHERITA_PIZZA_SLICE.get(),
 				ArproddelightModItems.SALAMI_PIZZA.get(),
@@ -82,6 +85,7 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.ICE_CREAM_CREAM.get(),
 				ArproddelightModItems.ICE_CREAM_CHOCOLATE.get(),
 				ArproddelightModItems.ICE_CREAM_HONEY.get(),
+				ArproddelightModItems.ICE_CREAM_CINNAMON.get(),
 
 
 				ArproddelightModItems.RAW_CLAY_CUP.get(),
@@ -89,15 +93,9 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.COFFEE_CUP.get(),
 				ArproddelightModItems.LATTE_CUP.get(),
 				ArproddelightModItems.CANDY_CANE.get(),
-
 				ArproddelightModItems.CANDY_SPEAR.get(),
 
-				ArproddelightModItems.RED_BAUBLE.get(),
-				ArproddelightModItems.SPRUCE_LEAVES_RED_BAUBLE.get(),
-				ArproddelightModItems.BLUE_BAUBLE.get(),
-				ArproddelightModItems.SPRUCE_LEAVES_BLUE_BAUBLE.get(),
-				ArproddelightModItems.YELLOW_BAUBLE.get(),
-				ArproddelightModItems.SPRUCE_LEAVES_YELLOW_BAUBLE.get(),
+
 				ArproddelightModItems.KHINKALI.get(),
 				ArproddelightModItems.CHEWING_GUM.get(),
 				ArproddelightModItems.MARSHMALLOW.get(),
@@ -107,22 +105,11 @@ public class ArproddelightModTabs {
 				ArproddelightModItems.BURNT_MARSHMALLOW_ON_STICK.get(),
 				ArproddelightModItems.CHEVON.get(),
 				ArproddelightModItems.COOKED_CHEVON.get(),
-//				ArproddelightModItems.AXOLOTL_GILLS.get(),
-//				ArproddelightModItems.AXOLOTL_HAT_HELMET.get(),
-				ArproddelightModItems.GELATIN.get(),
 
-				ArproddelightModItems.STRAWBERRY_JELLY.get(),
-				ArproddelightModItems.STRAWBERRY_CHEESECAKE.get(),
-				ArproddelightModItems.STRAWBERRY_CHEESECAKE_SLICE.get(),
-				ArproddelightModItems.STRAWBERRY_JAM.get(),
-				ArproddelightModItems.CINNAMON.get(),
-				ArproddelightModItems.CINNAMON_POWDER.get(),
 				ArproddelightModItems.BERRY_TEA.get(),
 				ArproddelightModItems.CINNAMON_ROLL.get(),
 				ArproddelightModItems.BOILED_EGG.get(),
 				ArproddelightModItems.DEVILED_EGGS.get(),
-
-
 				ArproddelightModItems.BATTERED_COD.get(),
 				ArproddelightModItems.FRIED_CHICKEN.get())
 				.forEach(tabData::accept);

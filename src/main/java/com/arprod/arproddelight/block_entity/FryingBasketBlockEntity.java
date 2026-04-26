@@ -5,7 +5,7 @@ import com.arprod.arproddelight.init.ArproddelightModRecipes;
 import com.arprod.arproddelight.recipe.DeepFryingRecipe;
 import com.simibubi.create.AllParticleTypes;
 import com.simibubi.create.content.processing.basin.BasinBlockEntity;
-import com.simibubi.create.content.processing.burner.BlazeBurnerBlock.HeatLevel;
+import com.simibubi.create.content.processing.basin.BasinRecipe;
 import com.simibubi.create.content.fluids.particle.FluidParticleData;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
 import com.simibubi.create.foundation.fluid.FluidIngredient;
@@ -15,8 +15,6 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -24,8 +22,6 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandler.FluidAction;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.registry.ModSounds;
@@ -35,7 +31,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class FryingBasketBlockEntity extends BlockEntity {
-    private final ItemStackHandler noDropInventory = new ItemStackHandler(0);
 
     private int progress;
     private int maxProgress;
@@ -111,101 +106,38 @@ public class FryingBasketBlockEntity extends BlockEntity {
     }
 
     private boolean canCompleteRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
-        return checkRecipe(recipe, basin).success();
+        return checkRecipe(recipe, basin);
     }
 
-    private RecipeCheck checkRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
+    private boolean checkRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
         if (level == null) {
-            return new RecipeCheck(recipe.getId().toString(), false, "level is null");
+            return false;
         }
 
-        HeatLevel heat = BasinBlockEntity.getHeatLevelOf(level.getBlockState(worldPosition.below(2)));
-        if (!recipe.getRequiredHeat().testBlazeBurner(heat)) {
-            return new RecipeCheck(recipe.getId().toString(), false,
-                    "heat mismatch: required=" + recipe.getRequiredHeat().serialize() + " actual=" + heat.name().toLowerCase());
+        if (!BasinRecipe.match(basin, recipe)) {
+            return false;
         }
 
-        IItemHandler itemHandler = basin.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
         IFluidHandler fluidHandler = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
 
-        String itemFailure = getItemIngredientFailure(recipe, itemHandler);
-        if (itemFailure != null) {
-            return new RecipeCheck(recipe.getId().toString(), false, itemFailure);
-        }
-        String fluidFailure = getFluidIngredientFailure(recipe, fluidHandler);
-        if (fluidFailure != null) {
-            return new RecipeCheck(recipe.getId().toString(), false, fluidFailure);
-        }
-
-        if (recipe.hasFuel()) {
-            FluidIngredient fuel = recipe.getFuel();
-            if (!canSatisfyFluidAmount(fuel, fuel.getRequiredAmount(), fluidHandler)) {
-                return new RecipeCheck(recipe.getId().toString(), false,
-                        "not enough fuel present; requires " + fuel.getRequiredAmount() + "mB to start");
-            }
-        }
-
-        if (!basin.acceptOutputs(recipe.getRollableResultsAsItemStacks(), recipe.getFluidResults(), true)) {
-            return new RecipeCheck(recipe.getId().toString(), false, "outputs do not fit basin output");
-        }
-
-        return new RecipeCheck(recipe.getId().toString(), true, "ok");
+        return hasRequiredFluids(recipe, fluidHandler);
     }
 
-    @Nullable
-    private String getItemIngredientFailure(DeepFryingRecipe recipe, IItemHandler itemHandler) {
-        int[] simulatedUsage = new int[itemHandler.getSlots()];
-        int idx = 1;
-        for (Ingredient ingredient : recipe.getIngredients()) {
-            boolean matched = false;
-            for (int slot = 0; slot < itemHandler.getSlots(); slot++) {
-                ItemStack stack = itemHandler.getStackInSlot(slot);
-                if (stack.isEmpty() || !ingredient.test(stack)) {
-                    continue;
-                }
-                int available = stack.getCount() - simulatedUsage[slot];
-                if (available <= 0) {
-                    continue;
-                }
-                simulatedUsage[slot]++;
-                matched = true;
-                break;
-            }
-            if (!matched) {
-                return "missing item ingredient #" + idx;
-            }
-            idx++;
-        }
-        return null;
-    }
-
-    @Nullable
-    private String getFluidIngredientFailure(DeepFryingRecipe recipe, IFluidHandler fluidHandler) {
+    private boolean hasRequiredFluids(DeepFryingRecipe recipe, IFluidHandler fluidHandler) {
         int[] simulatedUsage = new int[fluidHandler.getTanks()];
 
-        int idx = 1;
         for (FluidIngredient ingredient : recipe.getFluidIngredients()) {
             if (!consumeFluidSimulation(ingredient, ingredient.getRequiredAmount(), fluidHandler, simulatedUsage)) {
-                return "missing fluid ingredient #" + idx + " amount=" + ingredient.getRequiredAmount() + "mB";
-            }
-            idx++;
-        }
-
-        if (recipe.hasFuel()) {
-            if (!consumeFluidSimulation(recipe.getFuel(), recipe.getFuelAmountToConsume(), fluidHandler, simulatedUsage)) {
-                return "not enough fuel for consumption step; needs " + recipe.getFuelAmountToConsume() + "mB";
+                return false;
             }
         }
 
-        return null;
+        return !recipe.hasFuel()
+                || consumeFluidSimulation(recipe.getFuel(), recipe.getFuelAmountToConsume(), fluidHandler, simulatedUsage);
     }
 
-    private boolean canSatisfyFluidAmount(FluidIngredient ingredient, int amountRequired, IFluidHandler fluidHandler) {
-        int[] simulatedUsage = new int[fluidHandler.getTanks()];
-        return consumeFluidSimulation(ingredient, amountRequired, fluidHandler, simulatedUsage);
-    }
-
-    private boolean consumeFluidSimulation(FluidIngredient ingredient, int amountRequired, IFluidHandler fluidHandler, int[] simulatedUsage) {
+    private boolean consumeFluidSimulation(FluidIngredient ingredient, int amountRequired, IFluidHandler fluidHandler,
+                                           int[] simulatedUsage) {
         int remaining = amountRequired;
         for (int tank = 0; tank < fluidHandler.getTanks(); tank++) {
             FluidStack stack = fluidHandler.getFluidInTank(tank);
@@ -227,53 +159,20 @@ public class FryingBasketBlockEntity extends BlockEntity {
     }
 
     private void executeRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
-        IItemHandler itemHandler = basin.getCapability(ForgeCapabilities.ITEM_HANDLER).orElse(null);
         IFluidHandler fluidHandler = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
-
-        if (!consumeItemIngredients(recipe, itemHandler)) {
-            return;
-        }
-        if (!consumeFluidIngredients(recipe, fluidHandler)) {
+        if (!checkRecipe(recipe, basin)) {
             return;
         }
 
-        basin.acceptOutputs(recipe.rollResults(), recipe.getFluidResults(), false);
+        if (recipe.hasFuel() && !consumeFluidAmount(recipe.getFuel(), recipe.getFuelAmountToConsume(), fluidHandler)) {
+            return;
+        }
+
+        if (!BasinRecipe.apply(basin, recipe)) {
+            return;
+        }
+
         setChanged();
-    }
-
-    private boolean consumeItemIngredients(DeepFryingRecipe recipe, IItemHandler itemHandler) {
-        for (Ingredient ingredient : recipe.getIngredients()) {
-            boolean consumed = false;
-            for (int slot = 0; slot < itemHandler.getSlots(); slot++) {
-                ItemStack stack = itemHandler.getStackInSlot(slot);
-                if (stack.isEmpty() || !ingredient.test(stack)) {
-                    continue;
-                }
-                ItemStack extracted = itemHandler.extractItem(slot, 1, false);
-                if (!extracted.isEmpty()) {
-                    consumed = true;
-                    break;
-                }
-            }
-            if (!consumed) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean consumeFluidIngredients(DeepFryingRecipe recipe, IFluidHandler fluidHandler) {
-        for (FluidIngredient ingredient : recipe.getFluidIngredients()) {
-            if (!consumeFluidAmount(ingredient, ingredient.getRequiredAmount(), fluidHandler)) {
-                return false;
-            }
-        }
-
-        if (recipe.hasFuel()) {
-            return consumeFluidAmount(recipe.getFuel(), recipe.getFuelAmountToConsume(), fluidHandler);
-        }
-
-        return true;
     }
 
     private boolean consumeFluidAmount(FluidIngredient ingredient, int amountRequired, IFluidHandler fluidHandler) {
@@ -353,8 +252,5 @@ public class FryingBasketBlockEntity extends BlockEntity {
         super.load(tag);
         progress = tag.getInt("Progress");
         maxProgress = tag.getInt("MaxProgress");
-    }
-
-    private record RecipeCheck(String recipeId, boolean success, String reason) {
     }
 }

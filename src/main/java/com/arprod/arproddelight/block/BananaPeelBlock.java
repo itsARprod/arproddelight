@@ -5,7 +5,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,15 +27,15 @@ public class BananaPeelBlock extends Block {
 	}
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-		return box(1, 0, 1, 15, 6, 15);
+	public VoxelShape getShape( BlockState state,  BlockGetter world,  net.minecraft.core.BlockPos pos,  CollisionContext context) {
+		return Block.box(1, 0, 1, 15, 6, 15);
 	}
 
 	@Override
 	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity) {
 		super.entityInside(blockstate, world, pos, entity);
-        if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide()) {
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1, false, false));
+        if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide() && _entity.getSpeed() > 0.1F) {
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10, 7, false, false));
 
 		}
 	}
