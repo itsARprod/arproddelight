@@ -1,6 +1,6 @@
 package com.arprod.arproddelight.item;
 
-import com.arprod.arproddelight.init.ArproddelightModFluids;
+import com.arprod.arproddelight.registry.ArproddelightModFluids;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 

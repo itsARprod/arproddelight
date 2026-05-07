@@ -7,7 +7,7 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 
 public class BananaxeItem extends PickaxeItem {
 	public BananaxeItem() {

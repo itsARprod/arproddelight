@@ -6,14 +6,12 @@
       "chance": 32
     },
     {
-      "type": "minecraft:in_square"
-    },
-    {
       "type": "minecraft:heightmap",
       "heightmap": "WORLD_SURFACE_WG"
     },
     {
-      "type": "minecraft:biome"
+      "type": "farmersdelight:biome_tag",
+      "tag": "minecraft:is_overworld"
     }
   ]
 }

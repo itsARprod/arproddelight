@@ -1,6 +1,6 @@
 package com.arprod.arproddelight.compat.jei.category.animations;
 
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.simibubi.create.AllBlocks;

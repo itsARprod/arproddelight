@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraft.world.entity.LivingEntity;
 
-import com.arprod.arproddelight.init.ArproddelightModMobEffects;
+import com.arprod.arproddelight.registry.ArproddelightModMobEffects;
 
 @Mod.EventBusSubscriber
 public class EffectRemovalHandler {

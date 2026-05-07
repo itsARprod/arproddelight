@@ -1,0 +1,21 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "item": "arproddelight:cinnamon_wood"
+    },
+    [
+      {
+        "tag": "minecraft:axes"
+      }
+    ]
+  ],
+  "results": [
+    {
+      "item": "minecraft:stripped_jungle_wood"
+    },
+    {
+      "item": "arproddelight:cinnamon_bark"
+    }
+  ]
+}

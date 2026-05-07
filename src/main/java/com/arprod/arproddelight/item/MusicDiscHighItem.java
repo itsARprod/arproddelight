@@ -1,8 +1,6 @@
 package com.arprod.arproddelight.item;
 
-import com.arprod.arproddelight.init.ArproddelightModSounds;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
+import com.arprod.arproddelight.registry.ArproddelightModSounds;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.RecordItem;

@@ -1,7 +1,7 @@
 package com.arprod.arproddelight.block_entity;
 
-import com.arprod.arproddelight.init.ArproddelightModBlockEntities;
-import com.arprod.arproddelight.init.ArproddelightModRecipes;
+import com.arprod.arproddelight.registry.ArproddelightModBlockEntities;
+import com.arprod.arproddelight.registry.ArproddelightModRecipes;
 import com.arprod.arproddelight.recipe.DeepFryingRecipe;
 import com.simibubi.create.AllParticleTypes;
 import com.simibubi.create.content.processing.basin.BasinBlockEntity;

@@ -1,10 +1,7 @@
 package com.arprod.arproddelight.client;
 
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 import com.arprod.arproddelight.block.GelatinBlockBlock;
-import net.minecraft.client.color.block.BlockColor;
-import net.minecraft.client.color.block.BlockColors;
-import net.minecraft.world.item.DyeColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

@@ -1,12 +1,11 @@
 package com.arprod.arproddelight.compat.jei.category.animations;
 
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.simibubi.create.compat.jei.category.animations.AnimatedKinetics;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CampfireBlock;
 
 public class AnimatedTonir extends AnimatedKinetics {
 

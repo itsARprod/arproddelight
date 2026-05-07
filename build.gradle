@@ -88,15 +88,19 @@ dependencies {
 
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.20.0.112"))
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.20.0.112"))
+
     runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.112"))
 
     runtimeOnly(fg.deobf("squeek.appleskin:appleskin-forge:mc1.20.1-2.5.1"))
 
     implementation fg.deobf("curse.maven:farmers-delight-398521:5962797")
 
-    implementation fg.deobf("curse.maven:createaddition-422951:6915920")
+    runtimeOnly fg.deobf("curse.maven:create-central-kitchen-820977:6987710")
 
-    implementation fg.deobf("curse.maven:create-central-kitchen-820977:6987710")
+    runtimeOnly fg.deobf("curse.maven:sawmill-964817:6948522")
+
+    runtimeOnly fg.deobf("curse.maven:selene-499980:8044110")
+
 }
 
 

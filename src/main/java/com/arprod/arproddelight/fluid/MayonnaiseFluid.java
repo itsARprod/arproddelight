@@ -1,11 +1,8 @@
 
 package com.arprod.arproddelight.fluid;
 
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
-import com.arprod.arproddelight.init.ArproddelightModFluidTypes;
-import com.arprod.arproddelight.init.ArproddelightModFluids;
-import com.arprod.arproddelight.init.ArproddelightModItems;
-import net.minecraft.world.level.block.LiquidBlock;
+import com.arprod.arproddelight.registry.ArproddelightModFluidTypes;
+import com.arprod.arproddelight.registry.ArproddelightModFluids;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;

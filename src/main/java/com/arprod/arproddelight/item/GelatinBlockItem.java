@@ -1,7 +1,7 @@
 
 package com.arprod.arproddelight.item;
 
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 import com.simibubi.create.foundation.item.ItemDescription;
 import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.network.chat.Component;

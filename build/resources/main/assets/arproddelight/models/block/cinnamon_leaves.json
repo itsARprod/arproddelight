@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "arproddelight:block/cinnamon_leaves"
+  },
+  "render_type":"cutout"
+}

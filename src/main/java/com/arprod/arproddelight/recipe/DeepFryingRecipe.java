@@ -1,6 +1,6 @@
 package com.arprod.arproddelight.recipe;
 
-import com.arprod.arproddelight.init.ArproddelightModRecipes;
+import com.arprod.arproddelight.registry.ArproddelightModRecipes;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;

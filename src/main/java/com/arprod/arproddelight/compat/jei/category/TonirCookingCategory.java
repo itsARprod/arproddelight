@@ -2,7 +2,7 @@ package com.arprod.arproddelight.compat.jei.category;
 
 import com.arprod.arproddelight.ArproddelightMod;
 import com.arprod.arproddelight.compat.jei.category.animations.AnimatedTonir;
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 import com.arprod.arproddelight.recipe.TonirCookingRecipe;
 import com.simibubi.create.compat.jei.category.CreateRecipeCategory;
 import com.simibubi.create.foundation.gui.AllGuiTextures;

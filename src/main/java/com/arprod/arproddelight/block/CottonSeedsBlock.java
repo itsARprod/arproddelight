@@ -1,6 +1,6 @@
 package com.arprod.arproddelight.block;
 
-import com.arprod.arproddelight.init.ArproddelightModItems;
+import com.arprod.arproddelight.registry.ArproddelightModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;

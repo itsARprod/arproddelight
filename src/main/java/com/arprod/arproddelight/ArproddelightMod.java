@@ -1,6 +1,6 @@
 package com.arprod.arproddelight;
 
-import com.arprod.arproddelight.init.*;
+import com.arprod.arproddelight.registry.*;
 
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.common.Mod;

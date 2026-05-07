@@ -2,12 +2,11 @@
 package com.arprod.arproddelight.block;
 
 import com.arprod.arproddelight.block_entity.FryingBasketBlockEntity;
-import com.arprod.arproddelight.init.ArproddelightModBlockEntities;
+import com.arprod.arproddelight.registry.ArproddelightModBlockEntities;
 import com.simibubi.create.AllBlocks;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.Containers;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;

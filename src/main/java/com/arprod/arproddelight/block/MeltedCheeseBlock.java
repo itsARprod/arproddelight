@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
 
-import com.arprod.arproddelight.init.ArproddelightModFluids;
+import com.arprod.arproddelight.registry.ArproddelightModFluids;
 
 public class MeltedCheeseBlock extends LiquidBlock {
 

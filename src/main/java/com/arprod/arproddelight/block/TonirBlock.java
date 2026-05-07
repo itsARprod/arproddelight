@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import com.arprod.arproddelight.block_entity.TonirBlockEntity;
-import com.arprod.arproddelight.init.ArproddelightModBlockEntities;
+import com.arprod.arproddelight.registry.ArproddelightModBlockEntities;
 
 public class TonirBlock extends BaseEntityBlock {
 

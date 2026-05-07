@@ -8,10 +8,10 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.LiquidBlock;
 
-import com.arprod.arproddelight.init.ArproddelightModItems;
-import com.arprod.arproddelight.init.ArproddelightModFluids;
-import com.arprod.arproddelight.init.ArproddelightModFluidTypes;
-import com.arprod.arproddelight.init.ArproddelightModBlocks;
+import com.arprod.arproddelight.registry.ArproddelightModItems;
+import com.arprod.arproddelight.registry.ArproddelightModFluids;
+import com.arprod.arproddelight.registry.ArproddelightModFluidTypes;
+import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class MeltedCheeseFluid extends ForgeFlowingFluid {

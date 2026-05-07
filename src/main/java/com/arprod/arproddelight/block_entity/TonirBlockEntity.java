@@ -1,8 +1,8 @@
 package com.arprod.arproddelight.block_entity;
 
 import com.arprod.arproddelight.recipe.TonirCookingRecipe;
-import com.arprod.arproddelight.init.ArproddelightModBlockEntities;
-import com.arprod.arproddelight.init.ArproddelightModRecipes;
+import com.arprod.arproddelight.registry.ArproddelightModBlockEntities;
+import com.arprod.arproddelight.registry.ArproddelightModRecipes;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
