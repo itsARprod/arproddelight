@@ -1,0 +1,15 @@
+{
+  "group": "logs",
+  "ingredient": [
+    {
+      "item": "arproddelight:cinnamon_wood"
+    },
+    {
+      "item": "arproddelight:cinnamon_log"
+    }
+  ],
+  "ingredient_count": 1,
+  "result": "minecraft:jungle_sign",
+  "count": 2,
+  "type": "sawmill:woodcutting"
+}

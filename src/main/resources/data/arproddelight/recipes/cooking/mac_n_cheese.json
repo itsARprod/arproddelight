@@ -16,8 +16,5 @@
   "recipe_book_tab": "meals",
   "result": {
     "item": "arproddelight:mac_n_cheese"
-  },
-  "container": {
-      "item": "minecraft:bowl"
-    }
+  }
 }

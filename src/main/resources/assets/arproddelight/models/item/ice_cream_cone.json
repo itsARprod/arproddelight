@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "arproddelight:item/icone"
+    "layer0": "arproddelight:item/ice_cream_cone"
   }
 }

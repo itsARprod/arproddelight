@@ -6,9 +6,14 @@ license="MIT License"
 modId="arproddelight"
 version="4.0.0"
 displayName="ARprod's Delight"
-displayURL=""
 logoFile="logo.png"
 authors="ARprod"
+description = '''
+ARprod's Delight 4: Bubble & Squeak
+
+Special thanks to the creators of
+Farmer's Delight, Create, Some Assembly Required
+'''
 
 [[dependencies.arproddelight]]
     modId="minecraft"
@@ -20,7 +25,7 @@ authors="ARprod"
 [[dependencies.arproddelight]]
 modId="create"
 mandatory=true
-versionRange="[0.5.0,)"
+versionRange="[0.6.0,)"
 ordering="AFTER"
 side="BOTH"
 

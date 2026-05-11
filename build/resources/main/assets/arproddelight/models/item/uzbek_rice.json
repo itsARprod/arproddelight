@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "arproddelight:item/uzbekrice"
+    "layer0": "arproddelight:item/uzbek_rice"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "arproddelight:item/pasta_with_meatballs"
+    "layer0": "arproddelight:item/mac_n_cheese"
   }
 }

@@ -14,6 +14,7 @@ import net.minecraft.world.item.BlockItem;
 
 import com.arprod.arproddelight.ArproddelightMod;
 
+@SuppressWarnings("unused")
 public class ArproddelightModItems {
     public static final DeferredRegister<Item> REGISTRY =
             DeferredRegister.create(ForgeRegistries.ITEMS, ArproddelightMod.MODID);
@@ -100,8 +101,6 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> SUNFLOWER_OIL_BOTTLE= REGISTRY.register("sunflower_oil_bottle", SunflowerOilBottleItem::new);
     public static final RegistryObject<Item> BATTERED_COD= REGISTRY.register("battered_cod", BatteredCodItem::new);
     public static final RegistryObject<Item> FRIED_CHICKEN= REGISTRY.register("fried_chicken", FriedChickenItem::new);
-//    public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE= block(ArproddelightModBlocks.STRAWBERRY_CHEESECAKE);
-//    public static final RegistryObject<Item> STRAWBERRY_CHEESECAKE_SLICE= REGISTRY.register("strawberry_cheesecake_slice", StrawberryCheesecakeSliceItem::new);
     public static final RegistryObject<Item> MAYONNAISE_JAR= REGISTRY.register("mayonnaise_jar", MayonnaiseJarItem::new);
     public static final RegistryObject<Item> BOILED_POTATO= REGISTRY.register("boiled_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MASHED_POTATO= REGISTRY.register("mashed_potato", BoiledPotatoItem::new);
@@ -111,7 +110,8 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> CINNAMON_LEAVES = block(ArproddelightModBlocks.CINNAMON_LEAVES);
     public static final RegistryObject<Item> CINNAMON_BARK = REGISTRY.register("cinnamon_bark", BasicItem::new);
     public static final RegistryObject<Item> CINNAMON_SAPLING = block(ArproddelightModBlocks.CINNAMON_SAPLING);
-    //public static final RegistryObject<Item> PIZZA_BOX= REGISTRY.register("pizza_box", PizzaBoxItem::new);
+    public static final RegistryObject<Item> POTATO_SALAD = REGISTRY.register("potato_salad", PotatoSaladItem::new);
+    public static final RegistryObject<Item> FISH_AND_CHIPS = REGISTRY.register("fish_and_chips", FishAndChipsItem::new);
 
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         assert block.getId() != null;

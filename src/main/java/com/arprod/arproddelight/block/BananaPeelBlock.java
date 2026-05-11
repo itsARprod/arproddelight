@@ -17,6 +17,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
 public class BananaPeelBlock extends Block {
+	private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 6, 15);
+
 	public BananaPeelBlock() {
 		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.WOOL).strength(1f, 10f).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
@@ -27,15 +29,16 @@ public class BananaPeelBlock extends Block {
 	}
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public VoxelShape getShape( BlockState state,  BlockGetter world,  net.minecraft.core.BlockPos pos,  CollisionContext context) {
-		return Block.box(1, 0, 1, 15, 6, 15);
+		return SHAPE;
 	}
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity) {
-		super.entityInside(blockstate, world, pos, entity);
         if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide() && _entity.getSpeed() > 0.1F) {
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10, 7, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 5, 3, false, false));
 
 		}
 	}

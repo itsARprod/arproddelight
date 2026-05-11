@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "arproddelight:boiled_potato"
+    },
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "arproddelight:mayonnaise_jar"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:potato_salad",
+    "count": 1
+  }
+}

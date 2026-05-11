@@ -87,6 +87,7 @@ dependencies {
     implementation("io.github.llamalad7:mixinextras-forge:0.4.1")
 
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.20.0.112"))
+
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.20.0.112"))
 
     runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.112"))
@@ -100,6 +101,8 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:sawmill-964817:6948522")
 
     runtimeOnly fg.deobf("curse.maven:selene-499980:8044110")
+
+    runtimeOnly fg.deobf("curse.maven:some-assembly-required-422951:7658719")
 
 }
 

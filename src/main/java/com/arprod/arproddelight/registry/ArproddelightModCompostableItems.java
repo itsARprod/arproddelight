@@ -27,5 +27,7 @@ public class ArproddelightModCompostableItems {
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.CHERRY.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.WILD_COTTON.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.WILD_COFFEA.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.CINNAMON_LEAVES.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(ArproddelightModItems.CINNAMON_SAPLING.get(), 0.3f);
 	}
 }

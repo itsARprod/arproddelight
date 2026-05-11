@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "some_assembly_required"
+    }
+  ],
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "arproddelight:boiled_potato"
+    },
+    {
+      "item": "some_assembly_required:sliced_onion"
+    },
+    {
+      "item": "arproddelight:mayonnaise_jar"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:potato_salad",
+    "count": 1
+  }
+}
