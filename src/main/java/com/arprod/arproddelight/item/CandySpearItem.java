@@ -1,7 +1,6 @@
 
 package com.arprod.arproddelight.item;
 
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
@@ -15,9 +14,10 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 
+@SuppressWarnings("deprecated")
 public class CandySpearItem extends ConsumableItem {
 	public CandySpearItem() {
-		super(new Item.Properties().durability(32).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).build()));
+		super(new Item.Properties().durability(32).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).build()));
 	}
 
 	@Override

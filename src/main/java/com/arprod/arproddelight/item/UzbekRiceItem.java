@@ -14,9 +14,8 @@ public class UzbekRiceItem extends ConsumableItem {
                 .food(new FoodProperties.Builder()
                         .nutrition(12)
                         .saturationMod(0.6f)
-                        .effect(()-> new MobEffectInstance(ModEffects.COMFORT.get(), 5400, 0 ), 1)
+                        .effect(()-> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 5400, 0 ), 1)
                         .build()
-                )
-        ,true );
+                ));
 	}
 }

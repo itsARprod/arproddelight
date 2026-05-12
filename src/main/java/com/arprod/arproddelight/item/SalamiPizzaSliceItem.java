@@ -21,7 +21,7 @@ public class SalamiPizzaSliceItem extends ConsumableItem {
                             1200, // duration in ticks
                             0    // amplifier
                         ), 1.0f)
-                .build()),true);
+                .build()));
 	}
 
 	@Override

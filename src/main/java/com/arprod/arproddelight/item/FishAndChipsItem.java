@@ -16,6 +16,6 @@ public class FishAndChipsItem extends ConsumableItem {
                         .effect(()-> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1800, 0 ), 1)
                         .build()
                 )
-        ,true );
+        );
 	}
 }

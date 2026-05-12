@@ -14,7 +14,6 @@ public class MacNCheeseItem extends ConsumableItem {
                 .food((new FoodProperties.Builder())
                         .nutrition(10)
                         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1)
-                        .build()),
-                true);
+                        .build()));
     }
 }

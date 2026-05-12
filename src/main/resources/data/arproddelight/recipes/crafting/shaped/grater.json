@@ -7,7 +7,7 @@
   ],
   "key": {
     "a": {
-      "tag": "minecraft:stick"
+      "item": "minecraft:stick"
     },
     "b": {
       "item": "create:iron_sheet"

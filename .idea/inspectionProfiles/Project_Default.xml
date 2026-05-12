@@ -14,5 +14,47 @@
       <option name="REPORT_ANNOTATION_NOT_PROPAGATED_TO_OVERRIDERS" value="true" />
       <option name="REPORT_NULLS_PASSED_TO_NON_ANNOTATED_METHOD" value="true" />
     </inspection_tool>
+    <inspection_tool class="PyVulnerableApiCodeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableCodeUsages" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableLibrariesGlobal" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="arproddelight" />
+          <option value="arproddelight" />
+          <option value="arproddelight" />
+          <option value="arproddelight" />
+          <option value="arproddelight" />
+          <option value="arproddelight" />
+          <option value="arproddelight" />
+          <option value="arproddelight" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="com.google.guava:guava:31.1-jre" />
+          <option value="commons-io:commons-io:2.11.0" />
+          <option value="io.netty:netty-handler:4.1.82.Final" />
+          <option value="io.netty:netty-codec:4.1.82.Final" />
+          <option value="io.netty:netty-common:4.1.82.Final" />
+          <option value="org.apache.commons:commons-compress:1.21" />
+          <option value="org.apache.commons:commons-lang3:3.12.0" />
+          <option value="org.apache.logging.log4j:log4j-core:2.19.0" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+        </list>
+      </option>
+    </inspection_tool>
   </profile>
 </component>

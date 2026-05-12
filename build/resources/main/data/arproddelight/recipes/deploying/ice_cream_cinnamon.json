@@ -1,0 +1,18 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "arproddelight:ice_cream_cream"
+    },
+    [
+      {
+        "item": "arproddelight:cinnamon_powder"
+      }
+    ]
+  ],
+  "results": [
+    {
+      "item": "arproddelight:ice_cream_cinnamon"
+    }
+  ]
+}

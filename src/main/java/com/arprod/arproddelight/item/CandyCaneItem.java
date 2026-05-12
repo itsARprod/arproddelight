@@ -6,7 +6,6 @@ import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
@@ -20,7 +19,7 @@ import java.util.Objects;
 
 public class CandyCaneItem extends Item {
 	public CandyCaneItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.3f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).build()));
 	}
 
 	@Override

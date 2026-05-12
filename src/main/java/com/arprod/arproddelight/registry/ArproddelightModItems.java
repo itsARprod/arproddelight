@@ -37,7 +37,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> CHEESE_AND_TOMATO_DURUM = REGISTRY.register("cheese_and_tomato_durum", CheeseAndTomatoDurumItem::new);
     public static final RegistryObject<Item> UZBEK_RICE = REGISTRY.register("uzbek_rice", UzbekRiceItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CONE = REGISTRY.register("ice_cream_cone", IceCreamConeItem::new);
-    public static final RegistryObject<Item> ICE_CREAM_CREAM = REGISTRY.register("ice_cream_cream", IceCreamItem::new);
+    public static final RegistryObject<Item> ICE_CREAM_CREAM = REGISTRY.register("ice_cream_cream", IceCreamCreamItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CHOCOLATE = REGISTRY.register("ice_cream_chocolate", IceCreamChocolateItem::new);
     public static final RegistryObject<Item> RAW_BEEF_LAHMAJO = REGISTRY.register("raw_beef_lahmajo", RawBeefLahmajoItem::new);
     public static final RegistryObject<Item> BEEF_LAHMAJO = REGISTRY.register("beef_lahmajo", BeefLahmajoItem::new);
@@ -49,8 +49,8 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> GRATED_CHEESE = REGISTRY.register("grated_cheese", BasicItem::new);
     public static final RegistryObject<Item> CHERRY = REGISTRY.register("cherry", CherryItem::new);
     public static final RegistryObject<Item> WILD_COFFEA = block(ArproddelightModBlocks.WILD_COFFEA);
-    public static final RegistryObject<Item> COFFEE_BERRY = REGISTRY.register("coffee_berry", CoffeeBerryItem::new);
     public static final RegistryObject<Item> COFFEE_BEAN  = block(ArproddelightModBlocks.COFFEE_BEAN);
+    public static final RegistryObject<Item> COFFEE_BERRY = REGISTRY.register("coffee_berry", CoffeeBerryItem::new); //THIS MUST BE PLACED AFTER COFFEE BEAN
     public static final RegistryObject<Item> RAW_CLAY_CUP = REGISTRY.register("raw_clay_cup", BasicItem::new);
     public static final RegistryObject<Item> CLAY_CUP = REGISTRY.register("clay_cup", BasicItem::new);
     public static final RegistryObject<Item> COFFEE_CUP = REGISTRY.register("coffee_cup", CoffeeCupItem::new);
@@ -62,6 +62,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> COFFEE_BERRY_CRATE = block(ArproddelightModBlocks.COFFEE_BERRY_CRATE);
     public static final RegistryObject<Item> COTTON_CRATE = block(ArproddelightModBlocks.COTTON_CRATE);
     public static final RegistryObject<Item> MINT_CRATE = block(ArproddelightModBlocks.MINT_CRATE);
+    public static final RegistryObject<Item> APPLE_CRATE = block(ArproddelightModBlocks.APPLE_CRATE);
     public static final RegistryObject<Item> COFFEE_BEAN_BAG = block(ArproddelightModBlocks.COFFEE_BEAN_BAG);
     public static final RegistryObject<Item> CANDY_CANE = REGISTRY.register("candy_cane", CandyCaneItem::new);
     public static final RegistryObject<Item> CANDY_SPEAR = REGISTRY.register("candy_spear", CandySpearItem::new);

@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "arproddelight:mint"
+      "item": "minecraft:water_bucket"
     },
     {
       "item": "minecraft:sugar"
     },
     {
-      "item": "minecraft:water_bucket"
+      "item": "arproddelight:mint"
     }
   ],
   "result": {
