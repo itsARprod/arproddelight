@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "arproddelight:unfinished_pizza",
+    "arproddelight:margherita_pizza",
+    "arproddelight:salami_pizza",
+    "arproddelight:boscaiola_pizza",
+    "arproddelight:ice_cream_cone",
+    "arproddelight:incomplete_ice_cream",
+    "arproddelight:ice_cream_cream",
+    "arproddelight:ice_cream_chocolate",
+    "arproddelight:ice_cream_honey",
+    "arproddelight:ice_cream_cinnamon"
+  ]
+}

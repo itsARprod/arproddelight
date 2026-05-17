@@ -104,6 +104,7 @@ dependencies {
 
     runtimeOnly fg.deobf("curse.maven:some-assembly-required-422951:7658719")
 
+    runtimeOnly fg.deobf("curse.maven:create-fluid-1346709:8048351")
 }
 
 

@@ -1,0 +1,22 @@
+{
+  "type": "fluid:freezing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "fluid"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:ice"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ]
+}

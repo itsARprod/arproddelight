@@ -1,0 +1,21 @@
+{
+  "group": "logs",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "sawmill"
+    }
+  ],
+  "ingredient": [
+    {
+      "item": "arproddelight:cinnamon_wood"
+    },
+    {
+      "item": "arproddelight:cinnamon_log"
+    }
+  ],
+  "ingredient_count": 1,
+  "result": "minecraft:jungle_fence",
+  "count": 2,
+  "type": "sawmill:woodcutting"
+}

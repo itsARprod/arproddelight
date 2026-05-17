@@ -37,6 +37,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> CHEESE_AND_TOMATO_DURUM = REGISTRY.register("cheese_and_tomato_durum", CheeseAndTomatoDurumItem::new);
     public static final RegistryObject<Item> UZBEK_RICE = REGISTRY.register("uzbek_rice", UzbekRiceItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CONE = REGISTRY.register("ice_cream_cone", IceCreamConeItem::new);
+    public static final RegistryObject<Item> INCOMPLETE_ICE_CREAM = REGISTRY.register("incomplete_ice_cream", IceCreamConeItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CREAM = REGISTRY.register("ice_cream_cream", IceCreamCreamItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CHOCOLATE = REGISTRY.register("ice_cream_chocolate", IceCreamChocolateItem::new);
     public static final RegistryObject<Item> RAW_BEEF_LAHMAJO = REGISTRY.register("raw_beef_lahmajo", RawBeefLahmajoItem::new);
