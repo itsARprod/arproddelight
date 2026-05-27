@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:cinnamon_powder"
+    },
+    "title": {
+      "translate": "advancements.arproddelight.cinnamon.title"
+    },
+    "description": {
+      "translate": "advancements.arproddelight.cinnamon.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "eat_cinnamon": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "arproddelight:cinnamon_powder"
+          ],
+          "count": {
+            "min": 1
+          }
+        }
+      }
+    }
+  },
+  "parent": "arproddelight:root"
+}

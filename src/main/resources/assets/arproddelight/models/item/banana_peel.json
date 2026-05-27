@@ -2,6 +2,5 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "arproddelight:item/banana_peel"
-  },
-  "render_type": "translucent"
+  }
 }

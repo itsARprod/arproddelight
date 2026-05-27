@@ -68,7 +68,6 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> CANDY_CANE = REGISTRY.register("candy_cane", CandyCaneItem::new);
     public static final RegistryObject<Item> CANDY_SPEAR = REGISTRY.register("candy_spear", CandySpearItem::new);
     public static final RegistryObject<Item> CANDY_CANE_BLOCK = block(ArproddelightModBlocks.CANDY_CANE_BLOCK);
-    public static final RegistryObject<Item> KHINKALI = REGISTRY.register("khinkali", KhinkaliItem::new);
     public static final RegistryObject<Item> CHEWING_GUM = REGISTRY.register("chewing_gum", ChewingGumItem::new);
     public static final RegistryObject<Item> WILD_MINT = block(ArproddelightModBlocks.WILD_MINT);
     public static final RegistryObject<Item> MINT = REGISTRY.register("mint", BasicItem::new);
@@ -103,7 +102,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> SUNFLOWER_OIL_BOTTLE= REGISTRY.register("sunflower_oil_bottle", SunflowerOilBottleItem::new);
     public static final RegistryObject<Item> BATTERED_COD= REGISTRY.register("battered_cod", BatteredCodItem::new);
     public static final RegistryObject<Item> FRIED_CHICKEN= REGISTRY.register("fried_chicken", FriedChickenItem::new);
-    public static final RegistryObject<Item> MAYONNAISE_JAR= REGISTRY.register("mayonnaise_jar", MayonnaiseJarItem::new);
+    public static final RegistryObject<Item> MAYONNAISE= REGISTRY.register("mayonnaise", MayonnaiseItem::new);
     public static final RegistryObject<Item> BOILED_POTATO= REGISTRY.register("boiled_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MASHED_POTATO= REGISTRY.register("mashed_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MUSIC_DISC_HIGH = REGISTRY.register("music_disc_high", MusicDiscHighItem::new);
@@ -114,6 +113,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> CINNAMON_SAPLING = block(ArproddelightModBlocks.CINNAMON_SAPLING);
     public static final RegistryObject<Item> POTATO_SALAD = REGISTRY.register("potato_salad", PotatoSaladItem::new);
     public static final RegistryObject<Item> FISH_AND_CHIPS = REGISTRY.register("fish_and_chips", FishAndChipsItem::new);
+    public static final RegistryObject<Item> CHEESE_STICKS = REGISTRY.register("cheese_sticks", CheeseSticksItem::new);
 
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         assert block.getId() != null;

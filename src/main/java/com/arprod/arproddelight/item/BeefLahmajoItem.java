@@ -8,7 +8,7 @@ import vectorwing.farmersdelight.common.item.ConsumableItem;
 
 public class BeefLahmajoItem extends ConsumableItem {
 	public BeefLahmajoItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.3f).meat().build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(6).saturationMod(0.8f).meat().build()));
 	}
 
 	@Override

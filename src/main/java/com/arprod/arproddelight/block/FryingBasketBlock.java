@@ -32,10 +32,11 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("deprecation")
 public class FryingBasketBlock extends BaseEntityBlock implements IWrenchable {
 
 	public FryingBasketBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(1f, 10f).noOcclusion());
+		super(BlockBehaviour.Properties.of().noCollission().sound(SoundType.METAL).strength(1f, 10f).noOcclusion());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -58,7 +59,7 @@ public class FryingBasketBlock extends BaseEntityBlock implements IWrenchable {
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
 		BlockState state = this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
-		return state.canSurvive(context.getLevel(), context.getClickedPos()) ? state : null;
+		return this.canSurvive(state, context.getLevel(), context.getClickedPos()) ? state : null;
 	}
 
 	@Override
@@ -68,7 +69,7 @@ public class FryingBasketBlock extends BaseEntityBlock implements IWrenchable {
 
 	@Override
 	public @NotNull BlockState updateShape(@NotNull BlockState state, @NotNull Direction direction, @NotNull BlockState neighborState, @NotNull LevelAccessor level, @NotNull BlockPos pos, @NotNull BlockPos neighborPos) {
-		if (direction == Direction.DOWN && !state.canSurvive(level, pos)) {
+		if (direction == Direction.DOWN && !this.canSurvive(state, level, pos)) {
 			return Blocks.AIR.defaultBlockState();
 		}
 		return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
@@ -86,7 +87,7 @@ public class FryingBasketBlock extends BaseEntityBlock implements IWrenchable {
 
 	@Override
 	public @NotNull BlockState mirror(BlockState state, Mirror mirror) {
-		return state.rotate(mirror.getRotation(state.getValue(FACING)));
+		return this.rotate(state, mirror.getRotation(state.getValue(FACING)));
 	}
 
 	@Override

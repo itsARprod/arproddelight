@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "arproddelight:cinnamon_roll"
+    },
+    "title": {
+      "translate": "advancements.arproddelight.cinnamon_roll.title"
+    },
+    "description": {
+      "translate": "advancements.arproddelight.cinnamon_roll.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "eat_cinnamon_roll": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "arproddelight:cinnamon_roll"
+          ],
+          "count": {
+            "min": 1
+          }
+        }
+      }
+    }
+  },
+  "parent": "arproddelight:cinnamon"
+}
