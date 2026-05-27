@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "arproddelight:block/coffee_bean_0",
-    "particle": "arproddelight:block/coffee_bean_0"
-  },
-  "render_type": "cutout"
-}

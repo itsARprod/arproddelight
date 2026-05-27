@@ -1,9 +1,0 @@
-{
-  "parent": "arproddelight:block/pizza",
-  "textures": {
-    "particle": "arproddelight:block/margherita_pizza_top",
-    "bottom": "farmersdelight:block/pie_bottom",
-    "side": "farmersdelight:block/pie_side",
-    "top": "arproddelight:block/margherita_pizza_top"
-  }
-}

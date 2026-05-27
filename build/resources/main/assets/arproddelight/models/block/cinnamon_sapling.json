@@ -1,8 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "arproddelight:block/cinnamon_sapling",
-    "particle": "arproddelight:block/cinnamon_sapling"
-  },
-  "render_type": "cutout"
-}

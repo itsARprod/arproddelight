@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": {"model": "arproddelight:block/frying_basket", "y": 180},
-    "facing=east": {"model": "arproddelight:block/frying_basket", "y": 270},
-    "facing=south": {"model": "arproddelight:block/frying_basket"},
-    "facing=west": {"model": "arproddelight:block/frying_basket", "y": 90}
-  }
-}
