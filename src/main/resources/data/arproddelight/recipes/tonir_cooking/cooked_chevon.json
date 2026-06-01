@@ -1,0 +1,10 @@
+{
+  "type": "arproddelight:tonir_cooking",
+  "ingredient": {
+    "item": "minecraft:chevon"
+  },
+  "result": {
+    "item": "minecraft:cooked_chevon", "count": 1
+  },
+  "cookTime": 300
+}

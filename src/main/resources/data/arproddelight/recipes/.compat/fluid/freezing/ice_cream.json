@@ -1,0 +1,19 @@
+{
+  "type": "fluid:freezing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "fluid"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "arproddelight:incomplete_ice_cream"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:ice_cream_cream"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "arproddelight:tonir_cooking",
+  "ingredient": {
+    "item": "minecraft:mutton"
+  },
+  "result": {
+    "item": "minecraft:cooked_mutton", "count": 1
+  },
+  "cookTime": 300
+}

@@ -11,7 +11,7 @@ import vectorwing.farmersdelight.common.item.DrinkableItem;
 
 public class MayonnaiseItem extends DrinkableItem {
 	public MayonnaiseItem() {
-		super(new Properties().stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food((new FoodProperties.Builder()).alwaysEat()
+		super(new Properties().craftRemainder(Items.BOWL).food((new FoodProperties.Builder()).alwaysEat()
                 .build()));
 	}
 
@@ -20,10 +20,6 @@ public class MayonnaiseItem extends DrinkableItem {
 	}
 
 	public SoundEvent getDrinkingSound() {
-		return SoundEvents.HONEY_DRINK;
-	}
-
-	public SoundEvent getEatingSound() {
 		return SoundEvents.HONEY_DRINK;
 	}
 }

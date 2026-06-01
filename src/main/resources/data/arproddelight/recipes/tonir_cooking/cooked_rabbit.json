@@ -1,0 +1,10 @@
+{
+  "type": "arproddelight:tonir_cooking",
+  "ingredient": {
+    "item": "minecraft:rabbit"
+  },
+  "result": {
+    "item": "minecraft:cooked_rabbit", "count": 1
+  },
+  "cookTime": 300
+}

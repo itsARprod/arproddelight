@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "arproddelight:margherita_pizza"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "arproddelight:margherita_pizza_slice"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

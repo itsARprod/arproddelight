@@ -1,0 +1,10 @@
+{
+  "type": "arproddelight:tonir_cooking",
+  "ingredient": {
+    "item": "minecraft:beef"
+  },
+  "result": {
+    "item": "minecraft:cooked_beef", "count": 1
+  },
+  "cookTime": 300
+}

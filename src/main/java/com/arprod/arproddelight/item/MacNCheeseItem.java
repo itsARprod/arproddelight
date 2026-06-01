@@ -13,6 +13,7 @@ public class MacNCheeseItem extends ConsumableItem {
                 .craftRemainder(Items.BOWL)
                 .food((new FoodProperties.Builder())
                         .nutrition(10)
+                        .saturationMod(0.8f)
                         .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1)
                         .build()));
     }

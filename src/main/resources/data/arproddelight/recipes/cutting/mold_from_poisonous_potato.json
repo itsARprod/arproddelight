@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:poisonous_potato"
+    }
+  ],
+  "result": [
+    {
+      "count": 1,
+      "item": "arproddelight:mold",
+      "chance": 0.6
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

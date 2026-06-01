@@ -1,0 +1,10 @@
+{
+  "type": "arproddelight:tonir_cooking",
+  "ingredient": {
+    "item": "minecraft:porkchop"
+  },
+  "result": {
+    "item": "minecraft:cooked_porkchop", "count": 1
+  },
+  "cookTime": 300
+}

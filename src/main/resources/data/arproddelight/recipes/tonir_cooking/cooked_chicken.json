@@ -1,0 +1,10 @@
+{
+  "type": "arproddelight:tonir_cooking",
+  "ingredient": {
+    "item": "minecraft:chicken"
+  },
+  "result": {
+    "item": "minecraft:cooked_chicken", "count": 1
+  },
+  "cookTime": 300
+}
