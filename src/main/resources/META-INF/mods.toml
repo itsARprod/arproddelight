@@ -4,7 +4,7 @@ license="MIT License"
 
 [[mods]]
 modId="arproddelight"
-version="4.1.0"
+version="4.2.0"
 displayName="ARprod's Delight"
 logoFile="logo.png"
 authors="ARprod"
@@ -13,6 +13,8 @@ ARprod's Delight 4: Bubble & Squeak
 
 Special thanks to the creators of
 Farmer's Delight, Create, Some Assembly Required
+
+Thanks to NCS for providing JPB's "High"
 '''
 
 [[dependencies.arproddelight]]
