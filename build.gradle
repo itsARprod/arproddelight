@@ -86,6 +86,10 @@ dependencies {
 
     implementation("io.github.llamalad7:mixinextras-forge:0.4.1")
 
+    implementation(fg.deobf("curse.maven:farmers-delight-398521:8083474"))
+
+    runtimeOnly(fg.deobf("curse.maven:farmers-delight-398521:8083474"))
+
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.20.0.112"))
 
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.20.0.112"))
@@ -93,8 +97,6 @@ dependencies {
     runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.20.0.112"))
 
     runtimeOnly(fg.deobf("squeek.appleskin:appleskin-forge:mc1.20.1-2.5.1"))
-
-    implementation fg.deobf("curse.maven:farmers-delight-398521:8007609")
 
     runtimeOnly fg.deobf("curse.maven:create-central-kitchen-820977:6987710")
 
@@ -106,7 +108,3 @@ dependencies {
 
     runtimeOnly fg.deobf("curse.maven:create-fluid-1346709:8048351")
 }
-
-
-
-

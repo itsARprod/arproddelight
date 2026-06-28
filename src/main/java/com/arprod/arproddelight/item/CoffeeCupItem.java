@@ -9,7 +9,7 @@ public class CoffeeCupItem extends CoffeeItem {
     public CoffeeCupItem() {
         super(3,                              // caffeineLimit
                 1200,                           // negativeEffectDuration
-                6,                              // negativeEffectStrength
+                2,                              // negativeEffectStrength
                 List.of(MobEffects.MOVEMENT_SPEED, MobEffects.DIG_SPEED),
                 List.of(2400, 3000));
     }

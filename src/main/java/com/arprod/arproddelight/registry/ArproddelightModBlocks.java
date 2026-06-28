@@ -32,7 +32,6 @@ public class ArproddelightModBlocks {
 	public static final RegistryObject<Block> PEAR_CRATE = REGISTRY.register("pear_crate", crate());
 	public static final RegistryObject<Block> CHERRY_CRATE = REGISTRY.register("cherry_crate", crate());
 	public static final RegistryObject<Block> COTTON_CRATE = REGISTRY.register("cotton_crate", crate());
-	public static final RegistryObject<Block> APPLE_CRATE = REGISTRY.register("apple_crate", crate());
 	public static final RegistryObject<Block> COFFEE_BEAN_BAG = REGISTRY.register("coffee_bean_bag", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
 	public static final RegistryObject<Block> CANDY_CANE_BLOCK = REGISTRY.register("candy_cane_block", CandyCaneBlockBlock::new);

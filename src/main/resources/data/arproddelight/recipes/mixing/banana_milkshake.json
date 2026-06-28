@@ -1,0 +1,25 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "fluid": "minecraft:milk",
+      "amount": 200
+    },
+    {
+      "item": "arproddelight:banana"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+
+  ],
+  "results": [
+    {
+      "item": "arproddelight:banana_milkshake",
+      "count": 1
+    }
+  ]
+}

@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "arproddelight:margherita_pizza",
-    "arproddelight:salami_pizza",
-    "arproddelight:boscaiola_pizza"
+    "#arpoddelight:pizza"
   ]
 }

@@ -9,10 +9,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
-
+/**
+ Set a special container (i.e. Bowl from Mushroom Stew) that isn't the crafting remainder
+ **/
 public class SpecialContainerConsumableItem extends ConsumableItem {
 	protected Item containerItem;
-
+	/** @param containerItem The container the player gets when it finishes using it **/
 	public SpecialContainerConsumableItem(Properties properties, Item containerItem) {
 		super(properties);
 		this.containerItem = containerItem;

@@ -1,9 +1,8 @@
 
 package com.arprod.arproddelight.item;
 
+import com.arprod.arproddelight.item.template.ItemTooltipHelper;
 import com.arprod.arproddelight.registry.ArproddelightModBlocks;
-import com.simibubi.create.foundation.item.ItemDescription;
-import net.createmod.catnip.lang.FontHelper;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
@@ -23,10 +22,6 @@ public class GelatinBlockItem extends BlockItem {
 
         if (level == null) return;
 
-        ItemDescription description = ItemDescription.create(this, FontHelper.Palette.STANDARD_CREATE);
-
-        if (description != null) {
-            tooltip.addAll(description.getCurrentLines());
-        }
+        ItemTooltipHelper.addCreateDescription(this, tooltip);
     }
 }

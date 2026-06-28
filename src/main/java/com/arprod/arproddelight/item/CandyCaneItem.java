@@ -1,8 +1,7 @@
 
 package com.arprod.arproddelight.item;
 
-import com.simibubi.create.foundation.item.ItemDescription;
-import net.createmod.catnip.lang.FontHelper;
+import com.arprod.arproddelight.item.template.ItemTooltipHelper;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -15,7 +14,6 @@ import net.minecraft.world.entity.LivingEntity;
 import com.arprod.arproddelight.registry.ArproddelightModItems;
 
 import java.util.List;
-import java.util.Objects;
 
 public class CandyCaneItem extends Item {
 	public CandyCaneItem() {
@@ -47,6 +45,6 @@ public class CandyCaneItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
 		super.appendHoverText(stack, level, tooltip, flag);
-		tooltip.addAll(Objects.requireNonNull(ItemDescription.create(this, FontHelper.Palette.STANDARD_CREATE)).getCurrentLines());
+		ItemTooltipHelper.addCreateDescription(this, tooltip);
 	}
 }

@@ -8,7 +8,7 @@
     }
   ],
   "fuel": {
-    "fluidTag": "minecraft:water",
+    "fluid": "minecraft:water",
     "amount": 500
   },
   "results": [

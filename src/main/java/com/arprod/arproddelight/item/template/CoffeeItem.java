@@ -50,18 +50,27 @@ public class CoffeeItem extends DrinkableItem {
 
 	@Override
 	public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemstack, @NotNull Level world, @NotNull LivingEntity entity) {
+		if (entity.level().isClientSide){
+			return itemstack;
+		}
+
 		int caffeine = entity.getPersistentData().getInt("caffeine");
+
 		ItemStack result = super.finishUsingItem(itemstack, world, entity);
+
 		if (caffeine >= caffeineLimit) {
-			//NEGATIVE EFFECTS
-			entity.removeEffect(MobEffects.MOVEMENT_SPEED);
-			entity.removeEffect(MobEffects.DIG_SPEED);
+			//remove all positive effects
+            for (MobEffect positiveEffect : positiveEffects) {
+                entity.removeEffect(positiveEffect);
+            }
+			//add negative effects
 			entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, negativeEffectDuration, negativeEffectStrength, false, true));
 			entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, negativeEffectDuration, negativeEffectStrength, false, true));
+			//lactose intolerance
 			entity.addEffect(new MobEffectInstance(ArproddelightModMobEffects.LACTOSE_INTOLERANCE.get(), negativeEffectDuration, 0, false, true));
-			//ADVANCEMENT
+			//check for advancement
 			if (entity instanceof ServerPlayer _player) {
-				Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.fromNamespaceAndPath("arproddelight", "main/coffee"));
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(ResourceLocation.fromNamespaceAndPath("arproddelight", "coffee"));
                 assert _adv != null;
                 AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 				if (!_ap.isDone()) {
@@ -71,7 +80,7 @@ public class CoffeeItem extends DrinkableItem {
 			}
 
 		} else {
-			//POSITIVE EFFECTS
+			//add positive effects
 			for (int i = 0; i < positiveEffects.size(); i++) {
 				entity.addEffect(new MobEffectInstance(positiveEffects.get(i), positiveEffectDurations.get(i) - caffeine * positiveEffectDurations.get(i) / 4, caffeine, false, true));
 			}

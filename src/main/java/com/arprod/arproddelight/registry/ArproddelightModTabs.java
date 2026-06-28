@@ -25,7 +25,6 @@ public class ArproddelightModTabs {
                                     GRATER.get(),
                                     MUSIC_DISC_HIGH.get(),
                                     //crates
-                                    APPLE_CRATE.get(),
                                     BANANA_CRATE.get(),
                                     CHERRY_CRATE.get(),
                                     PEAR_CRATE.get(),
@@ -106,6 +105,7 @@ public class ArproddelightModTabs {
                                     ICE_CREAM_CHOCOLATE.get(),
                                     ICE_CREAM_HONEY.get(),
                                     ICE_CREAM_CINNAMON.get(),
+                                    ICE_CREAM_SWEET_BERRIES.get(),
                                     CINNAMON_ROLL.get(),
                                     RAW_CLAY_CUP.get(),
                                     CLAY_CUP.get(),
@@ -119,7 +119,8 @@ public class ArproddelightModTabs {
                                     MARSHMALLOW_ON_STICK.get(),
                                     COOKED_MARSHMALLOW_ON_STICK.get(),
                                     BURNT_MARSHMALLOW_ON_STICK.get(),
-                                    BERRY_TEA.get())
+                                    BERRY_TEA.get(),
+                                    BANANA_MILKSHAKE.get())
                             .forEach(tabData::accept))
                     .build());
 }

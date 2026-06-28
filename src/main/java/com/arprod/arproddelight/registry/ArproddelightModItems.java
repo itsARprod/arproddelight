@@ -36,6 +36,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> DOUBLE_HAMBURGER = REGISTRY.register("double_hamburger", DoubleHamburgerItem::new);
     public static final RegistryObject<Item> CHEESE_AND_TOMATO_DURUM = REGISTRY.register("cheese_and_tomato_durum", CheeseAndTomatoDurumItem::new);
     public static final RegistryObject<Item> UZBEK_RICE = REGISTRY.register("uzbek_rice", UzbekRiceItem::new);
+    public static final RegistryObject<Item> ICE_CREAM_SWEET_BERRIES = REGISTRY.register("ice_cream_sweet_berries", IceCreamSweetBerriesItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CONE = REGISTRY.register("ice_cream_cone", IceCreamConeItem::new);
     public static final RegistryObject<Item> INCOMPLETE_ICE_CREAM = REGISTRY.register("incomplete_ice_cream", IceCreamConeItem::new);
     public static final RegistryObject<Item> ICE_CREAM_CREAM = REGISTRY.register("ice_cream_cream", IceCreamCreamItem::new);
@@ -63,7 +64,6 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> COFFEE_BERRY_CRATE = block(ArproddelightModBlocks.COFFEE_BERRY_CRATE);
     public static final RegistryObject<Item> COTTON_CRATE = block(ArproddelightModBlocks.COTTON_CRATE);
     public static final RegistryObject<Item> MINT_CRATE = block(ArproddelightModBlocks.MINT_CRATE);
-    public static final RegistryObject<Item> APPLE_CRATE = block(ArproddelightModBlocks.APPLE_CRATE);
     public static final RegistryObject<Item> COFFEE_BEAN_BAG = block(ArproddelightModBlocks.COFFEE_BEAN_BAG);
     public static final RegistryObject<Item> CANDY_CANE = REGISTRY.register("candy_cane", CandyCaneItem::new);
     public static final RegistryObject<Item> CANDY_SPEAR = REGISTRY.register("candy_spear", CandySpearItem::new);
@@ -114,6 +114,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> POTATO_SALAD = REGISTRY.register("potato_salad", PotatoSaladItem::new);
     public static final RegistryObject<Item> FISH_AND_CHIPS = REGISTRY.register("fish_and_chips", FishAndChipsItem::new);
     public static final RegistryObject<Item> CHEESE_STICKS = REGISTRY.register("cheese_sticks", CheeseSticksItem::new);
+    public static final RegistryObject<Item> BANANA_MILKSHAKE = REGISTRY.register("banana_milkshake", BananaMilshakeItem::new);
 
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         assert block.getId() != null;
