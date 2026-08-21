@@ -1,0 +1,40 @@
+{
+  "type": "createdieselgenerators:basin_fermenting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "createdieselgenerators"
+    }
+  ],
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluidTag": "forge:milk"
+    },
+    {
+      "item": "arproddelight:mold",
+      "count": 1
+    }
+  ],
+  "processingTime": 200,
+  "results": [
+    {
+      "amount": 150,
+      "fluid": "arproddelight:melted_cheese"
+    },
+    {
+      "item": "arproddelight:cheese",
+      "count": 1,
+      "chance": 0.1
+    },
+    {
+      "item": "arproddelight:mold",
+      "count": 1
+    },
+    {
+      "item": "arproddelight:mold",
+      "count": 1,
+      "chance": 0.05
+    }
+  ]
+}
