@@ -17,7 +17,7 @@ apply plugin: 'maven-publish'
 
 
 group = 'com.arprod.arproddelight'
-version = '4.2.1'
+version = '4.2.2'
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -107,4 +107,8 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:some-assembly-required-422951:7658719")
 
     runtimeOnly fg.deobf("curse.maven:create-fluid-1346709:8048351")
+
+    runtimeOnly fg.deobf("curse.maven:create-diesel-generators-869316:7932785")
+
+    runtimeOnly fg.deobf("curse.maven:create-dragons-plus-1216624:8623168")
 }

@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "arproddelight:ice_cream_cone"
+    },
+    {
+      "amount": 250,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:incomplete_ice_cream"
+    }
+  ]
+}

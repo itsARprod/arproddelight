@@ -1,0 +1,19 @@
+{
+  "type": "create_dragons_plus:freezing",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create_dragons_plus"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "arproddelight:incomplete_ice_cream"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:ice_cream_cream"
+    }
+  ]
+}
