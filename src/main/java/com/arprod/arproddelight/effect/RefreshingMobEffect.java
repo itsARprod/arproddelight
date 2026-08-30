@@ -22,7 +22,7 @@ public class RefreshingMobEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
-        if (entity.level().isClientSide || entity.tickCount % (EFFECT_REMOVAL_INTERVAL / amplifier) != 0) {
+        if (entity.level().isClientSide || entity.tickCount % (EFFECT_REMOVAL_INTERVAL / (amplifier + 1)) != 0) {
             return;
         }
 
