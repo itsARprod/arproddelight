@@ -1,6 +1,6 @@
 {
   "type": "arproddelight:deep_frying",
-  "processingTime": 5,
+  "processingTime": 100,
   "ingredients": [
     {
       "item": "minecraft:sweet_berries"

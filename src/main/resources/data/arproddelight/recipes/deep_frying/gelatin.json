@@ -1,6 +1,6 @@
 {
   "type": "arproddelight:deep_frying",
-  "processingTime": 10,
+  "processingTime": 200,
   "heatRequirement": "heated",
   "ingredients": [
     {

@@ -55,5 +55,7 @@ public class DeepFryingCategory extends BasinCategory {
                     .draw(graphics, getBackground().getWidth() / 2 + 3, 55);
         }
         fryer.draw(graphics, getBackground().getWidth() / 2 + 3, 34);
+
+
     }
 }

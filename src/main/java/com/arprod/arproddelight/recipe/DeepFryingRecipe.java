@@ -51,7 +51,7 @@ public class DeepFryingRecipe extends BasinRecipe {
 
     public int getProcessingTime() {
         int duration = getProcessingDuration();
-        return duration > 0 ? duration * 20 : 100;
+        return duration > 0 ? duration: 100;
     }
 
     public int getFuelAmountToConsume() {

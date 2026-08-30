@@ -101,7 +101,7 @@ public class TonirCookingCategory implements IRecipeCategory<TonirCookingRecipe>
         return Integer.toString(experience);
     }
 
-    private static String formatCookTime(int cookTime) {
+    public static String formatCookTime(int cookTime) {
         if (cookTime <= 0) {
             return "0s";
         }
