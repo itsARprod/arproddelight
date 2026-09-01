@@ -29,7 +29,7 @@ import vectorwing.farmersdelight.common.registry.ModSounds;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-
+@SuppressWarnings("null")
 public class FryingBasketBlockEntity extends BlockEntity {
 
     private int progress;
@@ -106,10 +106,6 @@ public class FryingBasketBlockEntity extends BlockEntity {
     }
 
     private boolean canCompleteRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
-        return checkRecipe(recipe, basin);
-    }
-
-    private boolean checkRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
         if (level == null) {
             return false;
         }
@@ -160,7 +156,7 @@ public class FryingBasketBlockEntity extends BlockEntity {
 
     private void executeRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
         IFluidHandler fluidHandler = basin.getCapability(ForgeCapabilities.FLUID_HANDLER).orElse(null);
-        if (!checkRecipe(recipe, basin)) {
+        if (!canCompleteRecipe(recipe, basin)) {
             return;
         }
 

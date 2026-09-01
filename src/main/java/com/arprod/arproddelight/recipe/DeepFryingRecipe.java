@@ -46,7 +46,7 @@ public class DeepFryingRecipe extends BasinRecipe {
     }
 
     public boolean hasFuel() {
-        return fuel != FluidIngredient.EMPTY;
+        return getFuel() != FluidIngredient.EMPTY;
     }
 
     public int getProcessingTime() {
