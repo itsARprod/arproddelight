@@ -7,8 +7,7 @@
       "fluidTag": "forge:milk"
     },
     {
-      "item": "arproddelight:mold",
-      "count": 1
+      "item": "arproddelight:mold"
     }
 
   ],
@@ -18,12 +17,10 @@
       "fluid": "arproddelight:melted_cheese"
     },
     {
-      "item": "arproddelight:mold",
-      "count": 1
+      "item": "arproddelight:mold"
     },
     {
       "item": "arproddelight:mold",
-      "count": 1,
       "chance": 0.20
     }
 

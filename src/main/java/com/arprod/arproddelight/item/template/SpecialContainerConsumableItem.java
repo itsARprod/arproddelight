@@ -14,7 +14,7 @@ import vectorwing.farmersdelight.common.item.ConsumableItem;
  **/
 public class SpecialContainerConsumableItem extends ConsumableItem {
 	protected Item containerItem;
-	/** @param containerItem The container the player gets when it finishes using it **/
+	/** @param containerItem The container the player gets when it finishes using the item **/
 	public SpecialContainerConsumableItem(Properties properties, Item containerItem) {
 		super(properties);
 		this.containerItem = containerItem;
