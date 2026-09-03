@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluidTag": "forge:milk",
+      "amount": 100
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+
+  ],
+  "results": [
+    {
+      "amount": 500,
+      "fluid": "arproddelight:batter"
+    }
+
+  ]
+}

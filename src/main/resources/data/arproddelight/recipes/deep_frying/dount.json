@@ -1,0 +1,21 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 60,
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "amount": 100,
+      "fluid": "arproddelight:batter"
+    }
+  ],
+  "fuel": {
+    "fluidTag": "forge:plantoil",
+    "amount": 300
+  },
+  "results": [
+    {
+      "item": "arproddelight:donut",
+      "count": 1
+    }
+  ]
+}

@@ -115,6 +115,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> FISH_AND_CHIPS = REGISTRY.register("fish_and_chips", FishAndChipsItem::new);
     public static final RegistryObject<Item> CHEESE_STICKS = REGISTRY.register("cheese_sticks", CheeseSticksItem::new);
     public static final RegistryObject<Item> BANANA_MILKSHAKE = REGISTRY.register("banana_milkshake", BananaMilshakeItem::new);
+    public static final RegistryObject<Item> DONUT = REGISTRY.register("donut", DonutItem::new);
 
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
         assert block.getId() != null;

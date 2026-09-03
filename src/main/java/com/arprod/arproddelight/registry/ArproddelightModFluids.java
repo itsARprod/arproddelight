@@ -4,6 +4,7 @@
  */
 package com.arprod.arproddelight.registry;
 
+import com.arprod.arproddelight.fluid.BatterFluid;
 import com.arprod.arproddelight.fluid.MayonnaiseFluid;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,6 +32,8 @@ public class ArproddelightModFluids {
 	public static final RegistryObject<FlowingFluid> FLOWING_SUNFLOWER_OIL = REGISTRY.register("flowing_sunflower_oil", SunflowerOilFluid.Flowing::new);
 	public static final RegistryObject<FlowingFluid> MAYONNAISE = REGISTRY.register("mayonnaise", MayonnaiseFluid.Source::new);
 	public static final RegistryObject<FlowingFluid> FLOWING_MAYONNAISE = REGISTRY.register("flowing_mayonnaise", MayonnaiseFluid.Flowing::new);
+	public static final RegistryObject<FlowingFluid> BATTER = REGISTRY.register("batter", BatterFluid.Source::new);
+	public static final RegistryObject<FlowingFluid> FLOWING_BATTER = REGISTRY.register("flowing_batter", BatterFluid.Flowing::new);
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class FluidsClientSideHandler {
 		@SubscribeEvent

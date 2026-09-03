@@ -1,0 +1,44 @@
+
+package com.arprod.arproddelight.fluid;
+
+import com.arprod.arproddelight.registry.ArproddelightModFluidTypes;
+import com.arprod.arproddelight.registry.ArproddelightModFluids;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraftforge.fluids.ForgeFlowingFluid;
+import org.jetbrains.annotations.NotNull;
+
+public abstract class BatterFluid extends ForgeFlowingFluid {
+	public static final Properties PROPERTIES = new Properties(ArproddelightModFluidTypes.BATTER_TYPE, ArproddelightModFluids.BATTER,
+            ArproddelightModFluids.FLOWING_BATTER);
+
+	private BatterFluid() {
+		super(PROPERTIES);
+	}
+
+	public static class Source extends BatterFluid {
+		public int getAmount(@NotNull FluidState state) {
+			return 8;
+		}
+
+		public boolean isSource(@NotNull FluidState state) {
+			return true;
+		}
+	}
+
+	public static class Flowing extends BatterFluid {
+		protected void createFluidStateDefinition(StateDefinition.@NotNull Builder<Fluid, FluidState> builder) {
+			super.createFluidStateDefinition(builder);
+			builder.add(LEVEL);
+		}
+
+		public int getAmount(FluidState state) {
+			return state.getValue(LEVEL);
+		}
+
+		public boolean isSource(FluidState state) {
+			return false;
+		}
+	}
+}
