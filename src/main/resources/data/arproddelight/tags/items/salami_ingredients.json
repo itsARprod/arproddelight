@@ -5,5 +5,8 @@
     "#forge:cooked_beef",
     "#forge:cooked_mutton",
     "arproddelight:cooked_chevon"
+  ],
+  "optional": [
+    "ratatouille:sausage"
   ]
 }
