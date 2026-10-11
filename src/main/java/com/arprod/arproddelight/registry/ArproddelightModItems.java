@@ -103,6 +103,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> BATTERED_COD= REGISTRY.register("battered_cod", BatteredCodItem::new);
     public static final RegistryObject<Item> FRIED_CHICKEN= REGISTRY.register("fried_chicken", FriedChickenItem::new);
     public static final RegistryObject<Item> MAYONNAISE= REGISTRY.register("mayonnaise", MayonnaiseItem::new);
+    public static final RegistryObject<Item> BATTER = REGISTRY.register("batter", BatterItem::new);
     public static final RegistryObject<Item> BOILED_POTATO= REGISTRY.register("boiled_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MASHED_POTATO= REGISTRY.register("mashed_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MUSIC_DISC_HIGH = REGISTRY.register("music_disc_high", MusicDiscHighItem::new);

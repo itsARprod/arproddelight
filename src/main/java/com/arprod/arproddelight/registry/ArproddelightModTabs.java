@@ -69,6 +69,7 @@ public class ArproddelightModTabs {
                                     CHEESE.get(),
                                     GRATED_CHEESE.get(),
                                     MAYONNAISE.get(),
+                                    BATTER.get(),
                                     GELATIN.get(),
                                     CINNAMON_BARK.get(),
                                     CINNAMON.get(),
@@ -120,7 +121,9 @@ public class ArproddelightModTabs {
                                     COOKED_MARSHMALLOW_ON_STICK.get(),
                                     BURNT_MARSHMALLOW_ON_STICK.get(),
                                     BERRY_TEA.get(),
-                                    BANANA_MILKSHAKE.get())
+                                    BANANA_MILKSHAKE.get(),
+                                    DONUT.get())
+
                             .forEach(tabData::accept))
                     .build());
 }
