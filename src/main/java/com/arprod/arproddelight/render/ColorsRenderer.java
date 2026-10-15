@@ -1,4 +1,4 @@
-package com.arprod.arproddelight.client;
+package com.arprod.arproddelight.render;
 
 import com.arprod.arproddelight.registry.ArproddelightModBlocks;
 import com.arprod.arproddelight.block.GelatinBlockBlock;
@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
         value = Dist.CLIENT,
         bus = Mod.EventBusSubscriber.Bus.MOD
 )
-public class ModBlockColors {
+public class ColorsRenderer {
 
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {

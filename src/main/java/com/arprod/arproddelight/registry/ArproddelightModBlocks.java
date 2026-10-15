@@ -43,6 +43,7 @@ public class ArproddelightModBlocks {
     public static final RegistryObject<Block> WILD_COTTON = REGISTRY.register("wild_cotton", WildCottonBlock::new);
 	public static final RegistryObject<Block> COFFEE_BEAN = REGISTRY.register("coffee_bean", CoffeeBeanBlock::new);
 	public static final RegistryObject<Block> FRYING_BASKET = REGISTRY.register("frying_basket", FryingBasketBlock::new);
+	public static final RegistryObject<Block> COMPRESSOR = REGISTRY.register("compressor", CompressorBlock::new);
 	public static final RegistryObject<Block> SUNFLOWER_OIL = REGISTRY.register("sunflower_oil", SunflowerOilBlock::new);
 	public static final RegistryObject<Block> CINNAMON_LOG = REGISTRY.register("cinnamon_log", CinnamonLogBlock::new);
 	public static final RegistryObject<Block> CINNAMON_WOOD = REGISTRY.register("cinnamon_wood", CinnamonLogBlock::new);

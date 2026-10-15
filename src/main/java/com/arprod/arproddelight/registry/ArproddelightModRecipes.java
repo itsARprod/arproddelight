@@ -2,6 +2,7 @@ package com.arprod.arproddelight.registry;
 
 import com.arprod.arproddelight.ArproddelightMod;
 import com.arprod.arproddelight.recipe.DeepFryingRecipe;
+import com.arprod.arproddelight.recipe.CompressingRecipe;
 import com.arprod.arproddelight.recipe.TonirCookingRecipe;
 import com.arprod.arproddelight.recipe.TonirCookingRecipeSerializer;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
@@ -46,6 +47,33 @@ public class ArproddelightModRecipes {
 
     public static final RegistryObject<RecipeSerializer<DeepFryingRecipe>> DEEP_FRYING_SERIALIZER =
             SERIALIZERS.register("deep_frying", () -> new ProcessingRecipeSerializer<>(DeepFryingRecipe::new));
+
+    public static final RegistryObject<RecipeType<CompressingRecipe>> COMPRESSING_TYPE =
+            TYPES.register("compressing", () -> RecipeType.simple(id("compressing")));
+
+    public static final RegistryObject<RecipeSerializer<CompressingRecipe>> COMPRESSING_SERIALIZER =
+            SERIALIZERS.register("compressing", () -> new ProcessingRecipeSerializer<>(CompressingRecipe::new));
+
+    public static final IRecipeTypeInfo COMPRESSING_RECIPE_INFO = new IRecipeTypeInfo() {
+        private final ResourceLocation id = id("compressing");
+
+        @Override
+        public ResourceLocation getId() {
+            return id;
+        }
+
+        @Override
+        @SuppressWarnings("unchecked")
+        public <T extends RecipeSerializer<?>> T getSerializer() {
+            return (T) COMPRESSING_SERIALIZER.get();
+        }
+
+        @Override
+        @SuppressWarnings("unchecked")
+        public <T extends RecipeType<?>> T getType() {
+            return (T) COMPRESSING_TYPE.get();
+        }
+    };
 
     public static final IRecipeTypeInfo DEEP_FRYING_RECIPE_INFO = new IRecipeTypeInfo() {
         private final ResourceLocation id = id("deep_frying");
