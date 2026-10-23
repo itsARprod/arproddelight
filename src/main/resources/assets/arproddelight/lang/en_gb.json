@@ -1,5 +1,6 @@
 {
   "block.arproddelight.gelatin_block": "Block of Gelatine",
   "item.arproddelight.fried_cut_potatoes": "Chips",
-  "item.arproddelight.gelatin": "Gelatine"
+  "item.arproddelight.gelatin": "Gelatine",
+  "advancements.arproddelight.fries.descr": "Crisp up some Chips"
 }

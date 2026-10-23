@@ -22,18 +22,22 @@ public class CandyCaneItem extends Item {
 
 	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
-		ItemStack retval = new ItemStack(ArproddelightModItems.CANDY_SPEAR.get());
+
 
 		if (!entity.isShiftKeyDown()){
 			super.finishUsingItem(itemstack, world, entity);
 			return itemstack;
 		}
 
+		ItemStack retval = new ItemStack(ArproddelightModItems.CANDY_SPEAR.get());
+
 		if (itemstack.isEmpty()) {
 			return retval;
 		} else {
-			itemstack.shrink(1);
-			if (entity instanceof Player player && !player.getAbilities().instabuild) {
+			if (entity instanceof Player player) {
+				if(!player.getAbilities().instabuild) {
+					itemstack.shrink(1);
+				}
 				if (!player.getInventory().add(retval)) {
 					player.drop(retval, false);
 				}

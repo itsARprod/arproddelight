@@ -160,11 +160,14 @@ public class FryingBasketBlockEntity extends BlockEntity {
             return;
         }
 
-        if (recipe.hasFuel() && !consumeFluidAmount(recipe.getFuel(), recipe.getFuelAmountToConsume(), fluidHandler)) {
+        if (!BasinRecipe.apply(basin, recipe)) {
             return;
         }
 
-        if (!BasinRecipe.apply(basin, recipe)) {
+        // BasinRecipe.apply performs its own simulation before extracting inputs. Drain
+        // the basket's extra fuel only after it succeeds, so a rejected basin operation
+        // cannot consume fuel while leaving the ingredients behind.
+        if (recipe.hasFuel() && !consumeFluidAmount(recipe.getFuel(), recipe.getFuelAmountToConsume(), fluidHandler)) {
             return;
         }
 
