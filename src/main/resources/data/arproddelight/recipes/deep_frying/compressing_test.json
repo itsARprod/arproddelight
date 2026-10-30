@@ -1,0 +1,17 @@
+{
+  "type": "arproddelight:compressing",
+  "processingTime": 60,
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:ice",
+      "count": 1
+    }
+  ]
+}

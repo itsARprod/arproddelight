@@ -5,6 +5,7 @@ import com.arprod.arproddelight.registry.ArproddelightModRecipes;
 import com.arprod.arproddelight.recipe.DeepFryingRecipe;
 import com.simibubi.create.AllParticleTypes;
 import com.simibubi.create.content.processing.basin.BasinBlockEntity;
+import com.simibubi.create.content.processing.basin.BasinOperatingBlockEntity;
 import com.simibubi.create.content.processing.basin.BasinRecipe;
 import com.simibubi.create.content.fluids.particle.FluidParticleData;
 import com.simibubi.create.content.processing.recipe.HeatCondition;
@@ -18,22 +19,27 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.Container;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandler.FluidAction;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.common.registry.ModSounds;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 @SuppressWarnings("null")
-public class FryingBasketBlockEntity extends BlockEntity {
+public class FryingBasketBlockEntity extends BasinOperatingBlockEntity {
+
+    private static final Object DEEP_FRYING_RECIPE_CACHE_KEY = new Object();
 
     private int progress;
     private int maxProgress;
+    private boolean running;
     @Nullable
     private DeepFryingRecipe activeRecipe;
 
@@ -58,6 +64,8 @@ public class FryingBasketBlockEntity extends BlockEntity {
             return;
         }
 
+        be.running = true;
+
         if (be.activeRecipe == null || !be.activeRecipe.getId().equals(recipe.getId())) {
             be.activeRecipe = recipe;
             be.progress = 0;
@@ -72,6 +80,7 @@ public class FryingBasketBlockEntity extends BlockEntity {
                 be.executeRecipe(recipe, basin);
             }
             be.progress = 0;
+            be.running = false;
         }
     }
 
@@ -79,6 +88,7 @@ public class FryingBasketBlockEntity extends BlockEntity {
         progress = 0;
         maxProgress = 0;
         activeRecipe = null;
+        running = false;
     }
 
     @Nullable
@@ -103,6 +113,40 @@ public class FryingBasketBlockEntity extends BlockEntity {
         List<DeepFryingRecipe> recipes = new ArrayList<>(level.getRecipeManager().getAllRecipesFor(ArproddelightModRecipes.DEEP_FRYING_TYPE.get()));
         recipes.sort(Comparator.comparingInt((DeepFryingRecipe r) -> r.getIngredients().size() + r.getFluidIngredients().size()).reversed());
         return recipes;
+    }
+
+    @Override
+    public void startProcessingBasin() {
+        running = true;
+        progress = 0;
+    }
+
+    @Override
+    protected Optional<BasinBlockEntity> getBasin() {
+        if (level == null)
+            return Optional.empty();
+        BlockEntity below = level.getBlockEntity(worldPosition.below());
+        return below instanceof BasinBlockEntity basin ? Optional.of(basin) : Optional.empty();
+    }
+
+    @Override
+    protected boolean isRunning() {
+        return running;
+    }
+
+    @Override
+    protected void onBasinRemoved() {
+        resetProgress();
+    }
+
+    @Override
+    protected <C extends Container> boolean matchStaticFilters(Recipe<C> recipe) {
+        return recipe instanceof DeepFryingRecipe;
+    }
+
+    @Override
+    protected Object getRecipeCacheKey() {
+        return DEEP_FRYING_RECIPE_CACHE_KEY;
     }
 
     private boolean canCompleteRecipe(DeepFryingRecipe recipe, BasinBlockEntity basin) {
@@ -237,16 +281,18 @@ public class FryingBasketBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(@NotNull CompoundTag tag) {
-        super.saveAdditional(tag);
-        tag.putInt("Progress", progress);
-        tag.putInt("MaxProgress", maxProgress);
+    protected void read(CompoundTag tag, boolean clientPacket) {
+        progress = tag.getInt("Progress");
+        maxProgress = tag.getInt("MaxProgress");
+        running = tag.getBoolean("Running");
+        super.read(tag, clientPacket);
     }
 
     @Override
-    public void load(@NotNull CompoundTag tag) {
-        super.load(tag);
-        progress = tag.getInt("Progress");
-        maxProgress = tag.getInt("MaxProgress");
+    public void write(CompoundTag tag, boolean clientPacket) {
+        tag.putInt("Progress", progress);
+        tag.putInt("MaxProgress", maxProgress);
+        tag.putBoolean("Running", running);
+        super.write(tag, clientPacket);
     }
 }

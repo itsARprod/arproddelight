@@ -35,15 +35,10 @@ public class ArproddelightModBlockEntities {
     public static final RegistryObject<BlockEntityType<CompressorBlockEntity>> COMPRESSOR =
             BLOCK_ENTITIES.register("compressor",
                     () -> BlockEntityType.Builder.of(
-                            ArproddelightModBlockEntities::createCompressor,
+                            CompressorBlockEntity::new,
                             ArproddelightModBlocks.COMPRESSOR.get()
                     ).build(null)
             );
-
-    private static CompressorBlockEntity createCompressor(net.minecraft.core.BlockPos pos,
-                                                           net.minecraft.world.level.block.state.BlockState state) {
-        return new CompressorBlockEntity(COMPRESSOR.get(), pos, state);
-    }
 
     public static void register(net.minecraftforge.eventbus.api.IEventBus bus) {
         BLOCK_ENTITIES.register(bus);

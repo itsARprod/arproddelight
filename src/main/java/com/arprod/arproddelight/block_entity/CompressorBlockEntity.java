@@ -24,10 +24,6 @@ public class CompressorBlockEntity extends BasinOperatingBlockEntity {
         super(type, pos, state);
     }
 
-    public float getRenderedCogSpeed() {
-        return getSpeed();
-    }
-
     @Override
     public void tick() {
         super.tick();

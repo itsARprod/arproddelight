@@ -22,7 +22,7 @@ public class CompressorRenderer implements BlockEntityRenderer<CompressorBlockEn
             return;
 
         float time = AnimationTickHolder.getRenderTime(be.getLevel());
-        float angle = (time * be.getRenderedCogSpeed() * 3f / 10f) % 360f;
+        float angle = (time * be.getSpeed() * 3f / 10f) % 360f;
         SuperByteBuffer cog = CachedBuffers.partial(AllPartialModels.MECHANICAL_PUMP_COG, be.getBlockState());
         VertexConsumer vertexConsumer = buffer.getBuffer(RenderType.solid());
         cog.rotateCentered(angle * ((float) Math.PI / 180f), Direction.SOUTH)
