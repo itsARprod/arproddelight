@@ -1,3 +1,5 @@
 /run/
-/.gradle/
 /build/
+/.gradle/
+/.idea/
+/.settings/
