@@ -69,6 +69,7 @@ public class ArproddelightModTabs {
                                     CHEESE.get(),
                                     GRATED_CHEESE.get(),
                                     MAYONNAISE.get(),
+                                    BATTER.get(),
                                     GELATIN.get(),
                                     CINNAMON_BARK.get(),
                                     CINNAMON.get(),
@@ -92,6 +93,7 @@ public class ArproddelightModTabs {
                                     DEVILED_EGGS.get(),
                                     MAC_N_CHEESE.get(),
                                     FISH_AND_CHIPS.get(),
+                                    BUBBLE_AND_SQUEAK .get(),
                                     //somewhat complicated meals
                                     MARGHERITA_PIZZA.get(),
                                     MARGHERITA_PIZZA_SLICE.get(),
@@ -116,11 +118,21 @@ public class ArproddelightModTabs {
                                     CHEWING_GUM.get(),
                                     MARSHMALLOW.get(),
                                     SMORE.get(),
+                                    BIRDS_MILK.get(),
+                                    MINT_CHOCOLATE.get(),
                                     MARSHMALLOW_ON_STICK.get(),
                                     COOKED_MARSHMALLOW_ON_STICK.get(),
                                     BURNT_MARSHMALLOW_ON_STICK.get(),
                                     BERRY_TEA.get(),
-                                    BANANA_MILKSHAKE.get())
+                                    BANANA_MILKSHAKE.get(),
+                                    DONUT.get(),
+                                    CHOCOLATE_DONUT.get(),
+                                    PANCAKE.get(),
+                                    GINGERBREAD_COOKIES.get(),
+                                    CHOCOLATE_GINGERBREAD_COOKIES.get(),
+                                    ICED_GINGERBREAD_COOKIES.get(),
+                                    GINGERBREAD_MAN.get())
+
                             .forEach(tabData::accept))
                     .build());
 }

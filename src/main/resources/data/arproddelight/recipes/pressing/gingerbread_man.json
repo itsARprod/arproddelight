@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "arproddelight:iced_gingerbread_cookies"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:gingerbread_man"
+    }
+  ]
+}

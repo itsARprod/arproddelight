@@ -19,6 +19,14 @@ public class ArproddelightModItems {
     public static final DeferredRegister<Item> REGISTRY =
             DeferredRegister.create(ForgeRegistries.ITEMS, ArproddelightMod.MODID);
 
+    private static RegistryObject<Item> block(RegistryObject<Block> block) {
+        assert block.getId() != null;
+        return REGISTRY.register(
+                block.getId().getPath(),
+                () -> new BlockItem(block.get(), new Item.Properties())
+        );
+    }
+
     public static final RegistryObject<Item> CUT_POTATOES = REGISTRY.register("cut_potatoes", BasicItem::new);
     public static final RegistryObject<Item> FRIED_CUT_POTATOES = REGISTRY.register("fried_cut_potatoes", FriedCutPotatoesItem::new);
     public static final RegistryObject<Item> MELTED_CHEESE_BUCKET = REGISTRY.register("melted_cheese_bucket", MeltedCheeseItem::new);
@@ -103,6 +111,7 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> BATTERED_COD= REGISTRY.register("battered_cod", BatteredCodItem::new);
     public static final RegistryObject<Item> FRIED_CHICKEN= REGISTRY.register("fried_chicken", FriedChickenItem::new);
     public static final RegistryObject<Item> MAYONNAISE= REGISTRY.register("mayonnaise", MayonnaiseItem::new);
+    public static final RegistryObject<Item> BATTER = REGISTRY.register("batter", BatterItem::new);
     public static final RegistryObject<Item> BOILED_POTATO= REGISTRY.register("boiled_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MASHED_POTATO= REGISTRY.register("mashed_potato", BoiledPotatoItem::new);
     public static final RegistryObject<Item> MUSIC_DISC_HIGH = REGISTRY.register("music_disc_high", MusicDiscHighItem::new);
@@ -115,12 +124,14 @@ public class ArproddelightModItems {
     public static final RegistryObject<Item> FISH_AND_CHIPS = REGISTRY.register("fish_and_chips", FishAndChipsItem::new);
     public static final RegistryObject<Item> CHEESE_STICKS = REGISTRY.register("cheese_sticks", CheeseSticksItem::new);
     public static final RegistryObject<Item> BANANA_MILKSHAKE = REGISTRY.register("banana_milkshake", BananaMilshakeItem::new);
-
-    private static RegistryObject<Item> block(RegistryObject<Block> block) {
-        assert block.getId() != null;
-        return REGISTRY.register(
-                block.getId().getPath(),
-                () -> new BlockItem(block.get(), new Item.Properties())
-        );
-    }
+    public static final RegistryObject<Item> DONUT = REGISTRY.register("donut", DonutItem::new);
+    public static final RegistryObject<Item> PANCAKE = REGISTRY.register("pancake", PancakeItem::new);
+    public static final RegistryObject<Item> BUBBLE_AND_SQUEAK = REGISTRY.register("bubble_and_squeak", BubbleAndSqueakItem::new);
+    public static final RegistryObject<Item> BIRDS_MILK = REGISTRY.register("birds_milk", BirdsMilkItem::new);
+    public static final RegistryObject<Item> MINT_CHOCOLATE = REGISTRY.register("mint_chocolate", MintChocolateItem::new);
+    public static final RegistryObject<Item> GINGERBREAD_COOKIES = REGISTRY.register("gingerbread_cookies", GingerbreadCookiesItem::new);
+    public static final RegistryObject<Item> CHOCOLATE_GINGERBREAD_COOKIES = REGISTRY.register("chocolate_gingerbread_cookies", GlazedGingerbreadCookiesItem::new);
+    public static final RegistryObject<Item> ICED_GINGERBREAD_COOKIES = REGISTRY.register("iced_gingerbread_cookies", GlazedGingerbreadCookiesItem::new);
+    public static final RegistryObject<Item> GINGERBREAD_MAN = REGISTRY.register("gingerbread_man", GlazedGingerbreadCookiesItem::new);
+    public static final RegistryObject<Item> CHOCOLATE_DONUT = REGISTRY.register("chocolate_donut", GlazedDonutItem::new);
 }

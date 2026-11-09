@@ -1,0 +1,22 @@
+{
+  "type": "create:compacting",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "fluid": "create:honey",
+      "amount": 250
+    },
+    {
+      "item":"arproddelight:cinnamon_powder"
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:gingerbread_cookies",
+      "count": 2
+    }
+  ]
+}

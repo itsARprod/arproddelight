@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "arproddelight:gingerbread_cookies"
+    },
+    {
+      "fluid": "create:chocolate",
+      "amount": 50
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:chocolate_gingerbread_cookies"
+    }
+  ]
+}

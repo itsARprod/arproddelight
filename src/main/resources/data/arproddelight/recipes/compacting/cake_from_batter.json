@@ -1,0 +1,25 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "arproddelight:batter"
+    },
+    {
+      "item": "arproddelight:batter"
+    },
+    {
+      "item": "arproddelight:batter"
+    },
+    {
+      "fluidTag": "forge:milk",
+      "amount": 1000
+    }
+
+  ],
+  "results": [
+    {
+      "item": "minecraft:cake",
+      "count": 1
+    }
+  ]
+}

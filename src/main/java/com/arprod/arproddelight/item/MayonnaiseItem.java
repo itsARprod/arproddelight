@@ -11,8 +11,7 @@ import vectorwing.farmersdelight.common.item.DrinkableItem;
 
 public class MayonnaiseItem extends DrinkableItem {
 	public MayonnaiseItem() {
-		super(new Properties().craftRemainder(Items.BOWL).food((new FoodProperties.Builder()).alwaysEat()
-                .build()));
+		super(new Properties().craftRemainder(Items.BOWL).food((new FoodProperties.Builder()).nutrition(4).saturationMod(1.0F).build()));
 	}
 
 	public UseAnim getUseAnimation(ItemStack stack) {

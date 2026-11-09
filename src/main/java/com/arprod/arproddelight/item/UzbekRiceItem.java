@@ -13,6 +13,7 @@ public class UzbekRiceItem extends ConsumableItem {
         super(new Item.Properties().stacksTo(16).craftRemainder(Items.BOWL)
                 .food(new FoodProperties.Builder()
                         .nutrition(12)
+
                         .saturationMod(0.6f)
                         .effect(()-> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3000, 0 ), 1)
                         .build()

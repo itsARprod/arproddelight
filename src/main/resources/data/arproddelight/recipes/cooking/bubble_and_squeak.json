@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "arproddelight:cut_potatoes"
+    },
+    {
+      "tag": "forge:vegetables/onion"
+    },
+    {
+      "tag": "forge:crops/cabbage"
+    },
+    {
+      "tag": "forge:crops/cabbage"
+    },
+    {
+      "item": "farmersdelight:fried_egg"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "arproddelight:bubble_and_squeak"
+  }
+}

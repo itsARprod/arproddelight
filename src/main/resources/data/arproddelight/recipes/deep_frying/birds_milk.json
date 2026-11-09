@@ -1,0 +1,19 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 100,
+  "ingredients": [
+    {
+      "item": "arproddelight:marshmallow"
+    }
+  ],
+  "fuel": {
+    "fluidTag": "forge:chocolate",
+    "amount": 500
+  },
+  "results": [
+    {
+      "item": "arproddelight:birds_milk",
+      "count": 1
+    }
+  ]
+}

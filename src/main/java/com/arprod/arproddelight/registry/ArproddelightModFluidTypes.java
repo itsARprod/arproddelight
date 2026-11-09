@@ -20,4 +20,5 @@ public class ArproddelightModFluidTypes {
 	public static final RegistryObject<FluidType> MELTED_CHEESE_TYPE = REGISTRY.register("melted_cheese", MeltedCheeseFluidType::new);
 	public static final RegistryObject<FluidType> SUNFLOWER_OIL_TYPE = REGISTRY.register("sunflower_oil", SunflowerOilFluidType::new);
 	public static final RegistryObject<FluidType> MAYONNAISE_TYPE = REGISTRY.register("mayonnaise", MayonnaiseFluidType::new);
+//	public static final RegistryObject<FluidType> BATTER_TYPE = REGISTRY.register("batter", BatterFluidType::new);
 }
