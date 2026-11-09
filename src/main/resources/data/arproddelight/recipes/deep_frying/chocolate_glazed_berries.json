@@ -1,13 +1,13 @@
 {
   "type": "arproddelight:deep_frying",
-  "processingTime": 100,
+  "processingTime": 40,
   "ingredients": [
     {
       "item": "minecraft:sweet_berries"
     }
   ],
   "fuel": {
-    "fluidTag": "forge:chocolate",
+    "fluid": "forge:chocolate",
     "amount": 500
   },
   "results": [

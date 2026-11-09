@@ -199,7 +199,8 @@ public class FryingBasketBlockEntity extends BlockEntity {
     }
 
     private void emitProcessingEffects(Level level, BlockPos pos, DeepFryingRecipe recipe, BasinBlockEntity basin) {
-        if (progress % 24 == 0 && recipe.getRequiredHeat() != HeatCondition.NONE) {
+        boolean is_heated = recipe.getRequiredHeat() != HeatCondition.NONE;
+        if (progress % 24 == 0 && is_heated) {
             level.playSound(null, pos, ModSounds.BLOCK_SKILLET_SIZZLE.get(), SoundSource.BLOCKS,
                     1.2f, 0.95f + level.random.nextFloat() * 0.1f);
         }
@@ -219,7 +220,7 @@ public class FryingBasketBlockEntity extends BlockEntity {
             double x = pos.getX() + 0.3 + level.random.nextDouble() * 0.4;
             double y = pos.getY() - 0.15 + level.random.nextDouble() * 0.15;
             double z = pos.getZ() + 0.3 + level.random.nextDouble() * 0.4;
-            serverLevel.sendParticles(ParticleTypes.BUBBLE, x, y, z, 1, 0.0, 0.03, 0.0, 0.0);
+            if (is_heated) serverLevel.sendParticles(ParticleTypes.BUBBLE, x, y, z, 1, 0.0, 0.03, 0.0, 0.0);
             serverLevel.sendParticles(fluidParticle, x, y, z, 1, 0.01, 0.03, 0.01, 0.0);
         }
     }

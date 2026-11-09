@@ -98,7 +98,7 @@ dependencies {
 
     runtimeOnly(fg.deobf("squeek.appleskin:appleskin-forge:mc1.20.1-2.5.1"))
 
-    runtimeOnly fg.deobf("curse.maven:create-central-kitchen-820977:6987710")
+//    runtimeOnly fg.deobf("curse.maven:create-central-kitchen-820977:6987710")
 
     runtimeOnly fg.deobf("curse.maven:sawmill-964817:6948522")
 

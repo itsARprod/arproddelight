@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "item":"minecraft:sugar"
+    },
+    {
+      "tag":"forge:eggs"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:batter",
+    "count": 2
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "arproddelight:deep_frying",
+  "processingTime": 40,
+  "heatRequirement": "heated",
+  "ingredients": [
+    {
+      "item": "arproddelight:gingerbread_cookies"
+    }
+  ],
+  "fuel": {
+    "fluid": "create:chocolate",
+    "amount": 500
+  },
+  "results": [
+    {
+      "item": "arproddelight:chocolate_gingerbread_cookies",
+      "count": 1
+    }
+  ]
+}

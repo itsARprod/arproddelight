@@ -1,6 +1,6 @@
 {
   "type": "arproddelight:deep_frying",
-  "processingTime": 100,
+  "processingTime": 40,
   "ingredients": [
     {
       "item": "minecraft:apple"

@@ -9,7 +9,9 @@ public class DeviledEggsItem extends ConsumableItem {
 	public DeviledEggsItem() {
         super(new Properties()
                 .craftRemainder(Items.BOWL)
+                .stacksTo(16)
                 .food(new FoodProperties.Builder()
+
                         .nutrition(8)
                         .saturationMod(0.6f)
                         .build()

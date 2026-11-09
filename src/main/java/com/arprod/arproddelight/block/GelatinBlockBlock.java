@@ -5,24 +5,22 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlimeBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class GelatinBlockBlock extends Block {
+public class GelatinBlockBlock extends SlimeBlock {
 
     public static final EnumProperty<DyeColor> COLOR =
             EnumProperty.create("color", DyeColor.class);
@@ -31,7 +29,6 @@ public class GelatinBlockBlock extends Block {
 
     public GelatinBlockBlock() {
         super(Properties.of()
-                .instrument(NoteBlockInstrument.BASEDRUM)
                 .sound(SoundType.SLIME_BLOCK)
                 .instabreak()
                 .noOcclusion());
@@ -81,24 +78,24 @@ public class GelatinBlockBlock extends Block {
 
     /* Less-bouncy slime behavior */
 
-    @Override
-    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        entity.causeFallDamage(fallDistance, 0.3F, level.damageSources().fall());
-    }
-
-    @Override
-    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
-        if (entity.isSuppressingBounce()) return;
-
-        double y = entity.getDeltaMovement().y;
-        if (y < 0.0D) {
-            entity.setDeltaMovement(
-                    entity.getDeltaMovement().x,
-                    -y * 0.4D,
-                    entity.getDeltaMovement().z
-            );
-        }
-    }
+//    @Override
+//    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+//        entity.causeFallDamage(fallDistance, 0.3F, level.damageSources().fall());
+//    }
+//
+//    @Override
+//    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
+//        if (entity.isSuppressingBounce()) return;
+//
+//        double y = entity.getDeltaMovement().y;
+//        if (y < 0.0D) {
+//            entity.setDeltaMovement(
+//                    entity.getDeltaMovement().x,
+//                    -y * 0.4D,
+//                    entity.getDeltaMovement().z
+//            );
+//        }
+//    }
 
 //    @Override
 //    public int getLightBlock(BlockState state, BlockGetter level, BlockPos pos) {

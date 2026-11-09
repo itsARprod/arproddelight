@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "arproddelight:marshmallow"
+    },
+    {
+      "fluid": "create:chocolate",
+      "amount": 50
+    }
+  ],
+  "results": [
+    {
+      "item": "arproddelight:birds_milk"
+    }
+  ]
+}

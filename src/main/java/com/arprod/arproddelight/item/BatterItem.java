@@ -1,24 +1,11 @@
 
 package com.arprod.arproddelight.item;
 
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.UseAnim;
-import vectorwing.farmersdelight.common.item.DrinkableItem;
+import vectorwing.farmersdelight.common.item.ConsumableItem;
 
-public class BatterItem extends DrinkableItem {
+public class BatterItem extends ConsumableItem {
 	public BatterItem() {
-		super(new Properties().craftRemainder(Items.BOWL).food((new FoodProperties.Builder()).nutrition(4).saturationMod(1.0F).build()));
-	}
-
-	public UseAnim getUseAnimation(ItemStack stack) {
-		return UseAnim.DRINK;
-	}
-
-	public SoundEvent getDrinkingSound() {
-		return SoundEvents.HONEY_DRINK;
+		super(new Properties().food((new FoodProperties.Builder()).nutrition(4).saturationMod(1.0F).build()));
 	}
 }

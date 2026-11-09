@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:bar_of_chocolate"
+    },
+    {
+      "item":"arproddelight:mint"
+    },
+    {
+      "tag":"forge:milk"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:mint_chocolate",
+    "count": 3
+  }
+}

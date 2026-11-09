@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:flour/wheat"
+    },
+    {
+      "item":"minecraft:honey_bottle"
+    },
+    {
+      "item":"arproddelight:cinnamon_powder"
+    }
+  ],
+  "result": {
+    "item": "arproddelight:gingerbread_cookies",
+    "count": 2
+  }
+}
